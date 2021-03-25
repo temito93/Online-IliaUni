@@ -1,6 +1,7 @@
 Online IliaUni
 
 Branch Structure
+
 main branch: development 
 test branch: pre-development
 
@@ -9,6 +10,7 @@ pre-development - working branch
 
 
 pull request
+
 All the pull requests create from pre-development and send pull requests on the same branch.
 
 When creating new branch, always use the structure of the branch anatomy.
