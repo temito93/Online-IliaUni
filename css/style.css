@@ -17,3 +17,26 @@
     left: 0;
     display: block;
 }
+
+.background-content {
+    max-width: 789px;
+    margin-top: 366px;
+    z-index: 5;
+}
+
+.background-h1,
+.background-h2,
+.background-img {
+    margin-top: 30px;
+}
+
+.background-h1,
+.background-h2 {
+    font-family: 'DejaVu Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+
+
