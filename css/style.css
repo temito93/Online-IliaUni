@@ -1,0 +1,43 @@
+
+
+footer {
+	color: #fff;
+}
+
+/*footer .footer-bottom .copyright-text a {
+    color: #fff !important;
+    font-weight: 500; 
+}*/
+
+footer .footer-logo img {
+    max-width: 100%; 
+}
+
+footer .widget_about p {
+    /*margin-bottom: 20px;*/
+    /*line-height: 24px; */
+}
+
+
+
+.site-footer.style-3 {
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: cover;
+  	background-color: #1E1E1D; 
+}
+  
+  .widget{
+  	color: #fff;
+  }
+/*.site-footer.style-3 .footer-top {
+    background: transparent; 
+}*/
+
+.footer-logo {
+    margin-bottom: 10px; 
+}
+
+.widget_poster {
+	margin-top: 50px;
+}
