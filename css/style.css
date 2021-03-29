@@ -1,5 +1,6 @@
 
 
+
 /* section one */
 .section-one {
     padding-right: 0; 
@@ -138,3 +139,46 @@ header li:hover{
     }
 }
 
+/*here is footer css style*/
+footer {
+	color: #fff;
+}
+
+footer .footer-logo img {
+    max-width: 100%; 
+}
+
+.site-footer.style-3 {
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: cover;
+  	background-color: #1E1E1D; 
+}
+  
+.widget a{
+  	color: #fff;
+  }
+
+.footer-logo {
+    margin-bottom: 10px; 
+}
+
+.widget_poster {
+	margin-top: 50px;
+}
+/*end*/
+
+
+/*grid-systems styles*/
+
+.rotate-title{
+    transform: rotate(-90deg);
+}
+.relative-box img{
+    width: 100%;
+}
+.relative-second-box{
+      height: 538px;
+      background-color: #333333;
+      opacity: 80%;
+}
