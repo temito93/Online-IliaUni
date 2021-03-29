@@ -9,8 +9,8 @@
 
 .background-wrapper {
     z-index: 0;
-    /* top: -80px;
-    left: 0; */
+    top: -134.71px;
+    left: 0;
 }
 
 .background-wrapper::after {
@@ -65,10 +65,11 @@
 
 
 /* =========header================ */
-.header{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
+
+header{
+    position: relative;
+    z-index: 3;
+
 }
 .collapse-nav{
     margin-left: 80px;
