@@ -15,7 +15,6 @@
 
 .background-wrapper {
     z-index: 0;
-    top: -134.71px;
     left: 0;
 }
 
@@ -72,8 +71,9 @@
 
 /* =========header================ */
 
-header{
-    position: relative;
+.header{
+    position: absolute;
+    top: 0;
     z-index: 3;
 
 }
