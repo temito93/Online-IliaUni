@@ -16,6 +16,7 @@
 .background-wrapper {
     z-index: 0;
     left: 0;
+    
 }
 
 .background-wrapper::after {
