@@ -72,8 +72,10 @@
 
 /* =========header================ */
 
+
 .header{
-    z-index: 3;
+   width: 100%;
+   z-index: 3;
 }
 .collapse-nav{
     margin-left: 80px;
@@ -111,7 +113,8 @@ header li:hover{
     height: 80px;
 }
 .links {
-    font-family: "Noto Sans Georgian";
+    font-family: 'Noto Sans Georgian SemBd';
+    font-size: 22px;
     position: relative;   
 }
 .links:after {
@@ -122,6 +125,17 @@ header li:hover{
     right: 0;
     top: 38%;
     background-color: #333321;
+}
+.filter-section{
+    padding: 0;
+}
+.filter-items{
+    font-family: 'Noto Sans Georgian';
+    font-size: 20px;
+    color: white;
+    padding: 15px 20px;
+    border-left: 1px solid #707070;
+
 }
 
 @media(max-width: 992px){
