@@ -1,3 +1,7 @@
+:root {
+    --s-18px: 18px;
+}
+
 
 
 
@@ -206,17 +210,17 @@ footer .footer-logo img {
     margin-bottom: 24.5px;
 }
 
-.second-box-container p {
+.second-box-container-p {
     font-weight: 300;
-    font-size: 18px;
+    font-size: var(--s-18px);
 }
 
-.second-box-container h6 {
+.second-box-container-h6 {
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--s-18px);
 } 
 
-.relative-box p {
+.relative-box-p {
     color: #fff;
     font-size: 14px;
     font-weight: 300;
@@ -228,21 +232,21 @@ footer .footer-logo img {
     margin-right: 10px;
 }
 
-.view-container span {
+.view-container-span {
     font-size: 14px;
     font-weight: 200;
 }
 
 .col-p {
     color:  #1E1E1D;
-    font-size: 18px;
+    font-size: var(--s-18px);
     font-weight: 300;
     margin-top: 15px;
 }
 
 .col-h6 {
     color: #1E1E1D;
-    font-size: 18px;
+    font-size: var(--s-18px);
     font-weight: 400;
     margin-top: 16.5px;
 }
@@ -251,9 +255,9 @@ footer .footer-logo img {
     margin-top: 14.2px;
 }
 
-.box-content p {
+.box-content-p {
     color: #1E1E1D;
-    font-size: 18px;
+    font-size: var(--s-18px);
     font-weight: 300;
     margin-left: 5px;
 }
