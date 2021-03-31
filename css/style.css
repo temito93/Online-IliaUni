@@ -108,7 +108,8 @@ header li:hover{
     height: 80px;
 }
 .links {
-    font-family: "Noto Sans Georgian";
+    font-family: 'Noto Sans Georgian SemBd';
+    font-size: 22px;
     position: relative;   
 }
 .links:after {
