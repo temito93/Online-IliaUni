@@ -1,3 +1,7 @@
+:root {
+    --s-18px: 18px;
+}
+
 
 
 
@@ -5,13 +9,14 @@
 .section-one {
     padding-right: 0; 
     padding-left: 0;
+    
 }
 
 
 .background-wrapper {
     z-index: 0;
-    top: -134.71px;
     left: 0;
+    
 }
 
 .background-wrapper::after {
@@ -67,10 +72,10 @@
 
 /* =========header================ */
 
-header{
-    width: 100%;
-    z-index: 3;
 
+.header{
+   width: 100%;
+   z-index: 3;
 }
 .collapse-nav{
     margin-left: 80px;
@@ -182,15 +187,100 @@ footer .footer-logo img {
 
 
 /*grid-systems styles*/
+.section-two {
+    margin-bottom: 180px;
+}
 
 .rotate-title{
     transform: rotate(-90deg);
 }
 .relative-box img{
-    width: 100%;
+    max-width: 400px;
+    max-height: 390px;
+    object-fit: cover;
+}
+
+.relative-box {
+    max-width: 400px;
+    max-height: 390px;
 }
 .relative-second-box{
-      height: 538px;
+      min-height: 538px;
+      height: 100%;
       background-color: #333333;
       opacity: 80%;
+}
+
+.second-box-p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 155px;
+}
+
+.second-box-container {
+    margin-left: 11px;
+    margin-bottom: 24.5px;
+}
+
+.second-box-container-p {
+    font-weight: 300;
+    font-size: var(--s-18px);
+}
+
+.second-box-container-h6 {
+    font-weight: 400;
+    font-size: var(--s-18px);
+} 
+
+.relative-box-p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.view-container {
+    margin-top: 12.2px;
+    margin-right: 10px;
+}
+
+.view-container-span {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.col-p {
+    color:  #1E1E1D;
+    font-size: var(--s-18px);
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.col-h6 {
+    color: #1E1E1D;
+    font-size: var(--s-18px);
+    font-weight: 400;
+    margin-top: 16.5px;
+}
+
+.box-content {
+    margin-top: 14.2px;
+}
+
+.box-content-p {
+    color: #1E1E1D;
+    font-size: var(--s-18px);
+    font-weight: 300;
+    margin-left: 5px;
+}
+
+.box-content-icon {
+    color: #FF4C65;
+    font-size: 32px;
+}
+
+.box-lock img {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
