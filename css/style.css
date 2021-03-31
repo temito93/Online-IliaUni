@@ -73,10 +73,7 @@
 /* =========header================ */
 
 .header{
-    position: absolute;
-    top: 0;
     z-index: 3;
-
 }
 .collapse-nav{
     margin-left: 80px;
