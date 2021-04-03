@@ -306,7 +306,7 @@ footer .footer-logo img {
     cursor: default;
 }
 .pagination ul li.active,
-.pagination ul li.numb:hover{
+.pagination ul li.active:hover{
     background-color: #E2E2F7;
 }
 .numb-active{
