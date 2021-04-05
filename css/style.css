@@ -9,25 +9,24 @@ footer .footer-logo img {
     max-width: 100%; 
 }
 
-
-
-
 .site-footer.style-3 {
   	background-repeat: no-repeat;
   	background-position: center;
   	background-size: cover;
   	background-color: #1E1E1D; 
 }
-  
-  .widget{
+  .widget a i{
+	  color: #fff;
+	  width: 31px;
+	  height: 31px;;
+  }
+  .widget a{
   	color: #fff;
+	  text-decoration: none;
+	  font-size: 18px;
   }
 
-.footer-logo {
-    /* margin-bottom: 10px;  */
-}
 
 .widget_poster {
-	/* margin-top: 50px; */
 	margin-bottom: 0px;
 }
