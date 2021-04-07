@@ -26,7 +26,9 @@ function libFunc(addContent) {
         for(var i=1; i<filterElem.length; i++)  {
             filterElem[i].style.color = "#fff";
         }
-        colChilds[0].style.display = "block";
+        for (var a=0; a<colChilds.length; a+=4) {
+            colChilds[a].style.display = "block";
+        }
 
     } else {
         libListener.style.display = "block";
