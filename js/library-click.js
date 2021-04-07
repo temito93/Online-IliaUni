@@ -17,7 +17,6 @@ function libFunc(addContent) {
 
 
     //get col classes
-    let colElem = document.getElementById("remove-first");
     let colChilds = document.getElementsByClassName("col");
 
     if (libListener.style.display == "block") {
