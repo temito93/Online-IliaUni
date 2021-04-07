@@ -1,4 +1,4 @@
-'use strick'
+'use strict'
 
 document.getElementById("lib-click").addEventListener("click", libFunc);
 
