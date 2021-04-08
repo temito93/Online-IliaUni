@@ -150,14 +150,12 @@ header li:hover{
 /* Library content */
 
 #library-content {
-    max-width: 300px;
     width: 100%;
-    top: 90px;
     left: 0;
-    height: 1400px;
     z-index: 2;
     background-color: #1E1E1D;
     display: none;
+
 }
 
 
@@ -217,7 +215,7 @@ footer .footer-logo img {
 
 /*grid-systems styles*/
 .section-two {
-    margin-bottom: 180px;
+    padding-bottom: 180px;
 }
 
 .rotate-title{
