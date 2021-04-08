@@ -96,7 +96,7 @@
     </section>
 
     <section class="container-fluid filter-section position-relative">
-        <div id="library-left-elem" class="row border ps-5 bg-col w-75">
+        <div id="library-left-elem" class="row ps-5 bg-col w-75">
             <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
@@ -104,9 +104,109 @@
         </div>
 
         <!-- Library content-->
-        <div id="library-content" class="position-absolute">
-
-        </div>
+        <div id="library-content" class="position-absolute"> 
+          <form action="/action_page.php" class="form">
+            <label class="checkbox path"> 
+                <input type="checkbox">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg> მეცნიერება
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg> შთა 
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>კატეგორია
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ტექნოლოგიები
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ენათმეცნიერება
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>მენეჯმენტი
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>თამაშები
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ტექნოლოგიები
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>აკადემიური მუშაობის 
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ტექნიკები
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ეკოლოგია
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ისტორია
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ლიტერატურა
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>მეცნიერება
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>ისტორია
+            </label>
+            <label class="checkbox path">
+              <input type="checkbox">
+              <svg viewBox="0 0 21 21">
+                  <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+              </svg>რელიგია
+            </label>
+            <div class="buttons">
+              <button type="button" class="btn btn-outline-light">ძიება</button>
+              <button type="button" class="btn btn-outline-light">გასუფთავება</button>
+            </div>
+          </form>
 
         <!--End -->
     </section>
@@ -290,7 +390,7 @@
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-sm col-md-4 my-auto">
+                    <div class="col-xl-3 col-sm col-md-4 my-auto z-index">
                         <div class="widget widget_about">
                             <div class="footer-logo">
                                 <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/></a> 
@@ -306,7 +406,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto z-index">
                         <div class="widget widget_services d-flex justify-content-between">
                             <a href="javascript:void(0);">შესახებ</a>
                             <a href="javascript:void(0);">კონტაქტი</a>

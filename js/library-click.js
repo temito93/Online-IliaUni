@@ -1,6 +1,7 @@
 'use strict'
 
-document.getElementById("lib-click").addEventListener("click", libFunc);
+let libClick = document.getElementById("lib-click");
+libClick.addEventListener("click", libFunc);
 
 function libFunc(addContent) {
     //prevents page for refresh
@@ -21,7 +22,7 @@ function libFunc(addContent) {
 
     if (libListener.style.display == "block") {
         libListener.style.display = "none";
-        libLeftElem.classList.add("ps-5");
+        libClick.style.borderLeft =  "1px solid #707070";
         for(var i=1; i<filterElem.length; i++)  {
             filterElem[i].style.color = "#fff";
         }
@@ -31,7 +32,7 @@ function libFunc(addContent) {
 
     } else {
         libListener.style.display = "block";
-        libLeftElem.classList.remove("ps-5");
+        libClick.style.borderLeft =  "none";
         for(var i=1; i<filterElem.length; i++)  {
             filterElem[i].style.color = "#333333";
         }
