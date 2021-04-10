@@ -128,6 +128,7 @@ header li:hover{
 }
 .filter-section{
     padding: 0;
+    height: 1560px;
 }
 
 .bg-col {
@@ -155,7 +156,8 @@ header li:hover{
     z-index: 2;
     background-color: #1E1E1D;
     display: none;
-
+    top:90px;
+    height: calc(100% - 90px);
 }
 
 
@@ -214,8 +216,8 @@ footer .footer-logo img {
 
 
 /*grid-systems styles*/
-.section-two {
-    padding-bottom: 180px;
+.grid-system {
+    margin-bottom: 180px;
 }
 
 .rotate-title{
