@@ -24,8 +24,8 @@ function libFunc(addContent) {
     let libGetWidth = document.getElementById("lib-click").offsetWidth;
 
 
-    
-    
+
+
 
     let gridSystem = document.getElementById("grid-system-id");
 
@@ -34,15 +34,15 @@ function libFunc(addContent) {
     if (libListener.style.display == "block") {
         libListener.style.display = "none";
         libClick.style.borderLeft = "1px solid #707070";
-        for(let i=1; i<filterElem.length; i++)  {
+        for (let i = 1; i < filterElem.length; i++) {
             filterElem[i].style.color = "#fff";
         }
-        for (let a=0; a<colChilds.length; a+=4) {
+        for (let a = 0; a < colChilds.length; a += 4) {
             colChilds[a].style.display = "block";
         }
 
         gridSystem.style.marginLeft = libListener.offsetWidth - 15 + "px";
-        for (let b=0; b<=colChilds.length; b++) {
+        for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-4");
             colChilds[b].classList.add("col-3");
         }
@@ -50,26 +50,26 @@ function libFunc(addContent) {
     } else {
         libListener.style.display = "block";
         libClick.style.borderLeft = "none";
-        for(let i=1; i<filterElem.length; i++)  {
+        for (let i = 1; i < filterElem.length; i++) {
             filterElem[i].style.color = "#333333";
         }
 
-        for (let a=0; a<colChilds.length; a+=4) {
+        for (let a = 0; a < colChilds.length; a += 4) {
             colChilds[a].style.display = "none";
         }
-       
-        
+
+
 
         //Library content gets width parameter of the library element current width
         libListener.style.maxWidth = libGetWidth + 37 + "px";
 
-        
+
         gridSystem.style.marginLeft = libListener.offsetWidth + 15 + "px";
 
-        for (let b=0; b<=colChilds.length; b++) {
+        for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-3");
             colChilds[b].classList.add("col-4");
         }
-        
+
     }
 }
