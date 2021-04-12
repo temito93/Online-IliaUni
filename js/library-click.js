@@ -1,4 +1,5 @@
 'use strict'
+
 let libClick = document.getElementById("lib-click");
 libClick.addEventListener("click", libFunc);
 
@@ -33,8 +34,11 @@ function libFunc(addContent) {
 
     if (libListener.style.display == "block") {
         libListener.style.display = "none";
+
         libClick.style.borderLeft = "1px solid #707070";
         for (let i = 1; i < filterElem.length; i++) {
+
+
             filterElem[i].style.color = "#fff";
         }
         for (let a = 0; a < colChilds.length; a += 4) {
