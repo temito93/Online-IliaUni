@@ -167,14 +167,7 @@ header li:hover{
     padding:0 25px;
 }
 
-@media (max-width: 1480px){
-    .nav-li{
-        padding: 15px 10px
-    }
-    .links {
-        font-size: 14px;
-    }
-}
+
 
 
 
@@ -182,6 +175,8 @@ header li:hover{
 /* Library content */
 
 #library-content {
+    font-family: 'Noto Sans Georgian';
+    font-size: 18px;
     width: 100%;
     left: 0;
     z-index: 2;
@@ -202,8 +197,6 @@ header li:hover{
 .checkbox {
     display: flex;
     position: relative;
-    font-family: 'Noto Sans Georgian';
-    font-size: 18px;
     cursor: pointer;
   }
   .checkbox input {
@@ -229,8 +222,11 @@ header li:hover{
     display: flex;
     justify-content: space-between;
 }
-.buttons button:first-child{
-    width: 43%;
+.search-btn{
+    width: 80px;
+}
+.clear-btn{
+    width: 145px;
 }
 .checkbox-test{
     width: 17px;
@@ -258,6 +254,37 @@ header li:hover{
 .checkbox input:checked + .checkbox-test::after {
     display: block;
 }
+
+/* lecturers tab */
+.lecturer-tab{
+    display: none;
+}
+.lecturers {
+    margin: 40px 0 40px 20px;
+    max-height: 570px;
+    overflow-y: auto;
+}
+.lecturers div{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#f1f1f1;
+    border-radius: 8px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
 
 /*here is footer css style*/
 footer {
@@ -424,16 +451,22 @@ footer .footer-logo img {
   }
 
 /* media--------------- */
+@media (max-width: 1480px){
+    .nav-li{
+        padding: 15px 10px
+    }
+    .links {
+        font-size: 14px;
+    }
+}
 @media(max-width: 992px){
+    
     .space{
         display: none;
     }
     .header-icons img{   
         width: 20px;
     }
-}
-@media(max-width: 992px){
-    
     .button-wrapper{
         display: flex;
     }
