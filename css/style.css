@@ -286,11 +286,17 @@ footer .footer-logo img {
   .widget a{
 
   	color: #fff;
-	  text-decoration: none;
-	  font-size: 18px;
+    font-family: 'DejaVu Sans';
+	text-decoration: none;
+	font-size: 18px;
   }
 
-
+.confidence{
+    font-family: 'Noto Sans Georgian';
+    font-size: 16px;
+    font-weight: lighter;
+    color: #E2E2F7;
+}
 .widget_poster {
 	margin-bottom: 0px;
 }
