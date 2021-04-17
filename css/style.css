@@ -11,14 +11,11 @@
     padding-left: 0;
     
 }
-
-
 .background-wrapper {
     z-index: 0;
     left: 0;
     
 }
-
 .background-wrapper::after {
     content: '';
     width: 100%;
@@ -30,7 +27,6 @@
     left: 0;
     display: block;
 }
-
 .background-img {
     width: 3.5240885416666665vw;
 }
@@ -156,7 +152,6 @@ header li:hover{
     color: white;
     padding: 15px 20px;
     border-left: 1px solid #707070;
-
 }
 .icons{
     display: flex;
@@ -185,12 +180,10 @@ header li:hover{
     top:90px;
     height: calc(100% - 90px);
     color: white;
-    padding: 25px 50px;
-    
+    padding: 25px 50px;  
 }
 #library-left-elem{
     cursor:pointer;
-
 }
 
 /* checkbox-------- */
@@ -198,19 +191,19 @@ header li:hover{
     display: flex;
     position: relative;
     cursor: pointer;
-  }
-  .checkbox input {
+}
+.checkbox input {
     opacity: 0;
     margin-right: 15px;
     position: relative;
     border: none;
     padding: 0;
     cursor: pointer;
-  }
-  .checkbox input:hover {
+}
+.checkbox input:hover {
     --s: 2px;
     --b: #808080;
-  }
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -254,8 +247,7 @@ header li:hover{
 }
 .lecturers {
     margin: 40px 0 40px 20px;
-    max-height: 570px;
-    overflow-y: auto;
+    max-height: 770px;
 }
 .lecturers div{
     margin-bottom: 15px;
@@ -264,16 +256,16 @@ header li:hover{
 .lecturers::-webkit-scrollbar {
     width: 5px;
     
-  }
+}
 /* Handle */
 .lecturers::-webkit-scrollbar-thumb {
-background:#f1f1f1;
-border-radius: 8px; 
+    background:#f1f1f1;
+    border-radius: 8px; 
 }
 
 /* Handle on hover */
 .lecturers::-webkit-scrollbar-thumb:hover {
-background: #555; 
+    background: #555; 
 }
 
 
@@ -416,33 +408,6 @@ footer .footer-logo img {
     margin-bottom: 10px;
 }
 
-
-/* key-frames------------------ */
-  
-@-webkit-keyframes bounce {
-    50% {
-      transform: scale(1.2);
-    }
-    75% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes bounce {
-    50% {
-      transform: scale(1.2);
-    }
-    75% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
 /* media--------------- */
 @media (max-width: 1480px){
     .nav-li{
@@ -453,7 +418,6 @@ footer .footer-logo img {
     }
 }
 @media(max-width: 992px){
-    
     .space{
         display: none;
     }
