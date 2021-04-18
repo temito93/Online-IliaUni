@@ -2,19 +2,14 @@
     --s-18px: 18px;
 }
 
-
-
-
 /* section one */
 .section-one {
     padding-right: 0; 
-    padding-left: 0;
-    
+    padding-left: 0;  
 }
 .background-wrapper {
     z-index: 0;
-    left: 0;
-    
+    left: 0;  
 }
 .background-wrapper::after {
     content: '';
@@ -67,11 +62,8 @@
 
 
 /* =========header================ */
-
-
-.header{
-   width: 100%;
-   z-index: 3;
+header {
+    z-index: 3;
 }
 .collapse-nav{
     margin-left: 80px;
@@ -98,10 +90,7 @@ header li:hover{
 }
 .button-wrapper{
     display: none;
-    width: 100%;
     background-color: #c8c9ca;
-    justify-content: space-between;
-    align-items: center;
     padding: 2px 20px;
 }
 .space{
@@ -135,14 +124,11 @@ header li:hover{
     display: none;
 }
 .nav-li{
-    position: relative;
     padding: 15px 35px;
 }
 .filter-section{
-    padding: 0;
     height: 1560px;
 }
-
 .bg-col {
     background-color: #1E1E1D;
 }
@@ -152,40 +138,27 @@ header li:hover{
     color: white;
     padding: 15px 20px;
     border-left: 1px solid #707070;
-}
-.icons{
-    display: flex;
+    max-height: 60px;
 }
 .header-icons{
-    position: relative;
     cursor: pointer;
     padding:0 25px;
 }
-
-
-
-
-
-
 /* Library content */
 
 #library-content {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
-    width: 100%;
-    left: 0;
     z-index: 2;
     background-color: #1E1E1D;
     display: none;
-    top:90px;
-    height: calc(100% - 90px);
+    height: calc(100% - 60px);
     color: white;
     padding: 25px 50px;  
 }
 #library-left-elem{
     cursor:pointer;
 }
-
 /* checkbox-------- */
 .checkbox {
     display: flex;
@@ -203,13 +176,6 @@ header li:hover{
 .checkbox input:hover {
     --s: 2px;
     --b: #808080;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 65%;
 }
 .search-btn{
     margin-right: 10px;

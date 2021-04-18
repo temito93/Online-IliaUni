@@ -29,14 +29,14 @@
 </head>
 
 <body>
-  <header class="header position-absolute top-0">
+  <header class="header position-absolute top-0 w-100 z-index-3">
     <nav class="navbar navbar-expand-lg navbar-light py-0">
       <div class="container-fluid align-items-start p-0 m-0">
         <div class="space bg-dark"></div>
           <a class="navbar-brand bg-dark  me-0 p-3 logo" href="#">
             <img src="img/logo.png" alt="logo" width="120">
           </a>
-        <div class="button-wrapper bg-dark">
+        <div class="button-wrapper bg-dark justify-content-between align-items-center w-100">
           <a class="navbar-brand bg-dark  me-0  mobile-logo" href="#">
             <img class="w-100" src="img/logo.png" alt="logo" width="120">
           </a>
@@ -47,25 +47,25 @@
 
         <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
           <ul class="navbar-nav m-0">
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link active text-white links" aria-current="page" href="#">კურსები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ლექციები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">თუთორიალები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ინტერვიუები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ფილმები</a>
             </li>
           </ul>
           <hr>
-          <div class="icons">
-            <div class="header-icons">
+          <div class="icons d-flex">
+            <div class="header-icons position-relative">
                 <img src="img/icon-search.png" alt="search">
             </div>
             <div class="header-icons">
@@ -100,7 +100,7 @@
   </section>
 
 
-    <section class="container-fluid filter-section position-relative">
+    <section class="container-fluid filter-section position-relative p-0">
         <div id="library-left-elem" class="row ps-5 bg-col w-75">
             <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
@@ -109,8 +109,8 @@
         </div>
 
         <!-- Library content-->
-        <div id="library-content" class="position-absolute"> 
-          <form action="/action_page.php" class="form">
+        <div id="library-content" class="position-absolute w-100"> 
+          <form action="/action_page.php" class="form d-flex justify-content-around flex-column w-100 h-75">
             <label class="checkbox"> 
                 <input type="checkbox">
                 <span class="checkbox-test"></span>მეცნიერება
