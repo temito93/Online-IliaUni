@@ -29,14 +29,14 @@
 </head>
 
 <body>
-  <header class="header position-absolute top-0">
+  <header class="header position-absolute top-0 w-100 z-index-3">
     <nav class="navbar navbar-expand-lg navbar-light py-0">
       <div class="container-fluid align-items-start p-0 m-0">
         <div class="space bg-dark"></div>
           <a class="navbar-brand bg-dark  me-0 p-3 logo" href="#">
             <img src="img/logo.png" alt="logo" width="120">
           </a>
-        <div class="button-wrapper bg-dark">
+        <div class="button-wrapper bg-dark justify-content-between align-items-center w-100">
           <a class="navbar-brand bg-dark  me-0  mobile-logo" href="#">
             <img class="w-100" src="img/logo.png" alt="logo" width="120">
           </a>
@@ -47,25 +47,25 @@
 
         <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
           <ul class="navbar-nav m-0">
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link active text-white links" aria-current="page" href="#">კურსები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ლექციები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">თუთორიალები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ინტერვიუები</a>
             </li>
-            <li class="nav-item nav-li">
+            <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ფილმები</a>
             </li>
           </ul>
           <hr>
-          <div class="icons">
-            <div class="header-icons">
+          <div class="icons d-flex">
+            <div class="header-icons position-relative">
                 <img src="img/icon-search.png" alt="search">
             </div>
             <div class="header-icons">
@@ -100,7 +100,7 @@
   </section>
 
 
-    <section class="container-fluid filter-section position-relative">
+    <section class="container-fluid filter-section position-relative p-0">
         <div id="library-left-elem" class="row ps-5 bg-col w-75">
             <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
@@ -109,8 +109,8 @@
         </div>
 
         <!-- Library content-->
-        <div id="library-content" class="position-absolute"> 
-          <form action="/action_page.php" class="form">
+        <div id="library-content" class="position-absolute w-100"> 
+          <form action="/action_page.php" class="form d-flex justify-content-around flex-column w-100 h-75">
             <label class="checkbox"> 
                 <input type="checkbox">
                 <span class="checkbox-test"></span>მეცნიერება
@@ -175,12 +175,50 @@
               <input type="checkbox">
               <span class="checkbox-test"></span>რელიგია
             </label>
-            <div class="buttons">
-              <button type="button" class="btn btn-outline-light">ძიება</button>
-              <button type="button" class="btn btn-outline-light">გასუფთავება</button>
+            <div class="buttons d-flex flex-wrap justify-content-between">
+              <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+              <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
             </div>
           </form>
           
+          <div class="lecturer-tab" id="">
+            <div class="lecturers overflow-auto">
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+              <div>სახელი გვარი</div>
+            </div>
+            <div class="buttons">
+              <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+              <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+            </div>
+          </div>
           
        <!--End -->
       </div>
@@ -380,76 +418,40 @@
 
 
 
-
   <!-- Footer -->
-  <footer class="site-footer style-3" id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-sm-12 col-md-4 my-auto">
-            <div class="widget widget_about">
-              <div class="footer-logo">
-                <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt="" /></a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-            <div class="widget widget_poster">
-              <div class="footer-logo-big">
-                <a href="index.html"><img src="img/img-footer-brain.svg" alt="" /></a>
-              </div>
-
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto z-index">
-                        <div class="widget widget_services d-flex justify-content-between">
-                            <a href="javascript:void(0);">შესახებ</a>
-                            <a href="javascript:void(0);">კონტაქტი</a>
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto">
-            <div class="widget widget_services d-flex justify-content-between">
-              <a href="javascript:void(0);">შესახებ</a>
-              <a href="javascript:void(0);">კონტაქტი</a>
-              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-
-        </div>
-        <!-- footer bottom part -->
+    <footer class="site-footer style-3" id="footer">
         <div class="container-fluid">
-            <div class="row px-3">
-                <div class=" col d-flex justify-content-start">
-                    <p>© 2021 online iliauni</p>
+          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
+            <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+            <div class="row position-absolute d-flex justify-content-between alighn-items-start w-100 px-5 pb-5">
+              <div class="col-xl-3 col-sm-12 col-md-4 my-auto">
+                <div class="widget widget_about">
+                  <div class="footer-logo">
+                    <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/></a> 
+                  </div>
                 </div>
-                <div class="col d-flex justify-content-end">
-                    <p>კონფიდენციალობის პოლიტიკა</p>
-                </div>
+              </div>
 
+              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto">
+                <div class="widget widget_services d-flex justify-content-between">
+                  <a href="javascript:void(0);">შესახებ</a>
+                  <a href="javascript:void(0);">კონტაქტი</a>
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                  <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>  
             </div>
-          </div>
+            <div class="row position-absolute d-flex justify-content-between alighn-items-end w-100 bottom-0">
+              <div class="col-6 d-flex justify-content-start">
+                <p class="confidence">© 2021 online iliauni</p>
+              </div>
+              <div class="col-6 d-flex justify-content-end">
+                <p class="confidence">კონფიდენციალობის პოლიტიკა</p>
+              </div>
+            </div>
+           </div>
         </div>
-      </div>
-    </div>
-    <!-- footer bottom part -->
-    <div class="container">
-      <div class="row pb-4">
-        <div class=" col d-flex justify-content-start">
-          <p>© 2021 online iliauni</p>
-        </div>
-        <div class="col d-flex justify-content-end">
-          <p>კონფიდენციალობის პოლიტიკა</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+    </footer>
 
 
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
