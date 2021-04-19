@@ -235,6 +235,26 @@ header li:hover{
 }
 
 
+/*pagination*/
+.pagination ul{
+    width: 484px;
+
+}
+.pagination ul li {
+    list-style: none;
+    line-height: 45px;
+    font-size: 46px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination ul li.dots{
+    cursor: default;
+}
+.pagination ul li:first-child{
+    color: #E2E2F7;
+}
 
 
 /*here is footer css style*/
