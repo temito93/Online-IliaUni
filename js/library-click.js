@@ -27,15 +27,19 @@ function libFunc(addContent) {
 
 
 
-
+    let libContEl = document.getElementById("lib-content");
 
     let gridSystem = document.getElementById("grid-system-id");
 
 
+    
+    
 
-    if (libListener.style.display == "block") {
+
+    
+    if (libListener.style.display == "block" ) {
         libListener.style.display = "none";
-
+        libContEl.classList.remove("d-flex");
         libClick.style.borderLeft = "1px solid #707070";
         for (let i = 1; i < filterElem.length; i++) {
 
@@ -53,9 +57,13 @@ function libFunc(addContent) {
         }
         
 
-    } else {
+    } 
+    
+    else {
         libListener.style.display = "block";
         libClick.style.borderLeft = "none";
+
+        libContEl.classList.add("d-flex");
         for (let i = 1; i < filterElem.length; i++) {
             filterElem[i].style.color = "#333333";
         }
@@ -78,6 +86,8 @@ function libFunc(addContent) {
         }
 
     }
+
+    
 }
 
 
@@ -122,7 +132,7 @@ function lectFunc(addContent) {
 
     let gridSystem = document.getElementById("grid-system-id");
 
-
+    
 
     if (libListener.style.display == "block") {
         libListener.style.display = "none";
@@ -152,7 +162,8 @@ function lectFunc(addContent) {
         }
         
 
-    } else  {
+    } 
+    else {
         libListener.style.display = "block";
 
         //removes border left on lec-click id
@@ -188,3 +199,4 @@ function lectFunc(addContent) {
 
     }
 }
+
