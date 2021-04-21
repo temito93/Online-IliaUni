@@ -191,3 +191,27 @@ function lectFunc() {
     
 }
 
+//Clear library checkbox
+
+let getLibCheckButton = document.getElementById("library-check-button");
+getLibCheckButton.addEventListener("click", unCheckFunc);
+
+let checkBoxes = document.getElementsByTagName('input');
+function unCheckFunc() {
+    
+    for (let i = 0; i < checkBoxes.length; i++) {
+        if (checkBoxes[i].type == 'checkbox') {
+            checkBoxes[i].checked = '';
+        }
+    }
+
+
+    
+       
+    
+
+    
+    
+
+}
+
