@@ -153,10 +153,10 @@ header li:hover{
     font-size: 18px;
     z-index: 2;
     background-color: #1E1E1D;
-    display: none;
     height: calc(100% - 60px);
     color: white;
     padding: 25px 50px;  
+    display: none;
 }
 #library-left-elem{
     cursor:pointer;
@@ -212,10 +212,6 @@ header li:hover{
     display: block;
 }
 
-/* lecturers tab */
-.lecturer-tab{
-    display: none;
-}
 
 
 .lecturers {

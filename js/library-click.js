@@ -3,16 +3,11 @@
 let libClick = document.getElementById("lib-click");
 libClick.addEventListener("click", libFunc);
 
-function libFunc(addContent) {
-    
-    //prevents page for refresh
-    
+//hides content-background
+let getContentBackground = document.getElementById("content-background");
+getContentBackground.style.display = "none";
 
-    //get library div element
-    let libListener = document.getElementById("content-background");
-
-    //get library-left-elem div element
-    let libLeftElem = document.getElementById("library-left-elem");
+function libFunc() {
 
     //get filter-items
     let filterElem = document.querySelectorAll('.filter-items');
@@ -25,20 +20,48 @@ function libFunc(addContent) {
     //get offset width of library element for library content
     let libGetWidth = document.getElementById("lib-click").offsetWidth;
 
-
-
-    let libContEl = document.getElementById("lib-content");
-
     let gridSystem = document.getElementById("grid-system-id");
 
 
-    
-    
 
+    //lib-content (form)
+    let libContEl = document.getElementById("lib-content");
 
-    
-    if (libListener.style.display == "block" ) {
-        libListener.style.display = "none";
+    //hides lect-content id
+    let getLectTab = document.getElementById("lect-content");
+    getLectTab.style.display = "none";
+
+    if  (getContentBackground.style.display == "none") {
+
+        //shows content background
+        getContentBackground.style.display = "block";
+       
+        //removes border of library from the left side
+        libClick.style.borderLeft = "none";
+
+        //adds display flex in form (lib-content)
+        libContEl.style.display = "flex";
+
+        for (let i = 1; i < filterElem.length; i++) {
+            filterElem[i].style.color = "#333333";
+        }
+
+        for (let a = 0; a < colChilds.length; a += 4) {
+            colChilds[a].style.display = "none";
+        }
+
+        //Library content gets width parameter of the library element current width
+        getContentBackground.style.maxWidth = libGetWidth + 35 + "px";
+
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
+
+        for (let b = 0; b <= colChilds.length; b++) {
+            colChilds[b].classList.remove("col-3");
+            colChilds[b].classList.add("col-4");
+        }
+
+    } else if (getContentBackground.style.display == "block" && libClick && libContEl.style.display == "flex") {
+        getContentBackground.style.display = "none";
         libContEl.classList.remove("d-flex");
         libClick.style.borderLeft = "1px solid #707070";
         for (let i = 1; i < filterElem.length; i++) {
@@ -50,42 +73,23 @@ function libFunc(addContent) {
             colChilds[a].style.display = "block";
         }
 
-        gridSystem.style.marginLeft = libListener.offsetWidth - 15 + "px";
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-4");
             colChilds[b].classList.add("col-3");
         }
         
 
-    } 
-    
-    else {
-        libListener.style.display = "block";
+    } else if (lectClick && getContentBackground.style.display == "block") {
+        getLectTab.style.display = "none";
+        libContEl.style.display = "flex";
+        lectClick.style.borderLeft = "1px solid #707070";
         libClick.style.borderLeft = "none";
-
-        libContEl.classList.add("d-flex");
-        for (let i = 1; i < filterElem.length; i++) {
-            filterElem[i].style.color = "#333333";
-        }
-
-        for (let a = 0; a < colChilds.length; a += 4) {
-            colChilds[a].style.display = "none";
-        }
-
-
-
-        //Library content gets width parameter of the library element current width
-        libListener.style.maxWidth = libGetWidth + 35 + "px";
-
-
-        gridSystem.style.marginLeft = libListener.offsetWidth + 15 + "px";
-
-        for (let b = 0; b <= colChilds.length; b++) {
-            colChilds[b].classList.remove("col-3");
-            colChilds[b].classList.add("col-4");
-        }
-
+        libClick.style.color = "#fff";
+        lectClick.style.color = "#333333";
     }
+    
+    
 
     
 }
@@ -99,16 +103,7 @@ function libFunc(addContent) {
 let lectClick = document.getElementById("lec-click");
 lectClick.addEventListener("click", lectFunc);
 
-function lectFunc(addContent) {
-    
-    //prevents page for refresh
-    
-
-    //get library div element
-    let libListener = document.getElementById("content-background");
-
-    //get library-left-elem div element
-    let libLeftElem = document.getElementById("library-left-elem");
+function lectFunc() {
 
     //get filter-items
     let filterElem = document.querySelectorAll('.filter-items');
@@ -128,55 +123,20 @@ function lectFunc(addContent) {
 
     let lecEl = document.getElementById("lect-content");
 
-
+    
+        
+    //display none on lib-content
+    libContEl.style.display = "none";
 
     let gridSystem = document.getElementById("grid-system-id");
 
     
-
-    if (libListener.style.display == "block") {
-        libListener.style.display = "none";
-        
-        //add border left on lec-click id
-        lectClick.style.borderLeft = "1px solid #707070";
-
-        //adds d-flex class on lib-content
-        libContEl.classList.add("d-flex");
-        
-        //display none on lect-content
-        lecEl.style.display = "none";
-
-        for (let i = 0; i < filterElem.length - 2; i++) {
-
-
-            filterElem[i].style.color = "#fff";
-        }
-        for (let a = 0; a < colChilds.length; a += 4) {
-            colChilds[a].style.display = "block";
-        }
-
-        gridSystem.style.marginLeft = libListener.offsetWidth - 15 + "px";
-        for (let b = 0; b <= colChilds.length; b++) {
-            colChilds[b].classList.remove("col-4");
-            colChilds[b].classList.add("col-3");
-        }
-        
-
-    } 
-    else {
-        libListener.style.display = "block";
+    if (getContentBackground.style.display == "none"){
+        getContentBackground.style.display = "block";
 
         //removes border left on lec-click id
         lectClick.style.borderLeft = "none";
 
-        //removes d-flex class from lib-content
-        libContEl.classList.remove("d-flex");
-        
-        //display none on lib-content
-        libContEl.style.display = "none";
-
-        //display block on lect-content
-        lecEl.style.display = "block";
 
         for (let i = 0; i < filterElem.length - 2; i++) {
             filterElem[i].style.color = "#333333";
@@ -187,10 +147,10 @@ function lectFunc(addContent) {
         }
 
         //Library content gets width parameter of the library element current width
-        libListener.style.maxWidth = tagGetWidth + 36 + "px";
+        getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
 
 
-        gridSystem.style.marginLeft = libListener.offsetWidth + 15 + "px";
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
 
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-3");
@@ -198,5 +158,36 @@ function lectFunc(addContent) {
         }
 
     }
+    else if (getContentBackground.style.display == "block" && lecEl.style.display == "block" && lectClick){
+        getContentBackground.style.display = "none";
+        
+        //add border left on lec-click id
+        lectClick.style.borderLeft = "1px solid #707070";
+
+        
+        for (let i = 0; i < filterElem.length - 2; i++) {
+            filterElem[i].style.color = "#fff";
+        }
+        
+        for (let a = 0; a < colChilds.length; a += 4) {
+            colChilds[a].style.display = "block";
+        }
+
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
+        for (let b = 0; b <= colChilds.length; b++) {
+            colChilds[b].classList.remove("col-4");
+            colChilds[b].classList.add("col-3");
+        }
+        
+
+    } else if (libClick && getContentBackground.style.display == "block") {
+        libContEl.style.display = "none";
+        lecEl.style.display = "block";
+        lectClick.style.borderLeft = "none";
+        libClick.style.borderLeft = "1px solid #707070";
+        libClick.style.color = "#333333";
+        lectClick.style.color = "#fff";
+    }
+    
 }
 
