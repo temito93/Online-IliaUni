@@ -125,7 +125,7 @@ header li:hover{
     padding: 15px 35px;
 }
 .filter-section{
-    height: 1269px;
+    height: 1568px;
 }
 .bg-col {
     background-color: #1E1E1D;
@@ -237,10 +237,16 @@ header li:hover{
 
 
 /*pagination*/
+#pagination-id {
+    max-width: 480px;
+    width: 100%;
+    margin-left: 95px;
+    margin-top: 73px;
+}
+
 .pagination ul{
     width: 484px;
-    margin-bottom: 135px;
-
+    padding: 0;
 }
 .pagination ul li {
     list-style: none;
@@ -305,7 +311,7 @@ footer .footer-logo img {
 
 /*grid-systems styles*/
 .grid-system {
-    margin-bottom: 180px;
+    margin-bottom: 73px;
 }
 
 .rotate-title{
