@@ -127,7 +127,7 @@ header li:hover{
     padding: 15px 35px;
 }
 .filter-section{
-    height: 1560px;
+    height: 1269px;
 }
 .bg-col {
     background-color: #1E1E1D;
@@ -235,6 +235,27 @@ header li:hover{
 }
 
 
+/*pagination*/
+.pagination ul{
+    width: 484px;
+    margin-bottom: 135px;
+
+}
+.pagination ul li {
+    list-style: none;
+    line-height: 45px;
+    font-size: 46px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination ul li.dots{
+    cursor: default;
+}
+.pagination ul li:first-child{
+    color: #E2E2F7;
+}
 
 
 /*here is footer css style*/
