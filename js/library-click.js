@@ -129,15 +129,15 @@ function lectFunc() {
     libContEl.style.display = "none";
 
     let gridSystem = document.getElementById("grid-system-id");
-
+    
     
     if (getContentBackground.style.display == "none"){
         getContentBackground.style.display = "block";
 
         //removes border left on lec-click id
         lectClick.style.borderLeft = "none";
-
-
+        lecEl.style.display = "block";
+        libContEl.style.display = "none";
         for (let i = 0; i < filterElem.length - 2; i++) {
             filterElem[i].style.color = "#333333";
         }
