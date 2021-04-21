@@ -97,7 +97,7 @@ function libFunc() {
 
 
 
-//TAG CLICK
+//lec-click
 
 
 let lectClick = document.getElementById("lec-click");
