@@ -65,6 +65,16 @@
 header {
     z-index: 3;
 }
+.header-background{
+    height: 240px;
+    background: rgb(51,51,51);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(255,255,255,1) 100%);
+}
+.header-background h1{
+    font-family: 'DejaVu Sans';
+    font-size: 30px;
+    transform: translate(-50%, 190%);
+}
 .collapse-nav{
     margin-left: 80px;
 }
@@ -75,19 +85,7 @@ header {
 header li:hover{
     background-color: #34383d;
 }
-.fa-user-alt, .fa-search{
-    color: white;
-    font-size: 28px;
-    padding: 0 30px;
-}
-.fa-search:after {
-    content: '';
-    height: 20%;
-    width: 1px;
-    position: absolute;
-    right: 91px;
-    background-color: #333321;
-}
+
 .button-wrapper{
     display: none;
     background-color: #c8c9ca;
@@ -127,7 +125,7 @@ header li:hover{
     padding: 15px 35px;
 }
 .filter-section{
-    height: 1560px;
+    height: 1269px;
 }
 .bg-col {
     background-color: #1E1E1D;
@@ -238,6 +236,27 @@ header li:hover{
 }
 
 
+/*pagination*/
+.pagination ul{
+    width: 484px;
+    margin-bottom: 135px;
+
+}
+.pagination ul li {
+    list-style: none;
+    line-height: 45px;
+    font-size: 46px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination ul li.dots{
+    cursor: default;
+}
+.pagination ul li:first-child{
+    color: #E2E2F7;
+}
 
 
 /*here is footer css style*/
