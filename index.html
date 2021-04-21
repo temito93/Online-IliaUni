@@ -104,13 +104,13 @@
         <div id="library-left-elem" class="row ps-5 bg-col w-75">
             <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
-            <div class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
+            <div id="lec-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items bg-light text-dark border-start border-light">პოპულარობის მიხედვით <img src="img/eye.svg" alt="eye"></div>
         </div>
 
         <!-- Library content-->
-        <div id="library-content" class="position-absolute w-100"> 
-          <form action="/action_page.php" class="form d-flex justify-content-around flex-column w-100 h-75">
+        <div id="content-background" class="position-absolute w-100"> 
+          <form id="lib-content" action="/action_page.php" class="form  justify-content-around flex-column w-100 h-75">
             <label class="checkbox"> 
                 <input type="checkbox">
                 <span class="checkbox-test"></span>მეცნიერება
@@ -177,11 +177,11 @@
             </label>
             <div class="buttons d-flex justify-content-between">
               <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
-              <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+              <button id="library-check-button" type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
             </div>
           </form>
           
-          <div class="lecturer-tab" id="">
+          <div class="lecturer-tab" id="lect-content">
             <div class="lecturers overflow-auto">
               <div>სახელი გვარი</div>
               <div>სახელი გვარი</div>
@@ -465,6 +465,7 @@
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
   <script src="js/library-click.js"></script>
   <script src="js/pagination.js"></script>
+
 
 </body>
 
