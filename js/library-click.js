@@ -159,8 +159,6 @@ function lectFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
 
-        
-
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-3");
             colChilds[b].classList.add("col-4");
@@ -184,6 +182,7 @@ function lectFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
         
+       
         
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-4");
