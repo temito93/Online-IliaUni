@@ -22,8 +22,7 @@ function libFunc() {
 
     let gridSystem = document.getElementById("grid-system-id");
 
-    //gets pagination id
-    let paginationId = document.getElementById("pagination-id");
+    
 
 
 
@@ -58,9 +57,7 @@ function libFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
 
-        //pagination margin while grid blocks are 6
-        paginationId.style.marginLeft = "0";
-
+        
 
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-3");
@@ -82,8 +79,7 @@ function libFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
         
-        //pagination margin while grid blocks are 12
-        paginationId.style.marginLeft = "95" + "px";
+        
         
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-4");
@@ -141,9 +137,7 @@ function lectFunc() {
 
     let gridSystem = document.getElementById("grid-system-id");
     
-    //gets pagination id
-    let paginationId = document.getElementById("pagination-id");
-
+    
     if (getContentBackground.style.display == "none"){
         getContentBackground.style.display = "block";
 
@@ -165,8 +159,7 @@ function lectFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
 
-         //pagination margin while grid blocks are 6
-         paginationId.style.marginLeft = "0";
+        
 
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-3");
@@ -191,8 +184,6 @@ function lectFunc() {
 
         gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
         
-        //pagination margin while grid blocks are 12
-        paginationId.style.marginLeft = "95" + "px";
         
         for (let b = 0; b <= colChilds.length; b++) {
             colChilds[b].classList.remove("col-4");
