@@ -78,6 +78,15 @@ header {
 .collapse-nav{
     margin-left: 80px;
 }
+.logo{
+    width: 10%;
+    min-width: 125px;
+    max-width: 160px;
+}
+.logoImg{
+    max-width: 125px;
+    width: 100%;
+}
 .mobile-logo{
     width: 80px;
     height: 80px;
