@@ -65,6 +65,9 @@
 header {
     z-index: 3;
 }
+/* .logoImg{
+    width: 120px;
+}  */
 .header-background{
     height: 240px;
     background: rgb(51,51,51);
@@ -83,7 +86,7 @@ header {
     min-width: 125px;
     max-width: 160px;
 }
-.logoImg{
+.navbar-brand img{
     max-width: 125px;
     width: 100%;
 }
