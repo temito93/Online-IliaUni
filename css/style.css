@@ -246,7 +246,33 @@ header li:hover{
 .lecturers::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-
+/*tags*/
+.tag-items{
+    margin: 50px 0 40px 20px;
+    max-height: 770px;
+    color: #fff;
+}
+.tag-elements p{
+    margin-top: 10px;
+    color: #fff;
+    font-family: Noto Sans Georgian;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: lighter;
+    text-decoration: none;
+}
+.tag-elements:last-child{
+    padding-bottom: 150px;
+}
+.b-left-none{
+    border-left: none;
+}
+.border-color{
+    border-color: 1px solid #707070;
+}
+.tag-color{
+    color: #fff;
+}
 
 /*pagination*/
 #pagination-id {
