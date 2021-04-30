@@ -1,6 +1,9 @@
 :root {
     --s-18px: 18px;
 }
+body{
+    overflow-x: hidden;
+}
 
 /* section one */
 .section-one {
@@ -65,9 +68,6 @@
 header {
     z-index: 3;
 }
-/* .logoImg{
-    width: 120px;
-}  */
 .header-background{
     height: 240px;
     background: rgb(51,51,51);
@@ -150,11 +150,43 @@ header li:hover{
     border-left: 1px solid #707070;
     max-height: 60px;
 }
-
-
+/* ----popup--- */
+.popup{
+    background-color: #E2E2F7;
+    height: 100vh;
+    right: -50%;
+    padding: 30px 105px ;
+    z-index: 10;
+    transition: all 0.1s;
+}
+.close{
+    right: 30px;
+    cursor: pointer;
+}
 .header-icons{
     cursor: pointer;
     padding:0 25px;
+}
+.popup h5{
+    font-family: 'Noto Sans Georgian';
+    font-size: 20px;
+}
+#registration input{
+    width: 50%;
+    height: 45px;
+    background-color: rgba(0, 255, 255, 0);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+#registration{
+    margin-top: 230px;
+}
+.input-links{
+    font-size: 15px;
+}
+.rg-btn{
+    width: 120px;
+    font-size: 15px;
 }
 /* Library content */
 
