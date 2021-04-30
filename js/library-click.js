@@ -33,6 +33,10 @@ function libFunc() {
     let getLectTab = document.getElementById("lect-content");
     getLectTab.style.display = "none";
 
+    //display none on tag content
+    let tagCont = document.getElementById("tag-content");
+    tagCont.style.display = "none";
+
     if  (getContentBackground.style.display == "none") {
 
         //shows content background
@@ -87,16 +91,21 @@ function libFunc() {
         }
         
 
-    } else if (lectClick && getContentBackground.style.display == "block") {
-        getLectTab.style.display = "none";
-        libContEl.style.display = "flex";
-        lectClick.style.borderLeft = "1px solid #707070";
-        libClick.style.borderLeft = "none";
-        libClick.style.color = "#fff";
-        lectClick.style.color = "#333333";
-    }
-    
-    
+    } else if (lectClick  && getContentBackground.style.display == "block") {
+        
+
+        
+            getLectTab.style.display = "none";
+            libContEl.style.display = "flex";
+            lectClick.style.borderLeft = "1px solid #707070";
+            libClick.style.borderLeft = "none";
+            libClick.style.color = "#fff";
+            lectClick.style.color = "#333333";
+            tagClick.style.color = "#333333";
+        
+        
+        
+    } 
 
     
 }
@@ -123,7 +132,6 @@ function lectFunc() {
     //get offset width of library element for library content
     let tagGetWidth = document.getElementById("lec-click").offsetWidth;
 
-    
 
     let libContEl = document.getElementById("lib-content");
     
@@ -131,9 +139,14 @@ function lectFunc() {
     let lecEl = document.getElementById("lect-content");
 
     
+    
         
     //display none on lib-content
     libContEl.style.display = "none";
+
+    //display none on tag content
+    let tagCont = document.getElementById("tag-content");
+    tagCont.style.display = "none";
 
     let gridSystem = document.getElementById("grid-system-id");
     
@@ -191,15 +204,151 @@ function lectFunc() {
         
 
     } else if (libClick && getContentBackground.style.display == "block") {
-        libContEl.style.display = "none";
-        lecEl.style.display = "block";
-        lectClick.style.borderLeft = "none";
-        libClick.style.borderLeft = "1px solid #707070";
-        libClick.style.color = "#333333";
-        lectClick.style.color = "#fff";
-    }
+
+            libContEl.style.display = "none";
+            lecEl.style.display = "block";
+            lectClick.style.borderLeft = "none";
+            libClick.style.borderLeft = "1px solid #707070";
+            libClick.style.color = "#333333";
+            lectClick.style.color = "#fff";
+            tagClick.style.color = "#333333";
+            lectClick.style.borderLeft = "none"; 
+    } 
     
 }
+
+
+//tag content
+
+let tagClick = document.getElementById("menu-tag-item");
+tagClick.addEventListener("click", tagFunc);
+
+function tagFunc() {
+
+    //get filter-items
+    let filterElem = document.querySelectorAll('.filter-items');
+
+
+    //get col classes
+    let colChilds = document.getElementsByClassName("box-visibility");
+
+
+    //get offset width of library element for tag content
+    let tagGetWidth = document.getElementById("lib-click").offsetWidth;
+
+    let tagEl = document.getElementById("tag-content");
+        
+    //display none on lib-content
+    let libContEl = document.getElementById("lib-content");
+    libContEl.style.display = "none";
+
+    //hides lect-content id
+    let getLectTab = document.getElementById("lect-content");
+    getLectTab.style.display = "none";
+
+
+    let gridSystem = document.getElementById("grid-system-id");
+    
+    
+    if (getContentBackground.style.display == "none"){
+        getContentBackground.style.display = "block";
+
+        //removes border left on lec-click id
+        
+        //removes border of library from the left side
+        libClick.style.borderLeft = "none";
+        
+        tagEl.style.display = "block";
+
+        libContEl.style.display = "none";
+        getLectTab.style.display = "none";
+
+        for (let i = 0; i < filterElem.length; i++) {
+            if (i % 2 == 0) {
+                filterElem[i].style.color = "#333333";
+            }
+            
+        }
+
+        for (let a = 0; a < colChilds.length; a += 4) {
+            colChilds[a].style.display = "none";
+        }
+
+        //Library content gets width parameter of the library element current width
+        getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
+
+
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
+
+        for (let b = 0; b < colChilds.length; b++) {
+            colChilds[b].classList.remove("col-3");
+            colChilds[b].classList.add("col-4");
+        }
+
+    }
+    else if (getContentBackground.style.display == "block" && tagEl.style.display == "block" && tagClick){
+        getContentBackground.style.display = "none";
+        
+        //add border left on lec-click id
+        libClick.style.borderLeft = "1px solid #707070";
+
+        
+        for (let i = 0; i < filterElem.length; i++) {
+            if (i % 2 == 0) {
+                filterElem[i].style.color = "#fff";
+            }
+
+        }
+        
+        for (let a = 0; a < colChilds.length; a += 4) {
+            colChilds[a].style.display = "block";
+        }
+
+        gridSystem.style.marginLeft = getContentBackground.offsetWidth - 15 + "px";
+        
+       
+        
+        for (let b = 0; b < colChilds.length; b++) {
+            colChilds[b].classList.remove("col-4");
+            colChilds[b].classList.add("col-3");
+        }
+        
+
+    } else if (libClick  || lectClick && getContentBackground.style.display == "block") {
+    
+        lectClick.style.borderLeft = "#fff";
+        libContEl.style.display = "none";
+        getLectTab.style.display = "none";
+        tagEl.style.display = "block";
+        libClick.style.borderLeft = "none";
+        libClick.style.color = "#333333";
+        lectClick.style.color = "#333333";
+        tagClick.style.color = "#fff"
+        
+        if (lectClick && getContentBackground.style.display == "block") {
+            lectClick.style.borderLeft = "1px solid #707070";
+        }
+
+        
+        
+    }
+
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Clear library checkbox
 
