@@ -181,8 +181,11 @@ header li:hover{
 #registration{
     margin-top: 230px;
 }
-.input-links{
+.input-links button{
     font-size: 15px;
+    background: none;
+    border: none;
+    text-decoration: underline;
 }
 .rg-btn{
     width: 120px;
