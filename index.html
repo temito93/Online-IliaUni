@@ -6,12 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online IliaUni</title>
 
-  <!--icons-->
-  <script src="https://kit.fontawesome.com/6de6aa5275.js" crossorigin="anonymous"></script>
-
-  <!-- icons
-    <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
-    <script defer  src="js/libraries/fontawsome/all.min.js"></script> -->
+  <!-- icons -->
+   <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
+ 
 
   <!-- Bootstrap-->
   <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
@@ -29,12 +26,12 @@
 </head>
 
 <body>
-  <header class="header position-absolute top-0 w-100 z-index-3">
+  <header class="header position-absolute top-0 w-100">
     <nav class="navbar navbar-expand-lg navbar-light py-0">
       <div class="container-fluid align-items-start p-0 m-0">
         <div class="space bg-dark"></div>
           <a class="navbar-brand bg-dark  me-0 p-3 logo" href="#">
-            <img src="img/logo.png" alt="logo" width="120">
+            <img src="img/logo.png" alt="logo">
           </a>
         <div class="button-wrapper bg-dark justify-content-between align-items-center w-100">
           <a class="navbar-brand bg-dark  me-0  mobile-logo" href="#">
@@ -48,7 +45,7 @@
         <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
           <ul class="navbar-nav m-0">
             <li class="nav-item nav-li position-relative">
-              <a class="nav-link active text-white links" aria-current="page" href="#">კურსები</a>
+              <a class="nav-link active text-white links" aria-current="page" href="courses.html">კურსები</a>
             </li>
             <li class="nav-item nav-li position-relative">
               <a class="nav-link  text-white links" aria-current="page" href="#">ლექციები</a>
@@ -66,10 +63,10 @@
           <hr>
           <div class="icons d-flex">
             <div class="header-icons position-relative">
-                <img src="img/icon-search.png" alt="search">
+                <img src="img/icon-search.png" alt="search" >
             </div>
             <div class="header-icons">
-              <img src="img/icon-user.png" alt="icon-user">
+              <img src="img/icon-user.png" alt="icon-user" id="login">
             </div>
           </div>
         </div>
@@ -77,6 +74,26 @@
       </div>
     </nav>
   </header>
+  <div id="popup" class="w-50 position-absolute  popup top-0 position-relative">
+    <img src="/img/close.png" alt="close" id="close" class="position-absolute close">
+    <div class="container-fluid registration-popup">
+      <h5 class="text-white">რეგისტრაცია</h5>
+      <form id="registration" class="d-flex flex-column">
+        <p class="text-dark w-50">რეგისტრაციისთვის აუცილებელია 
+          ყველა ველის შევსება</p>
+        <input type="text" name="name"  id="name"  placeholder="სახელი">
+        <input type="text" name="surname" id="surname"  placeholder="გვარი">
+        <input type="email" name="email"  id="email" placeholder="ელ.ფოსტა">
+        <input type="password" name="password" id="password"  placeholder="პაროლი">
+        <input type="password" name="password"  id="confirmPassword" placeholder="გაიმეორეთ პაროლი">
+        <div class="input-links mb-5">
+          <button id="rg-btn" class="text-dark me-3">რეგისტრაცია</button>
+          <button id="password-btn" class="text-dark">პაროლის აღდგენა</button>
+        </div>
+        <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+      </form>
+    </div>
+  </div>
 
 
 
@@ -103,14 +120,14 @@
     <section class="container-fluid filter-section position-relative p-0">
         <div id="library-left-elem" class="row ps-5 bg-col w-75">
             <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
-            <div class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
-            <div class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
+            <div id="menu-tag-item" class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
+            <div id="lec-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items bg-light text-dark border-start border-light">პოპულარობის მიხედვით <img src="img/eye.svg" alt="eye"></div>
         </div>
 
         <!-- Library content-->
-        <div id="library-content" class="position-absolute w-100"> 
-          <form action="/action_page.php" class="form d-flex justify-content-around flex-column w-100 h-75">
+        <div id="content-background" class="position-absolute w-100"> 
+          <form id="lib-content" action="/action_page.php" class="form  justify-content-around flex-column w-100 h-75">
             <label class="checkbox"> 
                 <input type="checkbox">
                 <span class="checkbox-test"></span>მეცნიერება
@@ -175,13 +192,63 @@
               <input type="checkbox">
               <span class="checkbox-test"></span>რელიგია
             </label>
-            <div class="buttons d-flex flex-wrap justify-content-between">
+            <div class="buttons d-flex justify-content-between">
+              <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+              <button id="library-check-button" type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+            </div>
+          </form>
+
+          <div id="tag-content" class="tag-space">
+            <div class="tag-items">
+              <div class="tag-elements d-flex">
+                <p>#მეცნიერება,</p>
+                <p>#შესავალი,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#მენეჯმენტი,</p>
+                <p>#თამაშები,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ტექნოლოგიები, </p>
+                <p>#აკადემიური,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ეკოლოგია, </p>
+                <p>#ისტორია,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ლიტერატურა, </p>
+                <p>#არქეოლოგია,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ტექნოლოგიები, </p>
+                <p>#ენათმეცნიერება,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#მენეჯმენტი, </p>
+                <p>#თამაშები,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ტექნოლოგიები, </p>
+                <p>#აკადემიური,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>>#ეკოლოგია, </p>
+                <p>#ისტორია,</p>
+              </div>
+              <div class="tag-elements d-flex">
+                <p>#ლიტერატურა,</p>
+                <p>#არქეოლოგია,</p>
+              </div>
+            </div>
+            <div class="buttons d-flex justify-content-between">
               <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
               <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
             </div>
-          </form>
+          </div>
           
-          <div class="lecturer-tab" id="">
+            
+          <div class="lecturer-tab" id="lect-content">
             <div class="lecturers overflow-auto">
               <div>სახელი გვარი</div>
               <div>სახელი გვარი</div>
@@ -214,7 +281,7 @@
               <div>სახელი გვარი</div>
               <div>სახელი გვარი</div>
             </div>
-            <div class="buttons">
+            <div class="buttons d-flex justify-content-between">
               <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
               <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
             </div>
@@ -227,179 +294,192 @@
     
 
 
-    <div id="grid-system-id" class="grid-container d-flex flex-wrap grid-system">
-
+    <div id="grid-system-id" class="position-relative grid-container d-flex  flex-wrap grid-system">
       <div class="container">
-        <div class="row  d-flex justify-content-between  flex-wrap pt-5">
+        <div class="container">
+          <div class="row  d-flex justify-content-between  flex-wrap pt-5">
 
-          <div class="col-3 box-visibility">
-            <div class="relative-box w-100 h-100 position-relative ">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
+            <div class="col-3 box-visibility">
+              <div class="relative-box w-100 h-100 position-relative ">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img class="w-100 h-100"
+                  src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+                  alt="image">
+                <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+                <div class="box-lock position-absolute bottom-0 end-0">
+                  <img src="img/lock.svg" alt="img">
+                </div>
               </div>
-              <img class="w-100 h-100"
-                src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
-                alt="image">
-              <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
-              <div class="box-lock position-absolute bottom-0 end-0">
-                <img src="img/lock.svg" alt="img">
+              <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
+              <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+              <div class="box-content d-flex">
+                <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+                <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
               </div>
             </div>
-            <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
-            <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
-            <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
-              <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
-            </div>
-          </div>
 
-          <div class="col-3 box-visibility">
-            <div class="relative-second-box position-relative ">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
-              </div>
-              <img src="">
-              <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
+            <div class="col-3 box-visibility">
+              <div class="relative-second-box position-relative ">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img src="">
+                <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
 
-              <div class="second-box-container position-absolute bottom-0">
-                <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
-                <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
-                  არის რომ სამ ხაზში ეტეოდეს</h6>
+                <div class="second-box-container position-absolute bottom-0">
+                  <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
+                  <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
+                    არის რომ სამ ხაზში ეტეოდეს</h6>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-3 box-visibility">
-            <div class="relative-box w-100 h-100 position-relative ">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
+            <div class="col-3 box-visibility">
+              <div class="relative-box w-100 h-100 position-relative ">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img class="w-100 h-100"
+                  src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+                  alt="image">
+                <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+                <div class="box-lock position-absolute bottom-0 end-0">
+                  <img src="img/lock.svg" alt="img">
+                </div>
               </div>
-              <img class="w-100 h-100"
-                src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
-                alt="image">
-              <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
-              <div class="box-lock position-absolute bottom-0 end-0">
-                <img src="img/lock.svg" alt="img">
+              <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
+              <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+              <div class="box-content d-flex">
+                <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+                <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
               </div>
             </div>
-            <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
-            <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
-            <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
-              <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
-            </div>
-          </div>
 
-          <div class="col-3 box-visibility">
-            <div class="relative-second-box position-relative  ">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
-              </div>
-              <img src="">
-              <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
+            <div class="col-3 box-visibility">
+              <div class="relative-second-box position-relative  ">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img src="">
+                <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
 
-              <div class="second-box-container position-absolute bottom-0">
-                <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
-                <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
-                  არის რომ სამ ხაზში ეტეოდეს</h6>
+                <div class="second-box-container position-absolute bottom-0">
+                  <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
+                  <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
+                    არის რომ სამ ხაზში ეტეოდეს</h6>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="row row-cols-4 d-flex justify-content-between  flex-wrap pt-5">
-          <div class="col-3 box-visibility">
+        <div class="container">
+          <div class="row row-cols-4 d-flex justify-content-between  flex-wrap pt-5">
+            <div class="col-3 box-visibility">
 
-            <div class="relative-box w-100 h-100 position-relative">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
+              <div class="relative-box w-100 h-100 position-relative">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img class="w-100 h-100"
+                  src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+                  alt="image">
+                <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+                <div class="box-lock position-absolute bottom-0 end-0">
+                  <img src="img/lock.svg" alt="img">
+                </div>
               </div>
-              <img class="w-100 h-100"
-                src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
-                alt="image">
-              <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
-              <div class="box-lock position-absolute bottom-0 end-0">
-                <img src="img/lock.svg" alt="img">
+
+
+
+              <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
+              <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+              <div class="box-content d-flex">
+                <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+                <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
               </div>
             </div>
 
+            <div class="col-3 box-visibility">
+              <div class="relative-second-box position-relative ">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
 
+                <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
 
-            <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
-            <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
-            <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
-              <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+                <div class="second-box-container position-absolute bottom-0">
+                  <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
+                  <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
+                    არის რომ სამ ხაზში ეტეოდეს</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 box-visibility">
+              <div class="relative-box w-100 h-100 position-relative">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+                <img class="w-100 h-100"
+                  src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+                  alt="image">
+                <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+                <div class="box-lock position-absolute bottom-0 end-0">
+                  <img src="img/lock.svg" alt="img">
+                </div>
+              </div>
+              <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
+              <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+              <div class="box-content d-flex">
+                <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+                <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+              </div>
+            </div>
+
+            <div class="col-3 box-visibility">
+              <div class="relative-second-box position-relative">
+                <div class="view-container position-absolute top-0 end-0">
+                  <img src="img/icon-eye.svg" alt="img">
+                  <span class="view-container-span text-white"> 1324 </span>
+                </div>
+
+                <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
+
+                <div class="second-box-container position-absolute bottom-0">
+                  <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
+                  <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
+                    არის რომ სამ ხაზში ეტეოდეს</h6>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="col-3 box-visibility">
-            <div class="relative-second-box position-relative ">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
-              </div>
-
-              <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
-
-              <div class="second-box-container position-absolute bottom-0">
-                <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
-                <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
-                  არის რომ სამ ხაზში ეტეოდეს</h6>
-              </div>
+          
+        </div>
+      
+        
+        <div id="pagination-id" class="container-fluid">
+            <div class="pagination">
+              <ul class="d-flex justify-content-between pl-0" id="pagination_ul"> 
+          
+              </ul>
             </div>
-          </div>
-
-          <div class="col-3 box-visibility">
-            <div class="relative-box w-100 h-100 position-relative">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
-              </div>
-              <img class="w-100 h-100"
-                src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
-                alt="image">
-              <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
-              <div class="box-lock position-absolute bottom-0 end-0">
-                <img src="img/lock.svg" alt="img">
-              </div>
-            </div>
-            <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
-            <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
-            <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
-              <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
-            </div>
-          </div>
-
-          <div class="col-3 box-visibility">
-            <div class="relative-second-box position-relative">
-              <div class="view-container position-absolute top-0 end-0">
-                <img src="img/icon-eye.svg" alt="img">
-                <span class="view-container-span text-white"> 1324 </span>
-              </div>
-
-              <p class="second-box-p rotate-title position-absolute start-0">ინტერვიუ</p>
-
-              <div class="second-box-container position-absolute bottom-0">
-                <p class="second-box-container-p text-white">ლექტორი: თამარ ცხადაძე</p>
-                <h6 class="second-box-container-h6 text-white">სათაური შედარებით გრძელი შესახებ ვთქვათ იმდენად გრძელი
-                  არის რომ სამ ხაზში ეტეოდეს</h6>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+    
 
-
+   
+    
 
 
 
@@ -409,7 +489,7 @@
 
 
 
-
+ 
 
 
 
@@ -453,10 +533,13 @@
         </div>
     </footer>
 
-
+  <script src="js/jquery-3.6.0.js"></script>
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
   <script src="js/library-click.js"></script>
-  <script src="js/test.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/forms.js"></script>
+ 
+
 
 </body>
 
