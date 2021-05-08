@@ -1,9 +1,6 @@
 :root {
     --s-18px: 18px;
 }
-body{
-    overflow-x: hidden;
-}
 
 /* section one */
 .section-one {
@@ -153,11 +150,13 @@ header li:hover{
 /* ----popup--- */
 .popup{
     background-color: #E2E2F7;
-    height: 100vh;
+    width: 42%;
+    max-width: 690px;
     right: -50%;
-    padding: 30px 105px ;
+    padding: 30px 5.5%;
     z-index: 10;
     transition: all 0.1s;
+    opacity: 0;
 }
 .close{
     right: 30px;
@@ -171,8 +170,9 @@ header li:hover{
     font-family: 'Noto Sans Georgian';
     font-size: 20px;
 }
-#registration input{
-    width: 50%;
+.popup input{
+    width: 100%;
+    max-width: 340px;
     height: 45px;
     background-color: rgba(0, 255, 255, 0);
     padding-left: 10px;
