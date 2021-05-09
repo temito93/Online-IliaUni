@@ -193,7 +193,7 @@ header li:hover{
 }
 /* Library content */
 
-#content-background {
+.content-background {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
     z-index: 2;
@@ -310,14 +310,16 @@ header li:hover{
 }
 
 /*pagination*/
-#pagination-id {
+.pagination-id {
     max-width: 480px;
     width: 100%;
     margin-left: 0;
-    margin-top: 100px;
     padding: 0;
 }
 
+.lectures-p-margin {
+    margin-top: 290px;
+}
 .pagination ul{
     width: 484px;
     padding: 0;
@@ -510,3 +512,18 @@ footer .footer-logo img {
         color: white;
     }
 }
+
+
+
+.lectures-filter-section {
+    height: 3560px;
+}
+
+
+.m-top {
+    margin-top: 220px;
+}
+
+
+
+
