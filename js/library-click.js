@@ -1,8 +1,8 @@
 'use strict'
 
-let libClick = document.getElementById("lib-click");
+let libClick = document.querySelector(".lib-click");
 
-let getContentBackground = document.getElementById("content-background");
+let getContentBackground = document.querySelector(".content-background");
 
 if(getContentBackground){
     getContentBackground.style.display = "none";
@@ -27,23 +27,23 @@ if(libClick) {
 
 
         //get offset width of library element for library content
-        let libGetWidth = document.getElementById("lib-click").offsetWidth;
+        let libGetWidth = document.querySelector(".lib-click").offsetWidth;
 
-        let gridSystem = document.getElementById("grid-system-id");
+        let gridSystem = document.querySelector(".grid-system-id");
 
         
 
 
 
         //lib-content (form)
-        let libContEl = document.getElementById("lib-content");
+        let libContEl = document.querySelector(".lib-content");
 
         //hides lect-content id
-        let getLectTab = document.getElementById("lect-content");
+        let getLectTab = document.querySelector(".lect-content");
         getLectTab.style.display = "none";
 
         //display none on tag content
-        let tagCont = document.getElementById("tag-content");
+        let tagCont = document.querySelector(".tag-content");
         tagCont.style.display = "none";
 
         if  (getContentBackground.style.display == "none") {
@@ -127,7 +127,7 @@ if(libClick) {
 //lec-click
 
 
-let lectClick = document.getElementById("lec-click");
+let lectClick = document.querySelector(".lec-click");
 
 if(lectClick) {
     lectClick.addEventListener("click", lectFunc);
@@ -143,13 +143,13 @@ if(lectClick) {
 
 
         //get offset width of library element for library content
-        let tagGetWidth = document.getElementById("lec-click").offsetWidth;
+        let tagGetWidth = document.querySelector(".lec-click").offsetWidth;
 
 
-        let libContEl = document.getElementById("lib-content");
+        let libContEl = document.querySelector(".lib-content");
         
 
-        let lecEl = document.getElementById("lect-content");
+        let lecEl = document.querySelector(".lect-content");
 
         
         
@@ -158,10 +158,10 @@ if(lectClick) {
         libContEl.style.display = "none";
 
         //display none on tag content
-        let tagCont = document.getElementById("tag-content");
+        let tagCont = document.querySelector(".tag-content");
         tagCont.style.display = "none";
 
-        let gridSystem = document.getElementById("grid-system-id");
+        let gridSystem = document.querySelector(".grid-system-id");
         
         
         if (getContentBackground.style.display == "none"){
@@ -235,7 +235,7 @@ if(lectClick) {
 
 //tag content
 
-let tagClick = document.getElementById("menu-tag-item");
+let tagClick = document.querySelector(".menu-tag-item");
 
 if(tagClick){
     tagClick.addEventListener("click", tagFunc);
@@ -251,20 +251,20 @@ if(tagClick){
 
 
         //get offset width of library element for tag content
-        let tagGetWidth = document.getElementById("lib-click").offsetWidth;
+        let tagGetWidth = document.querySelector(".lib-click").offsetWidth;
 
-        let tagEl = document.getElementById("tag-content");
+        let tagEl = document.querySelector(".tag-content");
             
         //display none on lib-content
-        let libContEl = document.getElementById("lib-content");
+        let libContEl = document.querySelector(".lib-content");
         libContEl.style.display = "none";
 
         //hides lect-content id
-        let getLectTab = document.getElementById("lect-content");
+        let getLectTab = document.querySelector(".lect-content");
         getLectTab.style.display = "none";
 
 
-        let gridSystem = document.getElementById("grid-system-id");
+        let gridSystem = document.querySelector(".grid-system-id");
         
         
         if (getContentBackground.style.display == "none"){
@@ -371,7 +371,7 @@ if(tagClick){
 
 //Clear library checkbox
 
-let getLibCheckButton = document.getElementById("library-check-button");
+let getLibCheckButton = document.querySelector(".library-check-button");
 
 if(getLibCheckButton){
     getLibCheckButton.addEventListener("click", unCheckFunc);

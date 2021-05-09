@@ -99,15 +99,15 @@
 
     <section class="container-fluid filter-section position-relative p-0">
         <div id="library-left-elem" class="row ps-5 bg-col w-75">
-            <div id="lib-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
-            <div id="menu-tag-item" class="col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
-            <div id="lec-click" class="col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
+            <div class="lib-click col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
+            <div class="menu-tag-item col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
+            <div class="lec-click col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
             <div class="col-sm d-flex align-items-center justify-content-between filter-items bg-light text-dark border-start border-light">პოპულარობის მიხედვით <img src="img/eye.svg" alt="eye"></div>
         </div>
 
         <!-- Library content-->
-        <div id="content-background" class="position-absolute w-100"> 
-          <form id="lib-content" action="/action_page.php" class="form  justify-content-around flex-column w-100 h-75">
+        <div class="content-background position-absolute w-100"> 
+          <form  action="/action_page.php" class="lib-content form  justify-content-around flex-column w-100 h-75">
             <label class="checkbox"> 
                 <input type="checkbox">
                 <span class="checkbox-test"></span>მეცნიერება
@@ -174,11 +174,11 @@
             </label>
             <div class="buttons d-flex justify-content-between">
               <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
-              <button id="library-check-button" type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+              <button type="button" class="library-check-button btn btn-outline-light clear-btn">გასუფთავება</button>
             </div>
           </form>
 
-          <div id="tag-content" class="tag-space">
+          <div class="tag-content tag-space">
             <div class="tag-items">
               <div class="tag-elements d-flex">
                 <a href="">#მეცნიერება, </a>
@@ -228,7 +228,7 @@
           </div>
           
             
-          <div class="lecturer-tab" id="lect-content">
+          <div class="lecturer-tab lect-content">
             <div class="lecturers overflow-auto">
               <div>სახელი გვარი</div>
               <div>სახელი გვარი</div>
@@ -274,7 +274,7 @@
     
 
 
-    <div id="grid-system-id" class="position-relative grid-container d-flex  flex-wrap grid-system">
+    <div class="grid-system-id position-relative grid-container d-flex  flex-wrap grid-system">
       <div class="container">
         <div class="container">
           <div class="row  d-flex justify-content-between  flex-wrap pt-5">
@@ -447,7 +447,7 @@
         </div>
       
         
-        <div id="pagination-id" class="index-p-margin container-fluid">
+        <div class="pagination-id index-p-margin container-fluid">
             <div class="pagination">
               <ul class="d-flex justify-content-between pl-0" id="pagination_ul"> 
           

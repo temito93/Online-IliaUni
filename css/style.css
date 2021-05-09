@@ -157,8 +157,7 @@ header li:hover{
     padding:0 25px;
 }
 /* Library content */
-
-#content-background {
+.content-background {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
     z-index: 2;
@@ -249,7 +248,7 @@ header li:hover{
 
 
 /*pagination*/
-#pagination-id {
+.pagination-id {
     max-width: 480px;
     width: 100%;
     margin-left: 0;
