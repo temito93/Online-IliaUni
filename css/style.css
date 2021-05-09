@@ -193,7 +193,7 @@ header li:hover{
 }
 /* Library content */
 
-#content-background {
+.content-background {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
     z-index: 2;
@@ -310,7 +310,7 @@ header li:hover{
 }
 
 /*pagination*/
-#pagination-id {
+.pagination-id {
     max-width: 480px;
     width: 100%;
     margin-left: 0;
@@ -510,3 +510,13 @@ footer .footer-logo img {
         color: white;
     }
 }
+
+
+.tutorials-filter-section {
+    height: 3560px;
+}
+
+.m-top {
+    margin-top: 220px;
+}
+
