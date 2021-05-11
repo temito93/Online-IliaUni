@@ -317,9 +317,6 @@ header li:hover{
     padding: 0;
 }
 
-.tutorials-p-margin {
-    margin-top: 100px;
-}
 
 .pagination ul{
     width: 484px;
@@ -515,11 +512,4 @@ footer .footer-logo img {
 }
 
 
-.tutorials-filter-section {
-    height: 3560px;
-}
-
-.m-top-t {
-    margin-top: 100px;
-}
 
