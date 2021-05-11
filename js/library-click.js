@@ -20,6 +20,7 @@ if(libClick) {
         event.preventDefault();
         
 
+
         //get filter-items
         let filterElem = document.querySelectorAll('.filter-items');
 
@@ -134,8 +135,10 @@ let lectClick = document.querySelector(".lec-click");
 if(lectClick) {
     lectClick.addEventListener("click", lectFunc);
 
+
     function lectFunc(event) {
         event.preventDefault();
+
 
         //get filter-items
         let filterElem = document.querySelectorAll('.filter-items');
@@ -243,8 +246,10 @@ let tagClick = document.querySelector(".menu-tag-item");
 if(tagClick){
     tagClick.addEventListener("click", tagFunc);
 
+
     function tagFunc(event) {
         event.preventDefault();
+
 
         //get filter-items
         let filterElem = document.querySelectorAll('.filter-items');

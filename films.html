@@ -8,7 +8,7 @@
 
  <!-- icons -->
  <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
- <script defer  src="js/libraries/fontawsome/all.min.js"></script>
+
 
   <!-- Bootstrap-->
   <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
@@ -66,7 +66,7 @@
                 <img src="img/icon-search.png" alt="search">
             </div>
             <div class="header-icons">
-              <img src="img/icon-user.png" alt="icon-user">
+              <img src="img/icon-user.png" alt="icon-user" id="login">
             </div>
           </div>
         </div>
@@ -74,6 +74,26 @@
       </div>
     </nav>
   </header>
+  <div id="popup" class="popup top-0 position-fixed">
+    <img src="img/close.png"" alt="close" id="close" class="position-absolute close">
+    <div class="container-fluid registration-popup">
+      <h5 class="text-white">რეგისტრაცია</h5>
+      <form id="registration" class="d-flex flex-column">
+        <p class="text-dark w-50">რეგისტრაციისთვის აუცილებელია 
+          ყველა ველის შევსება</p>
+        <input type="text" name="name"  id="name"  placeholder="სახელი">
+        <input type="text" name="surname" id="surname"  placeholder="გვარი">
+        <input type="email" name="email"  id="email" placeholder="ელ.ფოსტა">
+        <input type="password" name="password" id="password"  placeholder="პაროლი">
+        <input type="password" name="password"  id="confirmPassword" placeholder="გაიმეორეთ პაროლი">
+        <div class="input-links mb-5">
+          <button id="rg-btn" class="text-dark me-3">ავტორიზაცია</button>
+          <button id="password-btn" class="text-dark">პაროლის აღდგენა</button>
+        </div>
+        <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+      </form>
+    </div>
+  </div>
   <section>
       <div class="container-fluid header-background position-relative">
         <h1 class="position-absolute bottom-50 start-50 text-white">ფილმები</h1>
@@ -123,9 +143,11 @@
 </footer>
 
 
+<script src="js/jquery-3.6.0.js"></script>
 <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
 <script src="js/library-click.js"></script>
 <script src="js/pagination.js"></script>
+<script src="js/forms.js"></script>
 
 </body>
 
