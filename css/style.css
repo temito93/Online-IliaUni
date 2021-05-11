@@ -317,9 +317,7 @@ header li:hover{
     padding: 0;
 }
 
-.lectures-p-margin {
-    margin-top: 290px;
-}
+
 .pagination ul{
     width: 484px;
     padding: 0;
@@ -512,18 +510,6 @@ footer .footer-logo img {
         color: white;
     }
 }
-
-
-
-.lectures-filter-section {
-    height: 3560px;
-}
-
-
-.m-top {
-    margin-top: 220px;
-}
-
 
 
 
