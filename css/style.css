@@ -1,9 +1,6 @@
 :root {
     --s-18px: 18px;
 }
-body{
-    overflow-x: hidden;
-}
 
 /* section one */
 .section-one {
@@ -153,11 +150,13 @@ header li:hover{
 /* ----popup--- */
 .popup{
     background-color: #E2E2F7;
-    height: 100vh;
+    width: 42%;
+    max-width: 690px;
     right: -50%;
-    padding: 30px 105px ;
+    padding: 30px 5.5%;
     z-index: 10;
     transition: all 0.1s;
+    opacity: 0;
 }
 .close{
     right: 30px;
@@ -171,8 +170,9 @@ header li:hover{
     font-family: 'Noto Sans Georgian';
     font-size: 20px;
 }
-#registration input{
-    width: 50%;
+.popup input{
+    width: 100%;
+    max-width: 340px;
     height: 45px;
     background-color: rgba(0, 255, 255, 0);
     padding-left: 10px;
@@ -193,7 +193,7 @@ header li:hover{
 }
 /* Library content */
 
-#content-background {
+.content-background {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
     z-index: 2;
@@ -310,13 +310,13 @@ header li:hover{
 }
 
 /*pagination*/
-#pagination-id {
+.pagination-id {
     max-width: 480px;
     width: 100%;
     margin-left: 0;
-    margin-top: 100px;
     padding: 0;
 }
+
 
 .pagination ul{
     width: 484px;
@@ -510,3 +510,6 @@ footer .footer-logo img {
         color: white;
     }
 }
+
+
+

@@ -72,8 +72,8 @@
       </div>
     </nav>
   </header>
-  <div id="popup" class="w-50 position-absolute  popup top-0 position-relative">
-    <img src="/img/close.png" alt="close" id="close" class="position-absolute close">
+  <div id="popup" class="popup top-0 position-fixed">
+    <img src="img/close.png"" alt="close" id="close" class="position-absolute close">
     <div class="container-fluid registration-popup">
       <h5 class="text-white">რეგისტრაცია</h5>
       <form id="registration" class="d-flex flex-column">
@@ -85,7 +85,7 @@
         <input type="password" name="password" id="password"  placeholder="პაროლი">
         <input type="password" name="password"  id="confirmPassword" placeholder="გაიმეორეთ პაროლი">
         <div class="input-links mb-5">
-          <button id="rg-btn" class="text-dark me-3">რეგისტრაცია</button>
+          <button id="rg-btn" class="text-dark me-3">ავტორიზაცია</button>
           <button id="password-btn" class="text-dark">პაროლის აღდგენა</button>
         </div>
         <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
@@ -99,19 +99,193 @@
   </section>
 
 
-
-
-
-
-  <section>
-    <div class="container-fluid p-5 ">
-      <div class="pagination">
-        <ul class="d-flex justify-content-between pl-0" id="pagination_ul"> 
-  
-        </ul>
-      </div>
+  <section class="container-fluid courses-filter-section position-relative p-0">
+    <div id="library-left-elem" class="row ps-5 bg-col w-75">
+        <div class="lib-click col-sm d-flex align-items-center justify-content-between filter-items">ბიბლიოთეკა <img src="img/icon-library.svg" alt="libraries"></div>
+        <div class="menu-tag-item col-sm d-flex align-items-center justify-content-between filter-items">თეგები <img src="img/tags.svg" alt="tags"></div>
+        <div class="lec-click col-sm d-flex align-items-center justify-content-between filter-items">ლექტორები <img src="img/lecturers.svg" alt="lecturers"></div>
+        <div class="col-sm d-flex align-items-center justify-content-between filter-items bg-light text-dark border-start border-light">პოპულარობის მიხედვით <img src="img/eye.svg" alt="eye"></div>
     </div>
-  </section>
+
+    <!-- Library content-->
+    <div class="content-background position-absolute w-100"> 
+      <form action="/action_page.php" class="lib-content form justify-content-around flex-column w-100 h-25">
+        <label for="checkbox-1" class="checkbox"> 
+            <input type="checkbox" name="checkbox-1">
+            <span class="checkbox-test"></span>მეცნიერება
+        </label>
+        <label for="checkbox-2" class="checkbox">
+          <input type="checkbox">
+          <span class="checkbox-test" name="checkbox-2"></span> შთა 
+        </label>
+        <label for="checkbox-3" class="checkbox">
+          <input type="checkbox" name="checkbox-3">
+          <span class="checkbox-test"></span>კატეგორია
+        </label>
+        <label for="checkbox-4" class="checkbox">
+          <input type="checkbox" name="checkbox-4">
+          <span class="checkbox-test"></span>ტექნოლოგიები
+        </label>
+        <label for="checkbox-5" class="checkbox">
+          <input type="checkbox" name="checkbox-5">
+          <span class="checkbox-test"></span>ენათმეცნიერება
+        </label>
+        <label for="checkbox-6" class="checkbox">
+          <input type="checkbox" name="checkbox-6">
+          <span class="checkbox-test"></span>მენეჯმენტი
+        </label>
+        <label for="checkbox-7" class="checkbox">
+          <input type="checkbox" name="checkbox-7">
+          <span class="checkbox-test"></span>თამაშები
+        </label>
+        <label for="checkbox-8" class="checkbox">
+          <input type="checkbox" name="checkbox-8">
+          <span class="checkbox-test"></span>ტექნოლოგიები
+        </label>
+        <label for="checkbox-9" class="checkbox">
+          <input type="checkbox" name="checkbox-9">
+          <span class="checkbox-test"></span>აკადემიური მუშაობის 
+        </label>
+        <label for="checkbox-10" class="checkbox">
+          <input type="checkbox" name="checkbox-10">
+          <span class="checkbox-test"></span>ტექნიკები
+        </label>
+        <label for="checkbox-11" class="checkbox">
+          <input type="checkbox" name="checkbox-11">
+          <span class="checkbox-test"></span>ეკოლოგია
+        </label>
+        <label for="checkbox-12" class="checkbox">
+          <input type="checkbox" name="checkbox-12">
+          <span class="checkbox-test"></span>ისტორია
+        </label>
+        <label for="checkbox-13" class="checkbox">
+          <input type="checkbox" name="checkbox-13">
+          <span class="checkbox-test"></span>ლიტერატურა
+        </label>
+        <label for="checkbox-14" class="checkbox">
+          <input type="checkbox" name="checkbox-14">
+          <span class="checkbox-test"></span>მეცნიერება
+        </label>
+        <label for="checkbox-15" class="checkbox">
+          <input type="checkbox" name="checkbox-15">
+          <span class="checkbox-test"></span>ისტორია
+        </label>
+        <label for="checkbox-16" class="checkbox">
+          <input type="checkbox" name="checkbox-16">
+          <span class="checkbox-test"></span>რელიგია
+        </label>
+        <div class="buttons d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+          <button type="button" class="library-check-button btn btn-outline-light clear-btn">გასუფთავება</button>
+        </div>
+      </form>
+
+      <div class="tag-content tag-space">
+        <div class="tag-items">
+          <div class="tag-elements d-flex">
+            <a href="">#მეცნიერება, </a>
+            <a href="">#შესავალი,</a>
+          </div>
+          <div class="tag-elements d-flex">
+            <a href="">#მენეჯმენტი, </a>
+            <a href="">#თამაშები,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ტექნოლოგიები, </a>
+            <a href="">#აკადემიური,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ეკოლოგია, </a>
+            <a href="">#ისტორია,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ლიტერატურა, </a>
+            <a href="">#არქეოლოგია,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ტექნოლოგიები, </a>
+            <a href="">#ენათმეცნიერება,</a>
+          </div>
+          <div class="tag-elements d-flex">
+            <a href="">#მენეჯმენტი, </a>
+            <a href="">#თამაშები,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ტექნოლოგიები, </a>
+            <a href="">#აკადემიური,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ეკოლოგია, </a>
+            <a href="">#ისტორია,</a>
+          </div>
+          <div class="tag-elements d-flex">
+             <a href="">#ლიტერატურა, </a>
+            <a href="">#არქეოლოგია,</a>
+          </div>
+        </div>
+        <div class="buttons d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+          <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+        </div>
+      </div>
+      
+        
+      <div class="lecturer-tab lect-content">
+        <div class="lecturers overflow-auto">
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+          <div>სახელი გვარი</div>
+        </div>
+        <div class="buttons d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
+          <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
+        </div>
+      </div>
+      
+    <!--End -->
+    </div>
+
+    <!-- Grid System-->
+    <div class="grid-system-id position-relative grid-container d-flex  flex-wrap grid-system">
+      
+      <!--Parent container for all-->
+      <div class="container">
+
+
+
+
+
+
+
+
+  
 
   <!-- Footer -->
   <footer class="site-footer style-3" id="footer">
