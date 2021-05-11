@@ -511,5 +511,27 @@ footer .footer-logo img {
     }
 }
 
+.courses-p-margin {
+    margin-top: 250px;
+}
 
+.lectures-p-margin {
+    margin-top: 290px;
+}
+
+.courses-filter-section,
+.lectures-filter-section,
+.tutorials-filter-section {
+    height: 3560px;
+
+}
+
+.m-top {
+    margin-top: 220px;
+}
+
+
+.m-top-t {
+    margin-top: 100px;
+}
 
