@@ -214,6 +214,7 @@ header li:hover{
     display: none;
 }
 #library-left-elem{
+    width: 90%;
     cursor:pointer;
 }
 
@@ -294,7 +295,6 @@ header li:hover{
 /*tags*/
 .tag-items{
     margin: 50px 0 40px 20px;
-    max-height: 770px;
     color: #fff;
 }
 .tag-elements p{
@@ -347,7 +347,6 @@ header li:hover{
 .pagination ul li:first-child{
     color: #E2E2F7;
 }
-
 
 /*here is footer css style*/
 footer {
