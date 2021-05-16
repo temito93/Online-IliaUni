@@ -1,7 +1,6 @@
 :root {
     --s-18px: 18px;
 }
-
 /* section one */
 .section-one {
     padding-right: 0; 
@@ -149,6 +148,7 @@ header li:hover{
 }
 /* ----popup--- */
 .popup{
+    font-family: 'Noto Sans Georgian';
     background-color: #E2E2F7;
     width: 42%;
     max-width: 690px;
@@ -177,9 +177,16 @@ header li:hover{
     background-color: rgba(0, 255, 255, 0);
     padding-left: 10px;
     margin-bottom: 20px;
+    border: 1px solid black;
 }
-#registration{
-    margin-top: 230px;
+#result-text{
+    top: 21%;
+}
+#courses-authentication h4{
+    font-size: 24px;
+}
+#recover{
+    max-width: 190px;
 }
 .input-links button{
     font-size: 15px;
@@ -190,6 +197,9 @@ header li:hover{
 .rg-btn{
     width: 120px;
     font-size: 15px;
+}
+#errors{
+    white-space:pre-wrap;
 }
 /* Library content */
 
@@ -204,6 +214,7 @@ header li:hover{
     display: none;
 }
 #library-left-elem{
+    width: 90%;
     cursor:pointer;
 }
 
@@ -284,7 +295,6 @@ header li:hover{
 /*tags*/
 .tag-items{
     margin: 50px 0 40px 20px;
-    max-height: 770px;
     color: #fff;
 }
 .tag-elements p{
@@ -337,7 +347,6 @@ header li:hover{
 .pagination ul li:first-child{
     color: #E2E2F7;
 }
-
 
 /*here is footer css style*/
 footer {
