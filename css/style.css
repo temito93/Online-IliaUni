@@ -69,6 +69,9 @@ header {
     background: rgb(51,51,51);
     background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(255,255,255,1) 100%);
 }
+.courseTitle-background{
+    height: 550px;
+}
 .header-background h1{
     font-family: 'DejaVu Sans';
     font-size: 30px;
@@ -93,7 +96,9 @@ header {
 header li:hover{
     background-color: #34383d;
 }
-
+.active a{
+    color: #595C59 !important;
+}
 .button-wrapper{
     display: none;
     background-color: #c8c9ca;
@@ -155,7 +160,6 @@ header li:hover{
     right: -50%;
     padding: 30px 5.5%;
     z-index: 10;
-    transition: all 0.1s;
     opacity: 0;
 }
 .close{
@@ -488,6 +492,25 @@ footer .footer-logo img {
 .box-lock img {
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+/* detail page  */
+.courseTitle::before{
+    content: "test";
+    width: 10px;
+    height: 10px;
+}
+.courseTitle-background{
+    font-size: 20px;
+    color: white;
+}
+.courseTitle-background small{
+    color: #E2E2F7;
+}
+.courseTitle-background h2{
+    font-size: 42px;
+    width: 57%;
+    margin: 20px 0;
 }
 
 /* media--------------- */
