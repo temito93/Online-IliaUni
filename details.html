@@ -133,13 +133,76 @@
       </div>
     </div>
   </div>
-  <section>
-      <div class="container-fluid  d-flex justify-content-center align-items-center flex-column header-background courseTitle-background">
-        <small>ეკოლოგია</small>
-        <h2 class="text-white text-center" id="courseTitle">გურამ ყიფიანი, ძველი სამყაროს 
+
+  <section class="container-fluid  d-flex justify-content-center align-items-center flex-column header-background courseTitle-background">
+    <small> <img src="img/library.svg" alt="library-icon" class="mb-2 me-1"> ეკოლოგია</small>
+    <h2 class="text-white text-center mb-3 mt-1" id="courseTitle">გურამ ყიფიანი, ძველი სამყაროს 
 დიზაინი (შესავალი)</h2>
-        <h5>7 ლექცია, ხანგძლივობა: 23 წთ.</h5>   
+    <h5>7 ლექცია, ხანგძლივობა: 23 წთ.</h5>   
+  </section>
+  <section class="container-fluid video-courses d-flex justify-content-center">
+    <div class="video-courses-wr w-100 d-flex flex-column align-items-center ">
+    <div class="rating-wr w-100">
+      <div class="d-flex justify-content-between align-items-center w-50 py-5" >
+        <!-- star rating------- -->
+        <div class="rating-wrapper d-flex align-items-center">
+          <p class="text-white me-3 m-0">რეიტინგი: </p>
+          <div  class="rating d-flex flex-row-reverse">
+            <input type="radio" name="star" id="star5" class="d-none"> <label for="star5"></label>
+            <input type="radio" name="star" id="star4" class="d-none"> <label for="star4"></label>
+            <input type="radio" name="star" id="star3" class="d-none"> <label for="star3"></label>
+            <input type="radio" name="star" id="star2" class="d-none"> <label for="star2"></label>
+            <input type="radio" name="star" id="star1" class="d-none"> <label for="star1"></label>
+          </div>
+        </div>
+        <!-- sessions -->
+        <div class="session d-flex align-items-center">
+          <img src="img/icon-eye.svg" width="30" height="30" alt="eye">
+          <p class="m-0 ms-2 text-white">1324</p>
+        </div>
+        <!-- users -->
+        <div class="users d-flex align-items-center">
+          <img src="img/icon-user.png"  width="30" height="30"  alt="user">
+          <p class="m-0 ms-2 text-white">90</p>
+        </div>
       </div>
+    </div>  
+    <!-- carousel------ -->
+    <div class="slider-wrapper w-100">
+      <div class="slideshow-container">
+        <div class="slides w-100">
+          <iframe class="video"  height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="slides">
+          <iframe class="video" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="numbertext"><span id="slider-num">1</span> / <span id="courses-lenght">7</span></div>
+        <i class="fas fa-arrow-left prev" id="minus"></i>
+        <i class="fas fa-arrow-right next" id="plus"></i>
+        </div>
+    </div>
+  
+    <div class="video-info d-flex w-100 justify-content-between py-3">
+      <p>კურსის შესახებ: </br> <span id="course-lecturer"> გურამ ყიფიანი</span>, ძველი სამყაროს დიზაინი (შესავალი)</p>
+      <p>7 ლექცია, ხანგძლივობა: 23 წთ.</p>
+    </div>
+    <button class="btn btn-outline-light py-3 px-5 rounded-0 fs-5 my-5" >მსურს გავიარო კურსი<i class="fas fa-arrow-right ps-3"></i></button>
+  </div>
   </section>
 
 
@@ -177,11 +240,10 @@
         </div>
         </div>
     </footer>
-
 <script src="js/jquery-3.6.0.js"></script>
 <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
 <script src="js/forms.js"></script>
-<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
 
 </body>
 
