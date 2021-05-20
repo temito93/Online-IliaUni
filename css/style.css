@@ -301,7 +301,7 @@ header li:hover{
 .tag-elements p{
     margin-top: 10px;
     color: #fff;
-    font-family: Noto Sans Georgian;
+    font-family: "Noto Sans Georgian";
     font-size: 18px;
     line-height: 2;
     font-weight: lighter;
@@ -397,7 +397,9 @@ footer .footer-logo img {
 .grid-system {
     margin-bottom: 73px;
 }
-
+.grid-system-id a{
+    text-decoration: none;
+}
 .rotate-title{
     transform: rotate(-90deg);
 }
@@ -515,7 +517,7 @@ footer .footer-logo img {
     background:#1E1E1D;
     font-size: 20px;
     color: white;
-    padding: 1% 18% 4% 18% !important;
+    padding: 1% 18% 4% 18%;
 }
 #course-lecturer{
     text-decoration-line: underline;
@@ -585,6 +587,64 @@ footer .footer-logo img {
 }
 .active-slider{
   background-color: #717171;
+}
+
+/* course-info */
+.course-info{
+    font-family: 'Noto Sans Georgian';
+    font-size: 16px;
+    padding: 2% 18%;
+}
+#read-more{
+    border: none;
+    text-decoration:underline;
+}
+.info-text{
+    height: 142px;
+    overflow: hidden;
+}
+.text-wrapper{
+    align-items: flex-end;
+}
+.course-links{
+    left: -13%;
+}
+.course-links button{
+    border: 1px solid black;
+}
+
+.lectures-lists{
+    background: #E2E2F7;
+    max-width: 1070px;
+}
+ol{
+    list-style: none
+}
+.lectures-lists .list-description:before{
+    content: "1.";
+    position: absolute;
+    left: -35px;
+    font-size: 32px;
+    bottom: 0px;
+}
+.lectures-lists:nth-child(2) .list-description:before{
+    content: "2.";
+}
+.lectures-lists:nth-child(3) .list-description:before{
+    content: "3.";
+}
+.lectures-lists:nth-child(4) .list-description:before{
+    content: "4."
+}
+.lists-wrapper{
+    padding: 2% 18%;
+}
+.lists-wrapper h3{
+    font-family: 'DejaVu Sans';
+    font-size: 20px;
+}
+.lists-wrapper img{
+    cursor: pointer;
 }
 
 
