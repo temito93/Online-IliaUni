@@ -1,10 +1,6 @@
 :root {
     --s-18px: 18px;
 }
-body{
-    overflow-x: hidden;
-}
-
 /* section one */
 .section-one {
     padding-right: 0; 
@@ -97,7 +93,9 @@ header {
 header li:hover{
     background-color: #34383d;
 }
-
+.active a{
+    color: #595C59 !important;
+}
 .button-wrapper{
     display: none;
     background-color: #c8c9ca;
@@ -152,12 +150,14 @@ header li:hover{
 }
 /* ----popup--- */
 .popup{
+    font-family: 'Noto Sans Georgian';
     background-color: #E2E2F7;
-    height: 100vh;
+    width: 42%;
+    max-width: 690px;
     right: -50%;
-    padding: 30px 105px ;
+    padding: 30px 5.5%;
     z-index: 10;
-    transition: all 0.1s;
+    opacity: 0;
 }
 .close{
     right: 30px;
@@ -171,15 +171,23 @@ header li:hover{
     font-family: 'Noto Sans Georgian';
     font-size: 20px;
 }
-#registration input{
-    width: 50%;
+.popup input{
+    width: 100%;
+    max-width: 340px;
     height: 45px;
     background-color: rgba(0, 255, 255, 0);
     padding-left: 10px;
     margin-bottom: 20px;
+    border: 1px solid black;
 }
-#registration{
-    margin-top: 230px;
+#result-text{
+    top: 21%;
+}
+#courses-authentication h4{
+    font-size: 24px;
+}
+#recover{
+    max-width: 190px;
 }
 .input-links button{
     font-size: 15px;
@@ -191,9 +199,12 @@ header li:hover{
     width: 120px;
     font-size: 15px;
 }
+#errors{
+    white-space:pre-wrap;
+}
 /* Library content */
 
-#content-background {
+.content-background {
     font-family: 'Noto Sans Georgian';
     font-size: 18px;
     z-index: 2;
@@ -204,6 +215,7 @@ header li:hover{
     display: none;
 }
 #library-left-elem{
+    width: 90%;
     cursor:pointer;
 }
 
@@ -284,7 +296,6 @@ header li:hover{
 /*tags*/
 .tag-items{
     margin: 50px 0 40px 20px;
-    max-height: 770px;
     color: #fff;
 }
 .tag-elements p{
@@ -310,13 +321,13 @@ header li:hover{
 }
 
 /*pagination*/
-#pagination-id {
+.pagination-id {
     max-width: 480px;
     width: 100%;
     margin-left: 0;
-    margin-top: 100px;
     padding: 0;
 }
+
 
 .pagination ul{
     width: 484px;
@@ -337,7 +348,6 @@ header li:hover{
 .pagination ul li:first-child{
     color: #E2E2F7;
 }
-
 
 /*here is footer css style*/
 footer {
@@ -481,6 +491,103 @@ footer .footer-logo img {
     margin-bottom: 10px;
 }
 
+/* detail page  */
+.courseTitle::before{
+    content: "test";
+    width: 10px;
+    height: 10px;
+}
+.courseTitle-background{
+    font-family: 'Noto Sans Georgian';
+    height: 550px;
+    font-size: 20px;
+    color: white;
+}
+.courseTitle-background small{
+    color: #E2E2F7;
+    text-decoration-line: underline;
+}
+.courseTitle-background h2{
+    font-size: 42px;
+    width: 57%;
+}
+.video-courses{
+    background:#1E1E1D;
+    font-size: 20px;
+    color: white;
+    padding: 1% 18% 4% 18% !important;
+}
+#course-lecturer{
+    text-decoration-line: underline;
+}
+.rating label{
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+.rating label:before{
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    position: relative;
+    display: block;
+    color: #757575;
+    font-weight: 600;
+}
+.rating label:after{
+    content: "\f005";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: .1s;
+    display: block;
+    color: #BFB883;
+    font-weight: 600;
+}
+.rating label:hover:after, .rating label:hover ~ label:after, .rating input:checked ~ label:after{
+    opacity:1;
+}
+.video-courses-wr{
+    max-width: 1200px;
+}
+/* ----slideshow */
+.slides{
+    display: none
+}
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+.prev{
+    left: -100px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 45px;
+    transition: 0.1s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+  right: -100px;
+  border-radius: 3px 0 0 3px;
+}
+.numbertext {
+    font-family: 'DejaVu Sans';
+    color: #f2f2f2;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 3px;
+    right: -60px;
+    transform: rotate(270deg);
+}
+.active-slider{
+  background-color: #717171;
+}
+
+
 /* media--------------- */
 @media (max-width: 1480px){
     .nav-li{
@@ -510,3 +617,28 @@ footer .footer-logo img {
         color: white;
     }
 }
+
+.courses-p-margin {
+    margin-top: 250px;
+}
+
+.lectures-p-margin {
+    margin-top: 290px;
+}
+
+.courses-filter-section,
+.lectures-filter-section,
+.tutorials-filter-section {
+    height: 3560px;
+
+}
+
+.m-top {
+    margin-top: 220px;
+}
+
+
+.m-top-t {
+    margin-top: 100px;
+}
+
