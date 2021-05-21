@@ -8,7 +8,7 @@
 
   <!--icons-->
   <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
-  
+  <link rel="icon" href="/img/favicon.svg" type="image/gif">
 
   <!-- Bootstrap-->
   <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
@@ -44,9 +44,9 @@
         <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
           <ul class="navbar-nav m-0">
             <li class="nav-item nav-li position-relative">
-              <a class="nav-link active text-white links" aria-current="page" href="courses.html">კურსები</a>
+              <a class="nav-link text-white links" aria-current="page" href="courses.html">კურსები</a>
             </li>
-            <li class="nav-item nav-li position-relative">
+            <li class="nav-item nav-li position-relative active">
               <a class="nav-link  text-white links" aria-current="page" href="lectures.html">ლექციები</a>
             </li>
             <li class="nav-item nav-li position-relative">
@@ -72,24 +72,65 @@
       </div>
     </nav>
   </header>
-  <div id="popup" class="popup top-0 position-fixed">
-    <img src="img/close.png"" alt="close" id="close" class="position-absolute close">
-    <div class="container-fluid registration-popup">
-      <h5 class="text-white">რეგისტრაცია</h5>
-      <form id="registration" class="d-flex flex-column">
-        <p class="text-dark w-50">რეგისტრაციისთვის აუცილებელია 
-          ყველა ველის შევსება</p>
-        <input type="text" name="name"  id="name"  placeholder="სახელი">
-        <input type="text" name="surname" id="surname"  placeholder="გვარი">
-        <input type="email" name="email"  id="email" placeholder="ელ.ფოსტა">
-        <input type="password" name="password" id="password"  placeholder="პაროლი">
-        <input type="password" name="password"  id="confirmPassword" placeholder="გაიმეორეთ პაროლი">
-        <div class="input-links mb-5">
-          <button id="rg-btn" class="text-dark me-3">ავტორიზაცია</button>
-          <button id="password-btn" class="text-dark">პაროლის აღდგენა</button>
+  <div id="popup" class="popup top-0 position-fixed vh-100 ">
+    <img src="img/close.png" alt="close" id="close" class="position-absolute close">
+    <h5 class="text-white" id="top-title">ავტორიზაცია</h5>
+    <!-- --authentication-- -->
+    <div id="popup-wrapper" class="align-items-center vh-100 d-flex" >
+      <div class="container-fluid authentication flex-column d-flex p-0" id="authentication">
+        <div id="result-text" class="position-absolute">
+          <div id="courses-authentication" class="d-none">
+            <small>კურსის გასასვლელად:</small>
+            <h4>(კურსი)</h4>
+          </div>
+          <div id="success-registration" class="d-none">
+            <img src="img/done.svg" class="pb-3" alt="done">
+            <p id="popup-title" class="m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
+          </div>
         </div>
-        <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
-      </form>
+        <form id="authentication-form">
+          <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
+          <input type="email" name="email"  id="authentication-email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" id="authentication-password"  placeholder="პაროლი">
+          <div class="input-links mb-5">
+            <button id="rg-btn" class="text-dark me-3">რეგისტრაცია</button>
+            <button id="auth-password-btn" class="text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark rg-btn ps-2">ავტორიზაცია</button>
+        </form>
+      </div>
+      <!-- --registration-- -->
+      <div class="container-fluid registration-popup flex-column  p-0 d-none" id="registration">
+        <form id="registration-form" class="d-flex flex-column">
+          <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
+            ყველა ველის შევსება</p>
+          <input type="text" name="name"  id="name"  placeholder="სახელი">
+          <input type="text" name="surname" id="surname"  placeholder="გვარი">
+          <input type="email" name="email"  id="email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" id="password"  placeholder="პაროლი">
+          <input type="password" name="password"  id="confirmPassword" placeholder="გაიმეორეთ პაროლი" class="mb-0">
+          <div id="errors" class="py-2 text-danger"></div>
+          <div class="input-links mb-5">
+            <button id="authentication-btn" class="text-dark me-3">ავტორიზაცია</button>
+            <button id="password-btn" class="text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+        </form>
+      </div>
+      <!-- ---recovery-- -->
+      <div id="password-recovery" class="d-none container-fluid flex-column  p-0">
+        <form id="password-form" class="d-flex flex-column">
+          <p class="text-dark w-100">
+            პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
+          </p>
+          <input type="email" name="email"  id="email-recovery" placeholder="ელ.ფოსტა" required>
+          <button type="submit" id="recover" class="btn btn-dark ps-2">პაროლის აღდგენა</button>
+        </form>
+        <div id="recovery-done" class="d-none">
+          <img src="img/done.svg" class="pb-3" alt="done">
+          <p class="m-0 ps-3">ელ. ფოსტაზე გამოგეგზავნთ პაროლის აღსადგენი ბმული</p>
+        </div>
+      </div>
     </div>
   </div>
   <section>
@@ -182,48 +223,25 @@
       </form>
 
       <div class="tag-content tag-space">
-        <div class="tag-items">
-          <div class="tag-elements d-flex">
-            <a href="">#მეცნიერება, </a>
-            <a href="">#შესავალი,</a>
-          </div>
-          <div class="tag-elements d-flex">
-            <a href="">#მენეჯმენტი, </a>
-            <a href="">#თამაშები,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ტექნოლოგიები, </a>
-            <a href="">#აკადემიური,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ეკოლოგია, </a>
-            <a href="">#ისტორია,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ლიტერატურა, </a>
-            <a href="">#არქეოლოგია,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ტექნოლოგიები, </a>
-            <a href="">#ენათმეცნიერება,</a>
-          </div>
-          <div class="tag-elements d-flex">
-            <a href="">#მენეჯმენტი, </a>
-            <a href="">#თამაშები,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ტექნოლოგიები, </a>
-            <a href="">#აკადემიური,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ეკოლოგია, </a>
-            <a href="">#ისტორია,</a>
-          </div>
-          <div class="tag-elements d-flex">
-             <a href="">#ლიტერატურა, </a>
-            <a href="">#არქეოლოგია,</a>
-          </div>
-        </div>
+            <div class="tag-items">
+              <div class="tag-elements">
+                <p>#მეცნიერება, #შესავალი,</p>
+                <p>#მენეჯმენტი, #თამაშები,</p>
+                <p>#ტექნოლოგიები, </p>
+                <p>#აკადემიური,</p>
+                <p>#ეკოლოგია, #ისტორია,</p>
+                <p>#ლიტერატურა, </p>
+                <p>#არქეოლოგია,</p>
+                <p>#ტექნოლოგიები, </p>
+                <p>#ენათმეცნიერება,</p>
+                <p>#მენეჯმენტი, #თამაშები,</p>
+                <p>#ტექნოლოგიები, </p>
+                <p>#აკადემიური,</p>
+                <p>#ეკოლოგია, #ისტორია,</p>
+                <p>#ლიტერატურა,</p>
+                <p>#არქეოლოგია,</p>
+              </div>
+            </div>
         <div class="buttons d-flex justify-content-between">
           <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
           <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
@@ -282,7 +300,7 @@
         <!--1 row container-->
         <div class="container row   d-flex justify-content-between  flex-wrap pt-5">
           <!--1 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -299,14 +317,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 1-->
 
           <!--2 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -323,14 +341,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 2-->
 
           <!--3 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -347,14 +365,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 3-->
 
           <!--4 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -371,10 +389,10 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 4-->
         </div>
 
@@ -383,7 +401,7 @@
          <!--2 row container-->
         <div class="container row  row-cols-4 d-flex justify-content-between  flex-wrap m-top">
           <!--1 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -400,14 +418,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 1-->
 
           <!--2 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -424,14 +442,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 2-->
 
           <!--3 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -448,14 +466,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 3-->
 
           <!--4 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -472,10 +490,10 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 4-->
         </div>
 
@@ -483,7 +501,7 @@
         <!--3 row container-->
         <div class="container row  row-cols-4 d-flex justify-content-between  flex-wrap m-top">
           <!--1 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -500,14 +518,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 1-->
 
           <!--2 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -524,14 +542,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 2-->
 
           <!--3 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -548,14 +566,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 3-->
 
           <!--4 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -572,10 +590,10 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 4-->
         </div>
 
@@ -583,7 +601,7 @@
         <!--4 row container-->
         <div class="container row  row-cols-4 d-flex justify-content-between  flex-wrap m-top">
           <!--1 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -600,14 +618,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 1-->
 
           <!--2 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -624,14 +642,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 2-->
 
           <!--3 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -648,14 +666,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 3-->
 
           <!--4 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -672,10 +690,10 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 4-->
         </div>
 
@@ -683,7 +701,7 @@
         <!--5 row container-->
         <div class="container row  row-cols-4 d-flex justify-content-between  flex-wrap m-top">
           <!--1 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -700,14 +718,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 1-->
 
           <!--2 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -724,14 +742,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 2-->
 
           <!--3 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -748,14 +766,14 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 3-->
 
           <!--4 element-->
-          <div class="col-3 box-visibility">
+          <a href="details.html" class="col-3 box-visibility">
             <div class="relative-box w-100 h-100 position-relative ">
               <div class="view-container position-absolute top-0 end-0">
                 <img src="img/icon-eye.svg" alt="img">
@@ -772,10 +790,10 @@
             <p class="col-p">ლექტორი: თამარ ცხადაძე</p>
             <h6 class="col-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
             <div class="box-content d-flex">
-              <a href="#"> <i class="box-content-icon fas fa-play-circle"></i> </a>
+              <i class="box-content-icon fas fa-play-circle"></i>
               <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
             </div>
-          </div>
+          </a>
           <!--end of 4-->
         </div>
 
@@ -803,7 +821,7 @@
   <footer class="site-footer style-3" id="footer">
     <div class="container-fluid">
       <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
-        <a href="index.html"><img src="img/img-footer-brain.svg" alt="logo"/></a> 
+        <img src="img/img-footer-brain.svg" alt="logo"/> 
         <div class="row position-absolute d-flex justify-content-between alighn-items-start w-100 px-5 pb-5">
           <div class="col-xl-3 col-sm-12 col-md-4 my-auto">
             <div class="widget widget_about">
