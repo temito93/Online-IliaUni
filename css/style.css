@@ -377,6 +377,7 @@ footer .footer-logo img {
 
 /*grid-systems styles*/
 .grid-system {
+  min-height: 300px;
   margin-bottom: 73px;
 }
 
