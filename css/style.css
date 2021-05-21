@@ -1,6 +1,7 @@
 :root {
   --s-18px: 18px;
 }
+
 /* section one */
 .section-one {
   padding-right: 0;
@@ -90,14 +91,10 @@ header li:hover {
   background-color: #34383d;
 }
 
-.active a{
-    color: #595C59 !important;
-}
-.button-wrapper{
-    display: none;
-    background-color: #c8c9ca;
-    padding: 2px 20px;
-
+.button-wrapper {
+  display: none;
+  background-color: #c8c9ca;
+  padding: 2px 20px;
 }
 .space {
   width: 80px;
@@ -147,62 +144,48 @@ header li:hover {
   max-height: 60px;
 }
 /* ----popup--- */
-
-
-.popup{
-    font-family: 'Noto Sans Georgian';
-    background-color: #E2E2F7;
-    width: 42%;
-    max-width: 690px;
-    right: -50%;
-    padding: 30px 5.5%;
-    z-index: 10;
-    opacity: 0;
+.popup {
+  background-color: #e2e2f7;
+  width: 42%;
+  max-width: 690px;
+  right: -50%;
+  padding: 30px 5.5%;
+  z-index: 10;
+  transition: all 0.1s;
+  opacity: 0;
 }
-.close{
-    right: 30px;
-    cursor: pointer;
+.close {
+  right: 30px;
+  cursor: pointer;
 }
-.header-icons{
-    cursor: pointer;
-    padding:0 25px;
+.header-icons {
+  cursor: pointer;
+  padding: 0 25px;
 }
-.popup h5{
-    font-family: 'Noto Sans Georgian';
-    font-size: 20px;
+.popup h5 {
+  font-family: "Noto Sans Georgian";
+  font-size: 20px;
 }
-.popup input{
-    width: 100%;
-    max-width: 340px;
-    height: 45px;
-    background-color: rgba(0, 255, 255, 0);
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border: 1px solid black;
+.popup input {
+  width: 100%;
+  max-width: 340px;
+  height: 45px;
+  background-color: rgba(0, 255, 255, 0);
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
-#result-text{
-    top: 21%;
+#registration {
+  margin-top: 230px;
 }
-#courses-authentication h4{
-    font-size: 24px;
+.input-links button {
+  font-size: 15px;
+  background: none;
+  border: none;
+  text-decoration: underline;
 }
-#recover{
-    max-width: 190px;
-}
-.input-links button{
-    font-size: 15px;
-    background: none;
-    border: none;
-    text-decoration: underline;
-}
-.rg-btn{
-    width: 120px;
-    font-size: 15px;
-  
-
-}
-#errors{
-    white-space:pre-wrap;
+.rg-btn {
+  width: 120px;
+  font-size: 15px;
 }
 /* Library content */
 
@@ -218,22 +201,12 @@ header li:hover {
   max-width: 25vw;
   width: 100%;
 }
-
 #library-left-elem {
   margin: 0;
   display: grid;
   grid-template-columns: 5vw 20vw 20vw 20vw 20vw;
   cursor: pointer;
-  font-family: 'Noto Sans Georgian';
-  font-size: 18px;
-  z-index: 2;
-  background-color: #1E1E1D;
-  height: calc(100% - 60px);
-  color: white;
-  padding: 25px 50px;  
-  display: none;
 }
-
 
 /* checkbox-------- */
 .checkbox {
@@ -305,24 +278,20 @@ header li:hover {
   background: #555;
 }
 /*tags*/
-
 .tag-items {
   margin: 50px 0 40px 20px;
   max-height: 770px;
   color: #fff;
 }
-
-.tag-elements p{
-    margin-top: 10px;
-    color: #fff;
-    font-family: "Noto Sans Georgian";
-    font-size: 18px;
-    line-height: 2;
-    font-weight: lighter;
-    text-decoration: none;
-
+.tag-elements p {
+  margin-top: 10px;
+  color: #fff;
+  font-family: Noto Sans Georgian;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: lighter;
+  text-decoration: none;
 }
-
 .tag-elements:last-child {
   padding-bottom: 150px;
 }
@@ -412,15 +381,9 @@ footer .footer-logo img {
   margin-bottom: 73px;
 }
 
-
 .rotate-title {
   transform: rotate(-90deg);
-
-.grid-system-id a{
-    text-decoration: none;
 }
-
-  
 .relative-box img {
   max-width: 400px;
   max-height: 390px;
@@ -509,161 +472,6 @@ footer .footer-logo img {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-
-/* detail page  */
-.courseTitle::before{
-    content: "test";
-    width: 10px;
-    height: 10px;
-}
-.courseTitle-background{
-    font-family: 'Noto Sans Georgian';
-    height: 550px;
-    font-size: 20px;
-    color: white;
-}
-.courseTitle-background small{
-    color: #E2E2F7;
-    text-decoration-line: underline;
-}
-.courseTitle-background h2{
-    font-size: 42px;
-    width: 57%;
-}
-.video-courses{
-    background:#1E1E1D;
-    font-size: 20px;
-    color: white;
-    padding: 1% 18% 4% 18%;
-}
-#course-lecturer{
-    text-decoration-line: underline;
-}
-.rating label{
-    display: block;
-    cursor: pointer;
-    position: relative;
-}
-.rating label:before{
-    content: "\f005";
-    font-family: "Font Awesome 5 Free";
-    position: relative;
-    display: block;
-    color: #757575;
-    font-weight: 600;
-}
-.rating label:after{
-    content: "\f005";
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: .1s;
-    display: block;
-    color: #BFB883;
-    font-weight: 600;
-}
-.rating label:hover:after, .rating label:hover ~ label:after, .rating input:checked ~ label:after{
-    opacity:1;
-}
-.video-courses-wr{
-    max-width: 1200px;
-}
-/* ----slideshow */
-.slides{
-    display: none
-}
-.slideshow-container {
-  position: relative;
-  margin: auto;
-}
-.prev{
-    left: -100px;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    font-size: 45px;
-    transition: 0.1s ease;
-    border-radius: 0 3px 3px 0;
-}
-.next {
-  right: -100px;
-  border-radius: 3px 0 0 3px;
-}
-.numbertext {
-    font-family: 'DejaVu Sans';
-    color: #f2f2f2;
-    font-size: 22px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 3px;
-    right: -60px;
-    transform: rotate(270deg);
-}
-.active-slider{
-  background-color: #717171;
-}
-
-/* course-info */
-.course-info{
-    font-family: 'Noto Sans Georgian';
-    font-size: 16px;
-    padding: 2% 18%;
-}
-#read-more{
-    border: none;
-    text-decoration:underline;
-}
-.info-text{
-    height: 142px;
-    overflow: hidden;
-}
-.text-wrapper{
-    align-items: flex-end;
-}
-.course-links{
-    left: -13%;
-}
-.course-links button{
-    border: 1px solid black;
-}
-
-.lectures-lists{
-    background: #E2E2F7;
-    max-width: 1070px;
-}
-ol{
-    list-style: none
-}
-.lectures-lists .list-description:before{
-    content: "1.";
-    position: absolute;
-    left: -35px;
-    font-size: 32px;
-    bottom: 0px;
-}
-.lectures-lists:nth-child(2) .list-description:before{
-    content: "2.";
-}
-.lectures-lists:nth-child(3) .list-description:before{
-    content: "3.";
-}
-.lectures-lists:nth-child(4) .list-description:before{
-    content: "4."
-}
-.lists-wrapper{
-    padding: 2% 18%;
-}
-.lists-wrapper h3{
-    font-family: 'DejaVu Sans';
-    font-size: 20px;
-}
-.lists-wrapper img{
-    cursor: pointer;
-}
-
 
 /* media--------------- */
 @media (max-width: 1480px) {
