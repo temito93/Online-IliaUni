@@ -69,7 +69,7 @@ if(libClick) {
             }
 
             //Library content gets width parameter of the library element current width
-            getContentBackground.style.maxWidth = libGetWidth + 35 + "px";
+            // getContentBackground.style.maxWidth = libGetWidth + 35 + "px";
 
             gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
 
@@ -186,7 +186,7 @@ if(lectClick) {
             }
 
             //Library content gets width parameter of the library element current width
-            getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
+            // getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
 
 
             gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
@@ -301,7 +301,7 @@ if(tagClick){
             }
 
             //Library content gets width parameter of the library element current width
-            getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
+            // getContentBackground.style.maxWidth = tagGetWidth + 36 + "px";
 
 
             gridSystem.style.marginLeft = getContentBackground.offsetWidth + 15 + "px";
