@@ -600,6 +600,9 @@ footer .footer-logo img {
 .course-links{
   padding-right: 70px;
 }
+#read-more{
+  text-decoration: underline;
+  border:none;
 }
 .video-courses-wr{
     max-width: 1200px;
@@ -622,6 +625,9 @@ footer .footer-logo img {
     font-size: 45px;
     transition: 0.1s ease;
     border-radius: 0 3px 3px 0;
+}
+.lectures-lists{
+  background-color: #E2E2F7;
 }
 .next {
   right: -100px;
