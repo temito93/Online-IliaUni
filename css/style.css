@@ -151,20 +151,32 @@ header li:hover {
   background-color: #e2e2f7;
   width: 42%;
   max-width: 690px;
-  right: -50%;
   padding: 30px 5.5%;
   z-index: 10;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
+.result-text{
+  top: 21%;
+}
 
+.errors{
+  white-space:pre-wrap;
+}
 
-.open{
+.courses-authentication h4{
+  font-size: 24px;
+}
+.recover{
+  max-width: 190px;
+}
+
+.showPopup{
   right: 0;
   opacity: 1;
 }
 
-.close {
+.hidePopup {
   right: -50%;
   opacity: 0;
 }
@@ -189,7 +201,7 @@ header li:hover {
   padding-left: 10px;
   margin-bottom: 20px;
 }
-#registration {
+.registration {
   margin-top: 230px;
 }
 .input-links button {
