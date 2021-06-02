@@ -1,7 +1,9 @@
 :root {
   --s-18px: 18px;
 }
-
+a {
+  text-decoration: none;
+}
 /* section one */
 .section-one {
   padding-right: 0;
@@ -181,7 +183,7 @@ header li:hover {
   opacity: 0;
 }
 
-.closeBtn {
+.close {
   right: 30px;
   cursor: pointer;
 }
