@@ -505,7 +505,10 @@ footer .footer-logo img {
     color: white;
   }
 }
-
+.video-section{
+ background-color: #1E1E1D;
+ padding-bottom: 200px;
+}
 .index-p-margin {
   margin-top: 100px;
 }
@@ -632,6 +635,37 @@ footer .footer-logo img {
 .next {
   right: -100px;
   border-radius: 3px 0 0 3px;
+}
+.container-sm.row-cols-2{
+  max-width: 1080px;
+}
+.container-sm.lists-wrapper{
+  max-width: 1080px;
+}
+.title-of-course{
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-family: 'DejaVu Sans';
+}
+.courses-h6{
+  font-size: 18px;
+  font-family: 'DejaVu Sans';
+  margin-top: 16.5px;
+  color: #fff;
+
+}
+.courses-p{
+  font-size: 18px;
+  font-family: 'DejaVu Sans';
+  margin-top: 15px;
+  color: #fff;
+
+}
+.course-content-p{
+    font-size: 18px;
+    ont-family: 'DejaVu Sans';
+    color: #fff;
+    margin-left: 5px;
 }
 .numbertext {
     font-family: 'DejaVu Sans';
