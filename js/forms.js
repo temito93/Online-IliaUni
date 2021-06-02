@@ -65,3 +65,4 @@ registrationBtn.addEventListener('click', registrationForm);
 authenticationBtn.addEventListener('click', authenticationForm);
 passwordRecoveryFormBtn.addEventListener('click', passwordRecovery);
 passwordRecoveryFormBtn2.addEventListener('click', passwordRecovery);
+
