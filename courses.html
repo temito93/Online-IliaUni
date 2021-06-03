@@ -88,7 +88,7 @@
             <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
           </div>
         </div>
-        <form class="authentication-form">
+        <form id="authentication-form">
           <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
           <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
           <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
@@ -101,7 +101,7 @@
       </div>
       <!-- --registration-- -->
       <div class="container-fluid registration-popup flex-column  p-0 d-none">
-        <form class="registration-form d-flex flex-column">
+        <form id="registration-form" class="d-flex flex-column">
           <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
             ყველა ველის შევსება</p>
           <input type="text" name="name"  class="name"  placeholder="სახელი">
@@ -119,7 +119,7 @@
       </div>
       <!-- ---recovery-- -->
       <div class="password-recovery d-none container-fluid flex-column  p-0">
-        <form class="password-form d-flex flex-column">
+        <form id="password-form" class="d-flex flex-column">
           <p class="text-dark w-100">
             პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
           </p>
