@@ -1,7 +1,9 @@
 :root {
   --s-18px: 18px;
 }
-
+a {
+  text-decoration: none;
+}
 /* section one */
 .section-one {
   padding-right: 0;
@@ -61,7 +63,7 @@ header {
   z-index: 3;
 }
 .header-background {
-  height: 240px;
+  min-height: 350px;
   background: rgb(51, 51, 51);
   background: linear-gradient(
     0deg,
@@ -151,12 +153,36 @@ header li:hover {
   background-color: #e2e2f7;
   width: 42%;
   max-width: 690px;
-  right: -50%;
   padding: 30px 5.5%;
   z-index: 10;
-  transition: all 0.1s;
+  transition: all 0.4s;
+}
+
+.result-text{
+  top: 21%;
+}
+
+.errors{
+  white-space:pre-wrap;
+}
+
+.courses-authentication h4{
+  font-size: 24px;
+}
+.recover{
+  max-width: 190px;
+}
+
+.showPopup{
+  right: 0;
+  opacity: 1;
+}
+
+.hidePopup {
+  right: -50%;
   opacity: 0;
 }
+
 .close {
   right: 30px;
   cursor: pointer;
@@ -177,7 +203,7 @@ header li:hover {
   padding-left: 10px;
   margin-bottom: 20px;
 }
-#registration {
+.registration {
   margin-top: 230px;
 }
 .input-links button {
@@ -663,7 +689,7 @@ footer .footer-logo img {
 }
 .course-content-p{
     font-size: 18px;
-    ont-family: 'DejaVu Sans';
+    font-family: 'DejaVu Sans';
     color: #fff;
     margin-left: 5px;
 }
