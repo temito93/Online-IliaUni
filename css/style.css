@@ -119,6 +119,10 @@ header li:hover {
   top: 38%;
   background-color: #333321;
 }
+.header-icons:first-child{
+  left: -80%;
+}
+
 .header-icons:first-child:after {
   content: "";
   height: 24px;
@@ -618,6 +622,9 @@ footer .footer-logo img {
     color: #BFB883;
     font-weight: 600;
 }
+.info-text-wrapper{
+  max-width: 1045px;
+}
 .info-text{
   text-align: justify;
   font-family: 'Noto Sans Georgian';
@@ -707,4 +714,8 @@ footer .footer-logo img {
 }
 .active-slider{
   background-color: #717171;
+}
+/* detail page list  */
+.lecture-num{
+  font-size: 44px;
 }

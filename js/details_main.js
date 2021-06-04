@@ -51,3 +51,12 @@ readMorebtn.addEventListener("click",function(){
     }
 })
 
+// lectures-lists numbers 
+const lecturesList = document.getElementsByClassName("lectures-lists");
+const lectureNum = document.querySelectorAll(".lecture-num");
+
+for(let i = 0 ; i < lecturesList.length ; i++){
+    lectureNum[i].innerText = i+1+".";
+    console.log(lecturesList.length);
+}
+
