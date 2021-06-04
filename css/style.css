@@ -622,6 +622,8 @@ footer .footer-logo img {
   text-align: justify;
   font-family: 'Noto Sans Georgian';
   font-size: 16px;
+  height: 142px;
+  overflow-y: hidden;
 }
 .rating label:hover:after, .rating label:hover ~ label:after, .rating input:checked ~ label:after{
     opacity:1;

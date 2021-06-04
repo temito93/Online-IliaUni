@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 // ---- video slider---
 let slideIndex = 1;
 let coursesLength = document.getElementById("courses-lenght")
@@ -26,24 +26,28 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 
-    // read-more function
-    const readMorebtn = $("#read-more");
-    const text = $(".info-text");
-    const dots = $("#dots");
-    const btnText = $("#btn-text");
-    readMorebtn.on("click",function(){
-        // change the classNames and styles if the text doesn't appear
-        if(dots.hasClass("d-block")){
-            dots.removeClass("d-block").addClass("d-none");
-            text.css("height","auto");
-            $(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-up");
-        }
-        else{
-            text.css("height","142px");
-            dots.removeClass("d-none").addClass("d-block");
-            btnText.text("სრულიად");
-            $(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
-        }
-    })
-
+// read-more function
+const readMorebtn = document.getElementById("read-more");
+const text = document.getElementById("infoText")
+const dots = document.getElementById("dots");
+const btnText = document.getElementById("btn-text")
+readMorebtn.addEventListener("click",function(){
+    // change the classNames and styles if the text doesn't appear
+    if(dots.classList.contains("d-block")){
+        dots.classList.remove("d-block");
+        dots.classList.add("d-none");
+        text.style.height = "auto";
+        btnText.innerText = "ნაკლების ნახვა";
+        document.querySelector(".fa-angle-down").classList.add("fa-angle-up");
+        document.querySelector(".fa-angle-down").classList.remove("fa-angle-down")
+    }
+    else{
+        text.style.height = 142+"px";
+        dots.classList.remove("d-none");
+        dots.classList.add("d-block");
+        btnText.innerText = "სრულიად";
+        document.querySelector(".fa-angle-up").classList.add("fa-angle-down");
+        document.querySelector(".fa-angle-up").classList.remove("fa-angle-up")
+    }
 })
+
