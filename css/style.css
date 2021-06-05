@@ -154,7 +154,7 @@ header li:hover {
 }
 /* ----popup--- */
 .popup {
-  background-color: #e2e2f7;
+  background-color: #E8E8E8;
   width: 42%;
   max-width: 690px;
   padding: 30px 5.5%;
@@ -636,7 +636,8 @@ footer .footer-logo img {
     opacity:1;
 }
 .course-links{
-  padding-right: 70px;
+  left: 15%;
+  bottom: -170px;
 }
 #read-more{
   text-decoration: underline;
@@ -653,19 +654,22 @@ footer .footer-logo img {
   position: relative;
   margin: auto;
 }
-.prev{
+#minus{
     left: -100px;
 }
-.prev, .next {
+#minus, #plus{
     cursor: pointer;
     position: absolute;
     top: 50%;
     font-size: 45px;
     transition: 0.1s ease;
     border-radius: 0 3px 3px 0;
+    background: none;
+    border: none;
+    right: -100px;;
 }
 .lectures-lists{
-  background-color: #E2E2F7;
+  background-color: #E8E8E8;
 }
 .next {
   right: -100px;
@@ -674,7 +678,13 @@ footer .footer-logo img {
 .container-sm.row-cols-2{
   max-width: 1080px;
 }
-.container-sm.lists-wrapper{
+.lists-wrapper{
+  padding: 0px 21%;
+}
+.controls{
+  width: 180px;
+}
+.lists-wrapper ol{
   max-width: 1080px;
 }
 .title-of-course{
@@ -718,4 +728,47 @@ footer .footer-logo img {
 /* detail page list  */
 .lecture-num{
   font-size: 44px;
+}
+.align-items-flex-end{
+  align-items: flex-end;
+}
+.additional-info{
+  font-family: "Noto Sans Georgian";
+}
+.additional-info h5{
+  font-size: 20px;
+
+}
+.video-lecture-num{
+  font-size: 44px;
+  left: -40px;
+  top: -24px;
+}
+.additional-info p,.additional-info a {
+  font-size: 16px;
+}
+.padlocks{
+  background-color: #E8E8E8;
+  width: 90px;
+  height: 90px;
+}
+#question-form {
+  font-family: "Noto Sans Georgian";
+  font-size: 22px;
+  margin-bottom: 10%;
+}
+#answer3{
+  margin-bottom: 10%;
+}
+#question-form span{
+  font-size: 44px;
+}
+#question-form label{
+  align-items: baseline;
+}
+#quizResult{
+  font-size: 16px;
+}
+#submit-answer span{
+  font-size: 14px;
 }
