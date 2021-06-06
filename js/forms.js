@@ -29,7 +29,6 @@ const popupShow = function(){
    popUp.classList.remove('hidePopup');
    popUp.classList.add('showPopup');
 }
-
 //Popup close
 const popupHide = function(event) {
    event.preventDefault();
