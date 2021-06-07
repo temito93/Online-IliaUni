@@ -598,6 +598,9 @@ footer .footer-logo img {
 #course-lecturer{
     text-decoration-line: underline;
 }
+.course-info{
+  max-width: 58%;
+}
 .rating label{
     display: block;
     cursor: pointer;
@@ -647,9 +650,6 @@ footer .footer-logo img {
     max-width: 1200px;
 }
 /* ----slideshow */
-.slides{
-    display: none
-}
 .slideshow-container {
   position: relative;
   margin: auto;
@@ -680,9 +680,6 @@ footer .footer-logo img {
 }
 .lists-wrapper{
   padding: 0px 21%;
-}
-.controls{
-  width: 180px;
 }
 .lists-wrapper ol{
   max-width: 1080px;

@@ -47,6 +47,7 @@ const authenticationForm = function(event) {
 const loggin = (event) => {
    event.preventDefault();
    if(authEmail.value !== "" && authPassword.value !== "" ){
+      // in details_main.js
        changeContent()
    }
 }

@@ -15,13 +15,81 @@ const minus = document.getElementById("minus");
 const num = document.getElementById("slider-num");
 const lecturesList = document.getElementsByClassName("lectures-lists");
 const lectureNum = document.querySelectorAll(".lecture-num");
+const iframeVideo = document.getElementById('existing-iframe-example');
+const lectureTitleNum = document.querySelector("#lecture-title-num");
 
-let slideIndex = 1;
+let slideIndex = 0;
 let quizPassedNum = 0;
 let videoLecture = document.querySelector(".video-lecture-num");
 let plusIcon = document.querySelector(".prev");
 let minusIcon = document.querySelector(".next");
-let slides = document.getElementsByClassName("slides");   
+let slides = document.getElementById("slider"); 
+
+
+const lectureTitleArr =["პირველი","მეორე","მესამე","მეოთხე"]
+// video slider url 
+let srcArray = [
+    "https://www.youtube.com/embed/HOBlvpAl7CY?enablejsapi=1",
+    "https://www.youtube.com/embed/HOBlvpAl7CY?enablejsapi=1",
+    "https://www.youtube.com/embed/HOBlvpAl7CY?enablejsapi=1",
+    "https://www.youtube.com/embed/UkV0FSqyRxY?enablejsapi=1",
+]  
+// ---- video slider---
+// YouTube Player API  codes 
+let tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('existing-iframe-example', {
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+  });
+}
+// automatically play video after load 
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
+// when video ends automatically open quiz 
+function onPlayerStateChange(event) {
+    if(event.data === 0) { 
+        setTimeout(() => startTest(),2000) 
+    }
+}
+// show first lecture video, slideIndex = 1
+showSlides(slideIndex);
+// check how many quizes are passed 
+function plusSlides() {
+    // if enough quizes are passed switch slides
+    if(quizPassedNum > slideIndex){
+        slideIndex < srcArray.length ? slideIndex += 1:null;
+        showSlides(slideIndex);
+    }
+}
+// switch previous slide 
+function minusSlides() {
+    if(slideIndex > 0){
+        slideIndex -= 1;
+        showSlides(slideIndex);
+    }   
+}
+minus.addEventListener("click", () => minusSlides())
+plus.addEventListener("click",() => plusSlides())
+// slideshow function 
+function showSlides(slideIndex) {
+    //   also unlock lecture lists in html
+  lecturesList[quizPassedNum].querySelector(".padlocks").style.backgroundColor = "#FF4C65";
+  lecturesList[quizPassedNum].querySelector(".padlocks").children[0].src = "img/unlock.svg";
+  lecturesList[quizPassedNum].style.opacity = "0.4";
+  num.innerText = slideIndex+1;
+  videoLecture.innerText = `${slideIndex+1}.`;
+  coursesLength.innerText = srcArray.length;
+  lectureTitleNum.innerText = lectureTitleArr[slideIndex]
+}
+
 // on lowerBtn click slide popup 
 const loginCourse = () => {
     coursesAuthentication.classList.remove("d-none");
@@ -30,42 +98,6 @@ const loginCourse = () => {
     lowerBtn.removeEventListener("click",loginCourse);
 }
 lowerBtn.addEventListener("click",loginCourse);
-
-// ---- video slider---
-
-// show first lecture video, slideIndex = 1
-showSlides(slideIndex);
-// check how many quizes are passed 
-function plusSlides() {
-    // if enough quizes are passed switch slides
-    if(quizPassedNum > slideIndex-1){
-        slideIndex < slides.length ? slideIndex += 1:null;
-        showSlides(slideIndex);
-    }
-}
-// switch previous slide 
-function minusSlides() {
-    slideIndex - 1 > 0 ? slideIndex -= 1:null;
-    showSlides(slideIndex);
-}
-minus.addEventListener("click", () => minusSlides())
-plus.addEventListener("click",() => plusSlides())
-// slideshow function 
-function showSlides() {
-    //   also unlock lecture lists in html
-  lecturesList[quizPassedNum].querySelector(".padlocks").style.backgroundColor = "#FF4C65";
-  lecturesList[quizPassedNum].querySelector(".padlocks").children[0].src = "img/unlock.svg";
-  lecturesList[quizPassedNum].style.opacity = "0.4";
-  num.innerText = slideIndex;
-  videoLecture.innerText = slideIndex+".";
-  coursesLength.innerText = slides.length;
-  for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      //   slides appear by the className
-      slides[i].className = slides[i].className.replace("active-slider", "");  
-  }
-  slides[slideIndex-1].style.display = "block";  
-}
 
 // read-more function
 const readMorebtn = document.getElementById("read-more");
@@ -97,12 +129,21 @@ for(let i = 0 ; i < lecturesList.length ; i++){
     lectureNum[i].innerText = i+1+".";
 }
 
-if(true){
-    changeContent();
-}
+// change page content after user logins 
 function changeContent(){
-    changeSliderBtn()
-    addlInfo()
+    changeSliderBtn();
+    addlInfo();
+    changeLists();
+}
+
+function changeLists(){
+    for(let i = 0 ; i < lecturesList.length ; i++){
+        lecturesList[i].classList.remove("pe-4");
+        lecturesList[i].children[1].style.width = "180px";
+        lecturesList[i].children[1].children[1].classList.add("d-flex");
+        lecturesList[i].children[1].children[1].classList.remove("d-none");
+    }
+
 }
 
 //after login enable slider button
@@ -131,12 +172,11 @@ function addlInfo(){
     lowerBtn.children[1].classList.remove("fa-arrow-right","ps-3");
     lowerBtn.children[1].classList.add("fa-arrow-down","pt-3");
 }
-document.getElementById("start-quiz").addEventListener("click",startTest);
 function startTest(){
     // show test div and hide video player 
     testBox.classList.add("d-flex")
     testBox.classList.remove("d-none")
-    slides[slideIndex-1].style.display ="none";
+    slides.style.display = "none";
 }
 const correct = () => {
     quizPassedNum++
@@ -194,6 +234,7 @@ function resulText(btnText,text1,text2=""){
     submitAnswer.children[1].classList.remove("d-none");
 }
 function clearQuizResults(){
+    slides.style.display = "block";
     quizResult.children[0].innerText = "";
     quizResult.children[1].innerText = ""; 
     submitAnswer.children[0].innerText = "დადასტურება";
@@ -206,3 +247,5 @@ function clearQuizResults(){
     submitAnswer.removeEventListener("click",inCorrect);
     submitAnswer.addEventListener("click",checkAnswer);
 }
+
+
