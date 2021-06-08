@@ -4,6 +4,10 @@ const loginBtn = document.querySelector('.login');
 const closeBtn = document.querySelector('.close');
 //Authentication form button
 const authenticationBtn = document.querySelector('.authentication-btn');
+//Authentication form-submit 
+const authenticationSubmit = document.querySelector('#authentication-form');
+const authEmail = document.querySelector('.authentication-email');
+const authPassword = document.querySelector('.authentication-password');
 //Registration form button
 const registrationBtn = document.querySelector('.auth-rg-btn');
 //Password recovery form button
@@ -21,12 +25,10 @@ const registrationPopup = document.querySelector('.registration-popup');
 const passwordRecoveryForm = document.querySelector('.password-recovery');
 
 //Popup open
-const popupShow = function(event) {
-   event.preventDefault();   
+const popupShow = function(){
    popUp.classList.remove('hidePopup');
    popUp.classList.add('showPopup');
 }
-
 //Popup close
 const popupHide = function(event) {
    event.preventDefault();
@@ -41,6 +43,15 @@ const authenticationForm = function(event) {
    registrationPopup.classList.add('d-none');
    authentication.classList.remove('d-none');
 }
+//login user
+const loggin = (event) => {
+   event.preventDefault();
+   if(authEmail.value !== "" && authPassword.value !== "" ){
+      // in details_main.js
+       changeContent()
+   }
+}
+
 
 //Registration form
 const registrationForm = function(event) {
@@ -63,6 +74,6 @@ loginBtn.addEventListener('click', popupShow);
 closeBtn.addEventListener('click', popupHide);
 registrationBtn.addEventListener('click', registrationForm);
 authenticationBtn.addEventListener('click', authenticationForm);
+authenticationSubmit.addEventListener('submit', loggin);
 passwordRecoveryFormBtn.addEventListener('click', passwordRecovery);
 passwordRecoveryFormBtn2.addEventListener('click', passwordRecovery);
-
