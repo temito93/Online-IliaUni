@@ -136,15 +136,15 @@ function changeContent(){
     changeLists();
 }
 
-function changeLists(){
-    for(let i = 0 ; i < lecturesList.length ; i++){
-        lecturesList[i].classList.remove("pe-4");
-        lecturesList[i].children[1].style.width = "180px";
-        lecturesList[i].children[1].children[1].classList.add("d-flex");
-        lecturesList[i].children[1].children[1].classList.remove("d-none");
-    }
+// function changeLists(){
+//     for(let i = 0 ; i < lecturesList.length ; i++){
+//         lecturesList[i].classList.remove("pe-4");
+//         lecturesList[i].children[1].style.width = "180px";
+//         lecturesList[i].children[1].children[1].classList.add("d-flex");
+//         lecturesList[i].children[1].children[1].classList.remove("d-none");
+//     }
 
-}
+// }
 
 //after login enable slider button
 function changeSliderBtn(){
@@ -247,5 +247,3 @@ function clearQuizResults(){
     submitAnswer.removeEventListener("click",inCorrect);
     submitAnswer.addEventListener("click",checkAnswer);
 }
-
-
