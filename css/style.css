@@ -63,8 +63,7 @@ header {
   z-index: 3;
 }
 .header-background {
-  min-height: 350px;
-  background: rgb(51, 51, 51);
+  height: 240px;
   background: linear-gradient(
     0deg,
     rgba(51, 51, 51, 1) 0%,
@@ -119,6 +118,22 @@ header li:hover {
   top: 38%;
   background-color: #333321;
 }
+.header-icons:first-child{
+  left: -80%;
+}
+.logout{
+  color: white;
+  width: 230px;
+  height: 40px;
+  background-color: #212529;
+  position: absolute;
+  bottom: -44px;
+  right: 20px;
+  text-align: center;
+  padding: 7px;
+  display: none;
+  cursor: pointer;
+}
 .header-icons:first-child:after {
   content: "";
   height: 24px;
@@ -150,7 +165,7 @@ header li:hover {
 }
 /* ----popup--- */
 .popup {
-  background-color: #e2e2f7;
+  background-color: #E8E8E8;
   width: 42%;
   max-width: 690px;
   padding: 30px 5.5%;
@@ -594,6 +609,9 @@ footer .footer-logo img {
 #course-lecturer{
     text-decoration-line: underline;
 }
+.course-info{
+  max-width: 58%;
+}
 .rating label{
     display: block;
     cursor: pointer;
@@ -618,16 +636,22 @@ footer .footer-logo img {
     color: #BFB883;
     font-weight: 600;
 }
+.info-text-wrapper{
+  max-width: 1045px;
+}
 .info-text{
   text-align: justify;
   font-family: 'Noto Sans Georgian';
   font-size: 16px;
+  height: 142px;
+  overflow-y: hidden;
 }
 .rating label:hover:after, .rating label:hover ~ label:after, .rating input:checked ~ label:after{
     opacity:1;
 }
 .course-links{
-  padding-right: 70px;
+  left: 15%;
+  bottom: -170px;
 }
 #read-more{
   text-decoration: underline;
@@ -637,26 +661,26 @@ footer .footer-logo img {
     max-width: 1200px;
 }
 /* ----slideshow */
-.slides{
-    display: none
-}
 .slideshow-container {
   position: relative;
   margin: auto;
 }
-.prev{
+#minus{
     left: -100px;
 }
-.prev, .next {
+#minus, #plus{
     cursor: pointer;
     position: absolute;
     top: 50%;
     font-size: 45px;
     transition: 0.1s ease;
     border-radius: 0 3px 3px 0;
+    background: none;
+    border: none;
+    right: -100px;;
 }
 .lectures-lists{
-  background-color: #E2E2F7;
+  background-color: #E8E8E8;
 }
 .next {
   right: -100px;
@@ -665,7 +689,10 @@ footer .footer-logo img {
 .container-sm.row-cols-2{
   max-width: 1080px;
 }
-.container-sm.lists-wrapper{
+.lists-wrapper{
+  padding: 0px 21%;
+}
+.lists-wrapper ol{
   max-width: 1080px;
 }
 .title-of-course{
@@ -705,4 +732,204 @@ footer .footer-logo img {
 }
 .active-slider{
   background-color: #717171;
+}
+/* detail page list  */
+.lecture-num{
+  font-size: 44px;
+}
+.align-items-flex-end{
+  align-items: flex-end;
+}
+.additional-info{
+  font-family: "Noto Sans Georgian";
+}
+.additional-info h5{
+  font-size: 20px;
+
+}
+.video-lecture-num{
+  font-size: 44px;
+  left: -40px;
+  top: -24px;
+}
+.additional-info p,.additional-info a {
+  font-size: 16px;
+}
+.padlocks{
+  background-color: #E8E8E8;
+  width: 90px;
+  height: 90px;
+}
+#question-form {
+  font-family: "Noto Sans Georgian";
+  font-size: 22px;
+  margin-bottom: 10%;
+}
+#answer3{
+  margin-bottom: 10%;
+}
+#question-form span{
+  font-size: 44px;
+}
+#question-form label{
+  align-items: baseline;
+}
+#quizResult{
+  font-size: 16px;
+}
+#submit-answer span{
+  font-size: 14px;
+}
+/* ===personal page== */
+.personal-page-tabs{
+  font-family: "Noto Sans Georgian";
+  font-size: 20px;
+  background: #1E1E1D;
+  width: 60%;
+  color: white;
+}
+.personal-page-tabs div{
+  padding: 15px 6%;
+  width: 33.33%;
+  text-align: center;
+  cursor: pointer;
+  border-color: #333321 !important;
+}
+/* ---current course section  */
+.current-courses{
+  padding: 4% 4%;
+}
+.current-courses h3 , .finished-courses  h3 ,.badges-section h3{
+  font-family: 'DejaVu Sans';
+  font-size: 22px;
+  margin-bottom: 3% !important;
+}
+.course-description h5{
+  font-family: "Noto Sans Georgian";
+  font-size: 18px;
+}
+.course-description h5:nth-child(2){
+  font-family: 'DejaVu Sans';
+}
+.views-eye{
+  top: 10px;
+  right: 10px;
+}
+.course-info-side{
+  padding: 8% 5%;
+}
+.continue-course-button{
+  width: 200px;
+  border: 1px solid #707070;
+  color: #1E1E1D;
+  font-size: 14px;
+}
+.background-image{
+  width: 400px;
+  height: 390px;
+  background-image: linear-gradient( rgb(255 0 0 / 0%), rgb(0 0 0 / 49%) ), /* your image */ url(../img/demo-image.png);
+}
+/*-- finished course section  */
+.finished-courses{
+  padding: 2.7% 4%;
+  background: #E8E8E8;
+}
+.certificate-background-image{
+  background-image: url(../img/certificate.png);
+  min-width: 400px;
+  background-size: cover;
+  height: 390px;
+  background-color: #0000004d;
+  background-blend-mode: overlay;
+  position: relative;
+}
+.certificates-side{
+  padding: 70px 5%;
+}
+/* ---badges--- */
+.badges-section{
+  padding: 4%;
+}
+.popover-body{
+  background: #1E1E1D;
+  color: white;
+  font-family: "Noto Sans Georgian";
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.bs-popover-bottom > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::after {
+  border-bottom-color: #1E1E1D;
+}
+.bs-popover-start > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after {
+  border-left-color: #1e1e1d;
+}
+/* --progress--  */
+.progress{
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  transform: translate(-50%,-50%);
+}
+.progress:after{
+  content: "";
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 1px solid #f2f5f5;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 15px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+  font-family: "Noto Sans Georgian";
+  width: 100%;
+  height: 100%;
+  font-size: 42px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: absolute;
+}
+.progress .progress-bar{
+  border-color: #FF4C65;
 }
