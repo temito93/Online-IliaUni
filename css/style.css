@@ -118,9 +118,7 @@ header li:hover {
   top: 38%;
   background-color: #333321;
 }
-.header-icons:first-child{
-  left: -80%;
-}
+
 .logout{
   color: white;
   width: 230px;
