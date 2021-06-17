@@ -118,9 +118,7 @@ header li:hover {
   top: 38%;
   background-color: #333321;
 }
-.header-icons:first-child{
-  left: -80%;
-}
+
 .logout{
   color: white;
   width: 230px;
@@ -932,4 +930,95 @@ footer .footer-logo img {
 }
 .progress .progress-bar{
   border-color: #FF4C65;
+}
+
+
+/* Project Wrapper */
+.project-wrapper {
+  background-color: #212529;
+  max-width: 1954px;
+  width: 100%;
+  height: 470px;
+}
+
+.project-icons {
+  max-width: 54px;
+  width: 100%;
+}
+.project-img {
+  left: 50%;
+  bottom: 193px;
+  transform: translateX(-50%);
+}
+
+.project-title {
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-title h5 {
+  color: #fff;
+  text-align: center;
+  margin-top: 13px;
+}
+
+.project-content-container {
+  max-width: 54px;
+  width: 100%;
+}
+
+.project-content {
+  margin-top: 86px;
+}
+
+.project-icon-parameter {
+  border: 1px solid #1E1E1D;
+  background-color: #333333;
+  max-width: 54px;
+  width: 100%;
+  height: 54px;
+}
+
+.project-content-text {
+  margin-left: 72px;
+  max-width: 1061px;
+  width: 100%;
+}
+
+.line-p:nth-child(2),
+.line-p:nth-child(3)
+.line-p:nth-child(3) {
+  margin-top: 30px;
+}
+
+
+.project-content-container {
+  max-width: 1326px;
+  width: 100%;
+}
+
+.c-17px {
+  font-size: 17px;
+}
+
+.project-content-icons {
+  margin-top: 30px;
+  margin-left: 8.4px;
+}
+
+.youtube-icon-container {
+  margin-left: 22.6px; 
+}
+
+.project-content-addr {
+  margin-top: 40px;
+}
+
+.project-content-num {
+  margin-top: 25px;
+}
+
+.project-content-mail {
+  margin-top: 30px;
 }
