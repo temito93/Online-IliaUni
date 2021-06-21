@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online IliaUni</title>
+
+ <!-- icons -->
+ <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
+ <link rel="icon" href="/img/favicon.svg" type="image/gif">
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-utilities.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap.css">
+
+  <!--fonts-->
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!--main css-->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <header class="header position-absolute top-0 w-100 z-index-3">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container-fluid align-items-start p-0 m-0">
+        <div class="space bg-dark"></div>
+          <a class="navbar-brand bg-dark  me-0 p-3 logo" href="index.html">
+            <img src="img/logo.png"  alt="logo">
+          </a>
+        <div class="button-wrapper bg-dark justify-content-between align-items-center w-100">
+          <a class="navbar-brand bg-dark  me-0  mobile-logo" href="index.html">
+            <img class="w-100" src="img/logo.png" alt="logo" width="120">
+          </a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
+          <ul class="navbar-nav m-0">
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link active text-white links" aria-current="page" href="courses.html">კურსები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="lectures.html">ლექციები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="tutorials.html">თუთორიალები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="interview.html">ინტერვიუები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="films.html">ფილმები</a>
+            </li>
+          </ul>
+          <hr>
+          <div class="icons d-flex">
+            <div class="header-icons">
+                <img src="img/icon-search.png" alt="search">
+            </div>
+            <div class="header-icons login position-relative">
+              <img src="img/icon-user.png" alt="icon-user" >
+            </div>
+          </div>
+          <div class="logout">სისტემიდან გამოსვლა</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="popup hidePopup top-0 position-fixed vh-100 ">
+    <img src="img/close.png" alt="close" class="close position-absolute close">
+    <h5 class="text-white top-title">ავტორიზაცია</h5>
+    <!-- --authentication-- -->
+    <div class="popup-wrapper align-items-center vh-100 d-flex" >
+      <div class="container-fluid authentication flex-column d-flex p-0">
+        <div class="result-text position-absolute">
+          <div class="courses-authentication d-none">
+            <small>კურსის გასასვლელად:</small>
+            <h4>(კურსი)</h4>
+          </div>
+          <div class="success-registration d-none">
+            <img src="img/done.svg" class="pb-3" alt="done">
+            <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
+          </div>
+        </div>
+        <form id="authentication-form">
+          <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
+          <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
+          <div class="input-links mb-5">
+            <button class="auth-rg-btn text-dark me-3">რეგისტრაცია</button>
+            <button class="auth-password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark ps-2">ავტორიზაცია</button>
+        </form>
+      </div>
+      <!-- --registration-- -->
+      <div class="container-fluid registration-popup flex-column  p-0 d-none">
+        <form id="registration-form" class="d-flex flex-column">
+          <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
+            ყველა ველის შევსება</p>
+          <input type="text" name="name"  class="name"  placeholder="სახელი">
+          <input type="text" name="surname" class="surname"  placeholder="გვარი">
+          <input type="email" name="email"  class="email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="password"  placeholder="პაროლი">
+          <input type="password" name="password"  class="confirmPassword" placeholder="გაიმეორეთ პაროლი" class="mb-0">
+          <div class="errors py-2 text-danger"></div>
+          <div class="input-links mb-5">
+            <button class="authentication-btn text-dark me-3">ავტორიზაცია</button>
+            <button class="password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+        </form>
+      </div>
+      <!-- ---recovery-- -->
+      <div class="password-recovery d-none container-fluid flex-column  p-0">
+        <form id="password-form" class="d-flex flex-column">
+          <p class="text-dark w-100">
+            პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
+          </p>
+          <input type="email" name="email"  class="email-recovery" placeholder="ელ.ფოსტა" required>
+          <button type="submit" class="recover btn btn-dark ps-2">პაროლის აღდგენა</button>
+        </form>
+        <div class="recovery-done d-none">
+          <img src="img/done.svg" class="pb-3" alt="done">
+          <p class="m-0 ps-3">ელ. ფოსტაზე გამოგეგზავნთ პაროლის აღსადგენი ბმული</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header background  -->
+  <section>
+      <div class="container-fluid header-background position-relative">
+        <h1 class="position-absolute bottom-50 start-50 text-white">პირადი გვერდი</h1>
+      </div>
+  </section>
+  <!--course tabs  -->
+  <section class="personal-page-tabs d-flex justify-content-between">
+    <div class="current-course"><span>1</span> მიმდინარე კურსი</div>
+    <div class="finished-course border-start"><span>1</span> დასრულებული კურსი</div>
+    <div class="gold-badge border-start"><span>1</span> ოქროს ბეჯი</div>
+  </section>
+  <!-- current lectures section  -->
+  <section class="container-fluid current-courses">
+    <div class="row">
+      <h3 class="m-0">მიმდინარე კურსები</h3>
+    </div>
+    <div class="row courses-wrapper d-flex flex-wrap">
+        <!-- course 1 -->
+        <div class="current-course1 col-6 d-flex">
+            <div class="image-side">
+                <div class="background-image  position-relative">
+                  <!-- views  -->
+                    <div class="position-absolute views-eye">
+                        <img src="img/icon-eye.svg" alt="img">
+                        <span class="view-container-span text-white ms-1"> 1324 </span>
+                    </div>
+                    <!-- progress bar  -->
+                    <div class="position-absolute top-50 start-50 progress">
+                        <span class="progress-left">
+                            <span class="progress-bar progressLeft"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar progressRight"></span>
+                        </span>
+                        <div class="progress-value">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-info-side d-flex flex-column justify-content-between">
+                <div class="course-description">
+                    <h5>ლექტორი: <span>თამარ ცხადაძე</span></h5>
+                    <h5>კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h5>
+                    <div class="box-content d-flex">
+                        <i class="box-content-icon fas fa-play-circle"></i>
+                        <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+                    </div>
+                </div>
+                <a href="#" class="d-flex justify-content-between p-2 continue-course-button"><span>კურსის გაგრძელება</span> <img src="./img/arrow-right.svg" alt="right"></a>
+            </div>
+        </div>
+        <!-- course  2 --> 
+        <div class="current-course2  col-6 d-flex">
+            <div class="image-side">
+                <div class="background-image  position-relative">
+                  <!-- views  -->
+                  <div class="position-absolute views-eye">
+                      <img src="img/icon-eye.svg" alt="img">
+                      <span class="view-container-span text-white ms-1"> 1324 </span>
+                  </div>
+                  <!-- progress bar  -->
+                  <div class="position-absolute top-50 start-50 progress">
+                    <span class="progress-left">
+                        <span class="progress-bar progressLeft"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar progressRight"></span>
+                    </span>
+                    <div class="progress-value">0</div>
+                </div>
+              </div>
+            </div>
+            <div class="course-info-side d-flex flex-column justify-content-between">
+                <div class="course-description">
+                    <h5>ლექტორი: <span>თამარ ცხადაძე</span></h5>
+                    <h5>კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h5>
+                    <div class="box-content d-flex">
+                        <i class="box-content-icon fas fa-play-circle"></i>
+                        <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+                    </div>
+                </div>
+                <a href="#" class="d-flex justify-content-between p-2 continue-course-button"><span>კურსის გაგრძელება</span> <img src="./img/arrow-right.svg" alt="right"></a>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- finished courses section  -->
+  <section class="container-fluid finished-courses">
+    <div class="row">
+      <h3 class="m-0">დასრულებული კურსები</h3>
+    </div>
+    <div class="row courses-wrapper d-flex  flex-wrap">
+        <!-- finished-course 1  -->
+        <div class="finished-course1  col-6 d-flex justify-content-between flex-column">
+            <div class="image-side  d-flex position-relative">
+            <!-- certificate background image  -->
+              <div class="certificate-background-image">
+                <!-- progress bar  -->
+                <div class="position-absolute top-50 start-50 progress">
+                  <span class="progress-left">
+                      <span class="progress-bar progressLeft"></span>
+                  </span>
+                  <span class="progress-right">
+                      <span class="progress-bar progressRight"></span>
+                  </span>
+                  <div class="progress-value">0</div>
+                </div>
+              </div>
+
+
+              <!-- download certificates  -->
+              <div class="certificates-side d-flex justify-content-between flex-column">
+                <div class="certificates d-flex flex-column">
+                    <a href="./img/certificate1.svg" download class="text-dark mb-4">
+                        <img src="./img/certificate1.svg" alt="certificate">
+                        სერთიფიკატი
+                    </a>
+                    <a href="./img/certificate2.svg" download class="text-dark">
+                        <img src="./img/certificate2.svg" alt="certificate">
+                        სერთიფიკატი
+                    </a>
+                </div>
+                <!-- star rating------- -->
+                <div class="rating-wrapper d-flex align-items-center">
+                    <p class="text-dark me-3 m-0">რეიტინგი: </p>
+                    <div  class="rating d-flex flex-row-reverse">
+                    <input type="radio" name="star" id="star5" class="d-none"> <label for="star5"></label>
+                    <input type="radio" name="star" id="star4" class="d-none"> <label for="star4"></label>
+                    <input type="radio" name="star" id="star3" class="d-none"> <label for="star3"></label>
+                    <input type="radio" name="star" id="star2" class="d-none"> <label for="star2"></label>
+                    <input type="radio" name="star" id="star1" class="d-none"> <label for="star1"></label>
+                    </div>
+                </div>
+                <a href="#" class="d-flex justify-content-between p-2 continue-course-button"><span>კურსის გაგრძელება</span> <img src="./img/arrow-right.svg" alt="right"></a>
+              </div>
+            </div>
+            <!-- finished-course-description -->
+            <div class="course-info-side d-flex flex-column justify-content-between ps-0">
+                <div class="course-description">
+                    <h5>ლექტორი: <span>თამარ ცხადაძე</span></h5>
+                    <h5>კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h5>
+                    <div class="box-content d-flex">
+                        <i class="box-content-icon fas fa-play-circle"></i>
+                        <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- finished-course 2  -->
+        <div class="row finished-course2  col-6 d-flex justify-content-between flex-column">
+            <div class="image-side d-flex p-0">
+                <!-- certificate background image  -->
+                <div class="certificate-background-image">
+                  <!-- progress bar  -->
+                  <div class="position-absolute top-50 start-50 progress">
+                    <span class="progress-left">
+                        <span class="progress-bar progressLeft"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar progressRight"></span>
+                    </span>
+                    <div class="progress-value">0</div>
+                  </div>
+                </div>
+                <!-- download certificates  -->
+                <div class="certificates-side d-flex justify-content-between flex-column">
+                    <div class="certificates d-flex flex-column">
+                        <a href="./img/certificate1.svg" download class="text-dark mb-4">
+                            <img src="./img/certificate1.svg" alt="certificate">
+                            სერთიფიკატი
+                        </a>
+                        <a href="./img/certificate2.svg" download class="text-dark">
+                            <img src="./img/certificate2.svg" alt="certificate">
+                            სერთიფიკატი
+                        </a>
+                    </div>
+                    <!-- star rating------- -->
+                    <div class="rating-wrapper d-flex align-items-center">
+                        <p class="text-dark me-3 m-0">რეიტინგი: </p>
+                        <div  class="rating d-flex flex-row-reverse">
+                        <input type="radio" name="star" id="star5" class="d-none"> <label for="star5"></label>
+                        <input type="radio" name="star" id="star4" class="d-none"> <label for="star4"></label>
+                        <input type="radio" name="star" id="star3" class="d-none"> <label for="star3"></label>
+                        <input type="radio" name="star" id="star2" class="d-none"> <label for="star2"></label>
+                        <input type="radio" name="star" id="star1" class="d-none"> <label for="star1"></label>
+                        </div>
+                    </div>
+                    <a href="#" class="d-flex justify-content-between p-2 continue-course-button"><span>კურსის გაგრძელება</span> <img src="./img/arrow-right.svg" alt="right"></a>
+                </div>
+            </div>
+            <!-- finished-course-description -->
+            <div class="course-info-side d-flex flex-column justify-content-between ps-0">
+                <div class="course-description">
+                    <h5>ლექტორი: <span>თამარ ცხადაძე</span></h5>
+                    <h5>კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h5>
+                    <div class="box-content d-flex">
+                        <i class="box-content-icon fas fa-play-circle"></i>
+                        <p class="box-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="badges-section">
+    <h3 class="mb-0">ბეჯები</h3>
+    <div class="badges-wrapper  d-flex">
+      <div id="badge1" class="m-5 ms-0 mt-2" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-content="ოქროს ბეჯი">
+        <img src="./img/badges.svg" alt="gold-badge">
+      </div>
+      <div id="badge2" class="m-5 mt-2" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-content="ოქროს ბეჯი">
+        <img src="./img/badges.svg" alt="gold-badge">
+      </div>  
+    </div>
+  </section>
+  <!-- other courses  -->
+  <section class="video-section pt-5">
+    <div class="container-fluid row  row-cols-4 d-flex justify-content-between  flex-wrap pt-5 ">
+        <!--1 element-->
+        <a href="details.html" class="col-3 box-visibility">
+          <div class="relative-box w-100 h-100 position-relative ">
+            <div class="view-container position-absolute top-0 end-0">
+              <img src="img/icon-eye.svg" alt="img">
+              <span class="view-container-span text-white"> 1324 </span>
+            </div>
+            <img class="w-100 h-100"
+              src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+              alt="image">
+            <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+            <div class="box-lock position-absolute bottom-0 end-0">
+              <img src="img/lock.svg" alt="img">
+            </div>
+          </div>
+          <p class="courses-p">ლექტორი: თამარ ცხადაძე</p>
+          <h6 class="courses-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+          <div class="box-content d-flex">
+            <i class="box-content-icon fas fa-play-circle"></i>
+            <p class="course-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+          </div>
+        </a>
+        <!--end of 1-->
+
+        <!--2 element-->
+        <a href="details.html" class="col-3 box-visibility">
+          <div class="relative-box w-100 h-100 position-relative ">
+            <div class="view-container position-absolute top-0 end-0">
+              <img src="img/icon-eye.svg" alt="img">
+              <span class="view-container-span text-white"> 1324 </span>
+            </div>
+            <img class="w-100 h-100"
+              src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+              alt="image">
+            <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+            <div class="box-lock position-absolute bottom-0 end-0">
+              <img src="img/lock.svg" alt="img">
+            </div>
+          </div>
+          <p class="courses-p">ლექტორი: თამარ ცხადაძე</p>
+          <h6 class="courses-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+          <div class="box-content d-flex">
+            <i class="box-content-icon fas fa-play-circle"></i>
+            <p class="course-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+          </div>
+        </a>
+
+        <!--3 element-->
+        <a href="details.html" class="col-3 box-visibility">
+          <div class="relative-box w-100 h-100 position-relative ">
+            <div class="view-container position-absolute top-0 end-0">
+              <img src="img/icon-eye.svg" alt="img">
+              <span class="view-container-span text-white"> 1324 </span>
+            </div>
+            <img class="w-100 h-100"
+              src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+              alt="image">
+            <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+            <div class="box-lock position-absolute bottom-0 end-0">
+              <img src="img/lock.svg" alt="img">
+            </div>
+          </div>
+          <p class="courses-p">ლექტორი: თამარ ცხადაძე</p>
+          <h6 class="courses-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+          <div class="box-content d-flex">
+            <i class="box-content-icon fas fa-play-circle"></i>
+            <p class="course-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+          </div>
+        </a>
+
+        <!--4 element-->
+        <a href="details.html" class="col-3 box-visibility">
+          <div class="relative-box w-100 h-100 position-relative ">
+            <div class="view-container position-absolute top-0 end-0">
+              <img src="img/icon-eye.svg" alt="img">
+              <span class="view-container-span text-white"> 1324 </span>
+            </div>
+            <img class="w-100 h-100"
+              src="https://bbts1.azureedge.net/images/p/full/2020/01/c58f6f4d-8622-44c3-b68d-e464ba045503.jpg"
+              alt="image">
+            <p class="relative-box-p rotate-title position-absolute top-50 start-0">კურსები</p>
+            <div class="box-lock position-absolute bottom-0 end-0">
+              <img src="img/lock.svg" alt="img">
+            </div>
+          </div>
+          <p class="courses-p">ლექტორი: თამარ ცხადაძე</p>
+          <h6 class="courses-h6">კურსის შედარებით გრძელი სათაური ორ ხაზიანი</h6>
+          <div class="box-content d-flex">
+            <i class="box-content-icon fas fa-play-circle"></i>
+            <p class="course-content-p"> 7 ლექცია, ხანგძლივობა: 23წთ.</p>
+          </div>
+        </a>
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer class="site-footer style-3" id="footer">
+    <div class="container-fluid">
+      <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
+        <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+        <div class="row position-absolute d-flex justify-content-between alighn-items-start w-100 px-5 pb-5">
+          <div class="col-xl-3 col-sm-12 col-md-4 my-auto">
+            <div class="widget widget_about">
+              <div class="footer-logo">
+                <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/></a> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto">
+            <div class="widget widget_services d-flex justify-content-between">
+              <a href="projectAbout.html">შესახებ</a>
+              <a href="javascript:void(0);">კონტაქტი</a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>  
+        </div>
+        <div class="row position-absolute d-flex justify-content-between alighn-items-end w-100 bottom-0">
+          <div class="col-6 d-flex justify-content-start">
+            <p class="confidence">© 2021 online iliauni</p>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <p class="confidence">კონფიდენციალობის პოლიტიკა</p>
+          </div>
+        </div>
+       </div>
+    </div>
+</footer>
+
+
+
+<script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/personal.js"></script>
+</body>
+
+</html>
