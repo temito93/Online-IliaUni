@@ -1004,7 +1004,7 @@ footer .footer-logo img {
 
 .line-p:nth-child(2),
 .line-p:nth-child(3)
-.line-p:nth-child(3) {
+.line-p:nth-child(4) {
   margin-top: 30px;
 }
 
@@ -1036,6 +1036,14 @@ footer .footer-logo img {
 }
 
 .project-content-mail {
+  margin-top: 30px;
+}
+.privacy-content {
+  max-width: 1061px;
+  width: 100%;
+  margin-top: 86px;
+}
+.privacy-p {
   margin-top: 30px;
 }
 
