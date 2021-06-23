@@ -1,3 +1,5 @@
+// burger-icon 
+const burger = document.querySelector(".burger");
 //Login button
 const loginBtn = document.querySelector('.login');
 //Close button
@@ -26,6 +28,13 @@ let topTitle = document.querySelector('.top-title');
 // logout user 
 const loggOutBtn = document.querySelector(".logout") ;
 
+// mobile nav-bar menu 
+const openMenu = () => {
+   //change content
+   document.querySelector(".navbar").classList.toggle("change");
+   //change burger-icon
+   burger.querySelectorAll("div").forEach(div => div.classList.toggle("change"))
+}
 //Popup open
 const popupShow = function(){
    popUp.classList.remove('hidePopup');
@@ -84,6 +93,8 @@ const passwordRecovery = function(event) {
    registrationPopup.classList.add('d-none');
    passwordRecoveryForm.classList.remove('d-none');
 }
+
+burger.addEventListener('click', openMenu);
 loginBtn.addEventListener('click', popupShow);
 closeBtn.addEventListener('click', popupHide);
 registrationBtn.addEventListener('click', registrationForm);
