@@ -28,6 +28,16 @@ let topTitle = document.querySelector('.top-title');
 // logout user 
 const loggOutBtn = document.querySelector(".logout") ;
 
+
+//Authentication form
+const getAuthForm = document.querySelector('.authentication-form');
+
+//Registration form
+const getRegForm = document.querySelector('.registration-form');
+
+//Password recovery form
+const getRecoveryForm = document.querySelector('.password-form');
+
 // mobile nav-bar menu 
 const openMenu = () => {
    //change content
@@ -39,12 +49,22 @@ const openMenu = () => {
 const popupShow = function(){
    popUp.classList.remove('hidePopup');
    popUp.classList.add('showPopup');
+   if(popUp.classList.contains('showPopup')) {
+      getAuthForm.setAttribute('id', 'authentication-form');
+      getRegForm.setAttribute('id', 'registration-form');
+      getRecoveryForm.setAttribute('id', 'password-form');
+   } 
 }
 //Popup close
 const popupHide = function(event) {
    event.preventDefault();
    popUp.classList.remove('showPopup');
    popUp.classList.add('hidePopup');
+   if(popUp.classList.contains('hidePopup')) {
+      getAuthForm.removeAttribute('id', 'authentication-form');
+      getRegForm.removeAttribute('id', 'registration-form');
+      getRecoveryForm.removeAttribute('id', 'password-form');
+   }
 }
 
 //Authentication form
