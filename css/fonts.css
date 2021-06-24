@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('../fonts/Dejavu/DejaVuSans.eot');
+    src: url('../fonts/Dejavu/DejaVuSans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Dejavu/DejaVuSans.woff2') format('woff2'),
+        url('../fonts/Dejavu/DejaVuSans.woff') format('woff'),
+        url('../fonts/Dejavu/DejaVuSans.ttf') format('truetype'),
+        url('../fonts/Dejavu/DejaVuSans.svg#DejaVuSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Georgian';
+    src: url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.eot');
+    src: url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.woff') format('woff'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.ttf') format('truetype'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-Regular.svg#NotoSansGeorgian-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Georgian SemBd';
+    src: url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.eot');
+    src: url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.woff2') format('woff2'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.woff') format('woff'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.ttf') format('truetype'),
+        url('../fonts/NotoSansGeorgian-hinted/NotoSansGeorgian-SemiBold.svg#NotoSansGeorgian-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
