@@ -380,10 +380,13 @@ footer {
   color: #fff;
 }
 
-footer .footer-logo img {
-  max-width: 100%;
+.footer-logo{
+  left: 81px;
+  top: 129px;
 }
-
+.footer-logo img{
+  width: 463px;
+}
 .z-index {
   z-index: 1;
 }
@@ -393,24 +396,62 @@ footer .footer-logo img {
   background-size: cover;
   background-color: #1e1e1d;
 }
-
-.widget a i {
-  color: #fff;
-  width: 31px;
-  height: 31px;
+/*.row.position-absolute{
+  top: 126px;
+  height: 85px;
 }
+.row.position-absolute.information{
+  top: 300px;
+  height: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}*/
+.widget a{
+  font-size: 18px;
+}
+.col-xl-3 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.social-icons{
+  display: flex;
+  justify-content: space-between;
+  left:85%; 
+  top: 161px;
+  width: 100px;
+}
+.social-icons i{
+  color: #fff;
+}
+
 .widget a {
   color: #fff;
   font-family: "DejaVu Sans";
   text-decoration: none;
   font-size: 18px;
 }
-
-.confidence {
+.widget{
+ width: 200px;
+ top: 161px;
+ left: 70%;
+}
+.bottom-content {
   font-family: "Noto Sans Georgian";
   font-size: 16px;
   font-weight: lighter;
   color: #e2e2f7;
+  height: 70px;
+  color: #fff;
+}
+.confidence{
+  left: 80%;
+  color: #fff;
+  white-space: nowrap;
+}
+.online-iliauni{
+  color: #fff;
+  left: 35px;
 }
 .widget_poster {
   margin-bottom: 0px;
