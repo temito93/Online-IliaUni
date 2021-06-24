@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online IliaUni</title>
+
+  <!-- icons -->
+   <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
+ 
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-utilities.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap.css">
+
+  <!--fonts-->
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!--main css-->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <header class="header position-absolute top-0 w-100">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container-fluid align-items-start p-0 m-0">
+        <div class="space bg-dark"></div>
+          <a class="navbar-brand bg-dark  me-0 p-3 logo" href="index.html">
+            <img src="img/logo.png" alt="logo">
+          </a>
+        <div class="button-wrapper bg-dark justify-content-between align-items-center w-100">
+          <a class="navbar-brand bg-dark  me-0  mobile-logo" href="#">
+            <img class="w-100" src="img/logo.png" alt="logo" width="120">
+          </a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="position-relative  collapse navbar-collapse bg-dark collapse-nav justify-content-between" id="navbarTogglerDemo02">
+          <ul class="navbar-nav m-0">
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link active text-white links" aria-current="page" href="courses.html">კურსები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="lectures.html">ლექციები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="tutorials.html">თუთორიალები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="interview.html">ინტერვიუები</a>
+            </li>
+            <li class="nav-item nav-li position-relative">
+              <a class="nav-link  text-white links" aria-current="page" href="films.html">ფილმები</a>
+            </li>
+          </ul>
+          <hr>
+          <div class="icons d-flex">
+            <div class="header-icons">
+                <img src="img/icon-search.png" alt="search" >
+            </div>
+            <div class="header-icons login position-relative">
+              <div class="logout">სისტემიდან გამოსვლა</div>
+              <img src="img/icon-user.png" alt="icon-user" >
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="popup hidePopup top-0 position-fixed vh-100 ">
+    <img src="img/close.png" alt="close" class="close position-absolute close">
+    <h5 class="text-white top-title">ავტორიზაცია</h5>
+    <!-- --authentication-- -->
+    <div class="popup-wrapper align-items-center vh-100 d-flex" >
+      <div class="container-fluid authentication flex-column d-flex p-0">
+        <div class="result-text position-absolute">
+          <div class="courses-authentication d-none">
+            <small>კურსის გასასვლელად:</small>
+            <h4>(კურსი)</h4>
+          </div>
+          <div class="success-registration d-none">
+            <img src="img/done.svg" class="pb-3" alt="done">
+            <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
+          </div>
+        </div>
+        <form id="authentication-form">
+          <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
+          <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
+          <div class="input-links mb-5">
+            <button class="auth-rg-btn text-dark me-3">რეგისტრაცია</button>
+            <button class="auth-password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark ps-2">ავტორიზაცია</button>
+        </form>
+      </div>
+      <!-- --registration-- -->
+      <div class="container-fluid registration-popup flex-column  p-0 d-none">
+        <form id="registration-form" class="d-flex flex-column">
+          <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
+            ყველა ველის შევსება</p>
+          <input type="text" name="name"  class="name"  placeholder="სახელი">
+          <input type="text" name="surname" class="surname"  placeholder="გვარი">
+          <input type="email" name="email"  class="email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="password"  placeholder="პაროლი">
+          <input type="password" name="password"  class="confirmPassword" placeholder="გაიმეორეთ პაროლი" class="mb-0">
+          <div class="errors py-2 text-danger"></div>
+          <div class="input-links mb-5">
+            <button class="authentication-btn text-dark me-3">ავტორიზაცია</button>
+            <button class="password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+        </form>
+      </div>
+      <!-- ---recovery-- -->
+      <div class="password-recovery d-none container-fluid flex-column  p-0">
+        <form id="password-form" class="d-flex flex-column">
+          <p class="text-dark w-100">
+            პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
+          </p>
+          <input type="email" name="email"  class="email-recovery" placeholder="ელ.ფოსტა" required>
+          <button type="submit" class="recover btn btn-dark ps-2">პაროლის აღდგენა</button>
+        </form>
+        <div class="recovery-done d-none">
+          <img src="img/done.svg" class="pb-3" alt="done">
+          <p class="m-0 ps-3">ელ. ფოსტაზე გამოგეგზავნთ პაროლის აღსადგენი ბმული</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Background -->
+  <section class="project-background container-fluid p-0">
+    <div class="project-wrapper position-relative">
+        <div class="project-img position-absolute">
+            <img src="img/projectBrain.png" alt="img">
+        </div>
+        <div class="project-title position-absolute">
+            <img src="img/projectTitle.png" alt="img">
+            <h5> კონფიდენციალობის პოლიტიკა</h5>
+        </div>
+        
+    </div>
+  </section>
+
+  <!-- Privacy Content -->
+  <section class="container p-0 privacy-content">
+        <div class="privacy-container d-flex  justify-content-center flex-column">
+            <p class="line-p">
+                ლორემ იპსუმ იცხოვრებს კომუნისტს წამლები ძვლებსა კლასიკოსის 
+                გორაკისაკენ დამრიგებელი შემოაპარაბდა ქოროს. წამლები ჰეკისა 
+                მწუხარების ბურთულას გიორგიზე ღერბებმოხატული დარჩენილმა 
+                ძვლებსა ქუჩისაგან მარტონი მოვაცილე, დამცირება დამრიგებელი 
+                მომიცადეთ ვიმტვრევთ. გამოსცადოს სინდისიერად წითელფეხსაცმელიანი 
+                ვიმტვრევთ გაუწმინდა წყნარ სრესილი გეკუთვნოდა, დავჯდები, 
+                დამშვიდებულ კლასიკოსის სიცილზე ჯამაათო შევმატებდი. 
+                შეთეთრებული ქოროს წყნარ დაუმკვიდროს უქუდო წამლები 
+                სინდისიერად, ჩალური, ჩექმაში მიუჯდა მთავრებმა დამცირება 
+                ქსეროქსი დააკლებდა მეჯინიბეთუხუცესმა. წაერთმია დავჯდები 
+                ჰფუსფუსებენ დამრიგებელი ძნელსა გაჩირაღდნებული ნანა. შემოვიარე
+                ქუჩისაგან ჰფუსფუსებენ წამლები გცემო იქნებოდი ხიდისებურად 
+                ნათქვამსა დაუმკვიდროს დაემორჩილება, სახუმარი გიორგიზე 
+                ქოლესტერინმა ღერბებმოხატული კომუნისტს. სტურუა ქუჩისაგან 
+                შემოაპარაბდა მთავრებმა, მომგვრელად წაერთმია ჯამაათო 
+                გაჭირვებიდან მომიცადეთ ინსტიქტი. ქუჩისაგან ჰეკისა ქსეროქსი 
+                მძღოლებმა ხარჯავ გადმოგცეთ ჯამაათო გაჩირაღდნებული 
+                ჰფუსფუსებენ მოჯამაგირეს სრესილი სიცილზე სამშობლოში წარამარა.
+                მომიცადეთ განუმეორებელი ძმობა მეჯინიბეთუხუცესმა გორაკისაკენ, 
+                ორმოცდათორმეტი რომლებმაც ჭექას მუშაკად სიცილზე.
+            </p>
+
+            <p class="privacy-p">
+                განგებაა მანქანიდანო ამოვიდნენ, სწერია დააგვიანებს მშრალი,
+                გადაავიწყდა ცხინვალიდანაც შეიტრუსა კატამ რივა მიეჩქარები 
+                დაუჯერებთ შოკივით გამსჭვალული. მანქანიდანო ნიკო უბნის
+                წვერამდე რესპუბლიკაში დაქალს, მოვუხმე სახალისო შეიტრუსა.
+                თეატრალიზებულ გამოგვეკიდება იგონებდნენ დისკს, შოკივით,
+                ეგების დახარეს დააგვიანებს რივა გამსჭვალული გაცრეცული
+                ტანსა ჩირაღდანში. მრავალფეროვანი გამოსულა იქაურმა იტყოდნენ
+                ბიოლოგებმა კარდინალობა. მოვიშორებ ეგების დააგვიანებს ნიკო
+                შეადგინეს სტურუასა ყურდაცქვეტილი დაუტირებელი 
+                ვსეირნობდით ბიოლოგებმა გადააბავდა ფანტასტიკურმა
+                გამოგვეკიდება სიამე მოგვთხოვეს. დაუჯერებთ 
+                პროფესიონალები სწერია დაწყებულია ჩრდილებივით 
+                კბილი ჰამლეტი.
+            </p>
+
+            <p class="privacy-p">
+                დაეჯერებინა დიდათ საშიშ შეუგინებია, გემს ედითს ვისიც. 
+                ჩაუარეს დაჰხტის მიწაში არშინი სტილიც წრეში მრავალჟამიერით, 
+                ღრუტუნებენ, გაუქვავდაო დაუგდო ხამ. ინტუიცია ბოჩოლების 
+                მიცანი გავანათებ ვისიც, შეგიპყრობთო დავალევინო ჭლექი ვეჭიდები, 
+                ბნელა დაიცადეთ მრავალჟამიერით განდობა გასაღებს 
+                მოწყობილობისათვის. ბოჩოლების მოწყობილობისათვის 
+                მოუხსენებია დავვარდებით, დაეჯერებინა სითიკანი, მხრებში 
+                ფაქტი. დაიცადეთ უბრალოსა არეულ დავალევინო ეთამაშებიან 
+                სითიკანი არშინი ლირა გემბანიდან. დაუგდო გაგვიჯიუტდა არშინი, 
+                გასაღებს ისუნთქავდა სითიკანი შარას მხრებში მელიას.
+            </p>
+
+            <p class="privacy-p">
+                დაეჯერებინა დიდათ საშიშ შეუგინებია, გემს ედითს ვისიც. 
+                ჩაუარეს დაჰხტის მიწაში არშინი სტილიც წრეში მრავალჟამიერით, 
+                ღრუტუნებენ, გაუქვავდაო დაუგდო ხამ. ინტუიცია ბოჩოლების 
+                მიცანი გავანათებ ვისიც, შეგიპყრობთო დავალევინო ჭლექი ვეჭიდები, 
+                ბნელა დაიცადეთ მრავალჟამიერით განდობა გასაღებს 
+                მოწყობილობისათვის. ბოჩოლების მოწყობილობისათვის მოუხსენებია 
+                დავვარდებით, დაეჯერებინა სითიკანი, მხრებში ფაქტი. დაიცადეთ 
+                უბრალოსა არეულ დავალევინო ეთამაშებიან სითიკანი არშინი ლირა 
+                გემბანიდან. დაუგდო გაგვიჯიუტდა არშინი, გასაღებს ისუნთქავდა 
+                სითიკანი შარას მხრებში მელიას.
+            </p>
+        </div>
+        
+  </section>
+  <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
+  <script src="js/library-click.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/forms.js"></script>
+</body>
