@@ -58,16 +58,16 @@
             <img src="./img/menu-logo.svg" alt="brain" class="position-absolute menu-brain">
           <div>
         </nav>
-        <div class="icons d-flex">
-          <div class="header-icons">
-              <img src="img/icon-search.svg" alt="search">
+        <div class="icons position-relative d-flex align-items-center">
+          <div class="header-icons position-relative">
+            <img src="img/icon-search.svg" alt="search">
           </div>
-          <button class="navbar-toggler ms-auto flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler ms-auto position-relative flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <div class="bg-light"></div>
             <div class="bg-light"></div>
             <div class="bg-light w-50"></div>
           </button>
-          <div class="header-icons login position-relative">
+          <div class="header-icons login">
             <div class="logout">სისტემიდან გამოსვლა</div>
             <img src="img/icon-user.svg" alt="icon-user" >
           </div>
@@ -91,7 +91,7 @@
             <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
           </div>
         </div>
-        <form class='authentication-form'>
+        <form id='authentication-form'>
           <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
           <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
           <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
