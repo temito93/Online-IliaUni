@@ -4,17 +4,19 @@ let libClick = document.querySelector(".lib-click");
 
 let getContentBackground = document.querySelector(".content-background");
 
+const librarySection =  document.getElementById("library-left-elem");
+
 if(getContentBackground){
     getContentBackground.style.display = "none";
 }
 
 // if document size changes call this function
 window.addEventListener("resize",contentWidth)
-
-// change library content width 
+librarySection.addEventListener("click",contentWidth);  
+// change librarySection's width 
 function contentWidth(){  
     // get paddinLeft of tabs section
-    let paddingValue = window.getComputedStyle(document.getElementById("library-left-elem"), null).getPropertyValue('padding-left');
+    let paddingValue = window.getComputedStyle(librarySection, null).getPropertyValue('padding-left');
     //get offset width of library element for library content
     let libGetWidth = libClick.offsetWidth;
     //and sum up
@@ -28,7 +30,6 @@ if(libClick) {
 //hides content-background
 function libFunc(event) {
     event.preventDefault();
-    contentWidth()
     let filterElem = document.querySelectorAll('.filter-items');
 
 
