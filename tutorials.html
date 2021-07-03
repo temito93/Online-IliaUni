@@ -26,7 +26,7 @@
 </head>
 
 <body>
-<header class="header position-absolute top-0 w-100">
+  <header class="header position-absolute top-0 w-100">
     <div class="d-flex justify-content-between">
       <div class="d-flex align-items-start p-0 m-0">
         <div class="space bg-dark"></div>
@@ -58,16 +58,16 @@
             <img src="./img/menu-logo.svg" alt="brain" class="position-absolute menu-brain">
           <div>
         </nav>
-        <div class="icons d-flex">
-          <div class="header-icons">
-              <img src="img/icon-search.svg" alt="search">
+        <div class="icons position-relative d-flex align-items-center">
+          <div class="header-icons position-relative">
+            <img src="img/icon-search.svg" alt="search">
           </div>
-          <button class="navbar-toggler ms-auto flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler ms-auto position-relative flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <div class="bg-light"></div>
             <div class="bg-light"></div>
             <div class="bg-light w-50"></div>
           </button>
-          <div class="header-icons login position-relative">
+          <div class="header-icons login">
             <div class="logout">სისტემიდან გამოსვლა</div>
             <img src="img/icon-user.svg" alt="icon-user" >
           </div>
@@ -91,7 +91,7 @@
             <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
           </div>
         </div>
-        <form class="authentication-form">
+        <form id='authentication-form'>
           <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
           <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
           <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
@@ -136,6 +136,7 @@
       </div>
     </div>
   </div>
+
   <section>
       <div class="container-fluid header-background position-relative">
         <h1 class="position-absolute bottom-50 start-50 text-white">თუთორიალები</h1>
@@ -152,8 +153,8 @@
     </ul >
 
     <!-- Library content-->
-<div class="content-background position-absolute"> 
-      <form action="/action_page.php" class="lib-content form justify-content-around flex-column w-100 h-25">
+    <div class="content-background position-absolute"> 
+      <form  action="/action_page.php" class="lib-content form  justify-content-around flex-column w-100 h-75">
         <label for="checkbox-1" class="checkbox"> 
             <input type="checkbox" name="checkbox-1">
             <span class="checkbox-test"></span>მეცნიერება
@@ -775,40 +776,37 @@
     
   
 
-  <!-- Footer -->
-  <footer class="site-footer style-3" id="footer">
-    <div class="container-fluid">
-      <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
-        <a href="index.html"><img src="img/img-footer-brain.svg" alt="logo"/></a> 
-        <div class="row position-absolute d-flex justify-content-between alighn-items-start w-100 px-5 pb-5">
-          <div class="col-xl-3 col-sm-12 col-md-4 my-auto">
-            <div class="widget widget_about">
-              <div class="footer-logo">
-                <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt="university"/></a> 
-              </div>
-            </div>
+<!-- Footer -->
+    <footer class="site-footer style-3" id="footer">
+        <div class="container-fluid position-relative">                
+          <div class="footer-logo position-absolute">
+            <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/>
+            </a>
           </div>
 
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-auto">
-            <div class="widget widget_services d-flex justify-content-between">
-              <a href="projectAbout.html">შესახებ</a>
-              <a href="javascript:void(0);">კონტაქტი</a>
-              <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          <div class="widget position-absolute d-flex z-index justify-content-between">
+            <a href="projectAbout.html">შესახებ</a>
+            <a href="javascript:void(0);">კონტაქტი</a>
+          </div>
+
+          <div class="z-index social-icons position-absolute">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
+              <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+          </div>
+          <div class="bottom-content">
+            <div class="online-iliauni position-absolute">
+              <p class="online-iliauni">© 2021 online iliauni</p>
             </div>
-          </div>  
-        </div>
-        <div class="row position-absolute d-flex justify-content-between alighn-items-end w-100 bottom-0">
-          <div class="col-6 d-flex justify-content-start">
-            <p class="confidence">© 2021 online iliauni</p>
-          </div>
-          <div class="col-6 d-flex justify-content-end">
-            <a href="privacyPolicy.html" class="confidence">კონფიდენციალობის პოლიტიკა</a>
+            <div class="confidence position-absolute justify-content-end">
+              <a href="privacyPolicy.html" class="confidence">კონფიდენციალობის პოლიტიკა</a>
+            </div>
           </div>
         </div>
-       </div>
-    </div>
-</footer>
+    
+    </footer>
 
 
 

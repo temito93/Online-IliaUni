@@ -58,16 +58,16 @@
             <img src="./img/menu-logo.svg" alt="brain" class="position-absolute menu-brain">
           <div>
         </nav>
-        <div class="icons d-flex">
-          <div class="header-icons">
-              <img src="img/icon-search.svg" alt="search">
+        <div class="icons position-relative d-flex align-items-center">
+          <div class="header-icons position-relative">
+            <img src="img/icon-search.svg" alt="search">
           </div>
-          <button class="navbar-toggler ms-auto flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler ms-auto position-relative flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <div class="bg-light"></div>
             <div class="bg-light"></div>
             <div class="bg-light w-50"></div>
           </button>
-          <div class="header-icons login position-relative">
+          <div class="header-icons login">
             <div class="logout">სისტემიდან გამოსვლა</div>
             <img src="img/icon-user.svg" alt="icon-user" >
           </div>
@@ -92,7 +92,7 @@
             <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
           </div>
         </div>
-        <form id="authentication-form">
+        <form id='authentication-form'>
           <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
           <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
           <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
@@ -105,7 +105,7 @@
       </div>
       <!-- --registration-- -->
       <div class="container-fluid registration-popup flex-column  p-0 d-none">
-        <form id="registration-form" class="d-flex flex-column">
+        <form class="registration-form d-flex flex-column">
           <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
             ყველა ველის შევსება</p>
           <input type="text" name="name"  class="name"  placeholder="სახელი">
@@ -123,7 +123,7 @@
       </div>
       <!-- ---recovery-- -->
       <div class="password-recovery d-none container-fluid flex-column  p-0">
-        <form id="password-form" class="d-flex flex-column">
+        <form class="password-form d-flex flex-column">
           <p class="text-dark w-100">
             პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
           </p>
@@ -230,8 +230,42 @@
             </div>
         </div>
   </section>
+
+    <!-- Footer -->
+    <footer class="site-footer style-3" id="footer">
+        <div class="container-fluid position-relative">                
+          <div class="footer-logo position-absolute">
+            <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/>
+            </a>
+          </div>
+
+          <div class="widget position-absolute d-flex z-index justify-content-between">
+            <a href="projectAbout.html">შესახებ</a>
+            <a href="javascript:void(0);">კონტაქტი</a>
+          </div>
+
+          <div class="z-index social-icons position-absolute">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
+              <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+          </div>
+          <div class="bottom-content">
+            <div class="online-iliauni position-absolute">
+              <p class="online-iliauni">© 2021 online iliauni</p>
+            </div>
+            <div class="confidence position-absolute justify-content-end">
+              <a href="privacyPolicy.html" class="confidence">კონფიდენციალობის პოლიტიკა</a>
+            </div>
+          </div>
+        </div>
+    
+    </footer>
+
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
   <script src="js/library-click.js"></script>
   <script src="js/pagination.js"></script>
   <script src="js/main.js"></script>
 </body>
+</html>
