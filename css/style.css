@@ -837,6 +837,26 @@ footer {
 #submit-answer span{
   font-size: 14px;
 }
+.results{
+  display: none;
+  margin: 3% 0 0 0;
+}
+.question span{
+  font-size: 44px;
+}
+#quizResultTitle{
+  text-align: center;
+  margin: 7% 0;
+}
+#questions-wrapper div{
+  margin-top: 8%;
+}
+#certificate-div{
+  display: none;
+}
+#finalQuizSubmit{
+  display: flex;
+}
 /* ===personal page== */
 .personal-page-tabs{
   font-family: "Noto Sans Georgian";
