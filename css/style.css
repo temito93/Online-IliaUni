@@ -449,6 +449,7 @@ footer {
   background-size: cover;
   background-color: #1e1e1d;
   height: 343px;
+  width: 100%;
 }
 .widget a{
   font-size: 18px;
@@ -483,10 +484,11 @@ footer {
 .footer-logo-big{
   left: 35%;
   top: 15%;
+
 }
 .footer-logo-big img{
   width:606px;
-  height: 3o0px;
+  height: 300px;
 }
 .widget a {
   color: #fff;
