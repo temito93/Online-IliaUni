@@ -448,7 +448,7 @@ footer {
   background-position: center;
   background-size: cover;
   background-color: #1e1e1d;
-  height: 427px;
+  height: 343px;
 }
 .widget a{
   font-size: 18px;
@@ -481,8 +481,12 @@ footer {
   height: 35px;
 }
 .footer-logo-big{
-  left: 30%;
-  top:18%;
+  left: 35%;
+  top: 15%;
+}
+.footer-logo-big img{
+  width:606px;
+  height: 3o0px;
 }
 .widget a {
   color: #fff;
@@ -492,7 +496,7 @@ footer {
   font-family: 'DejaVu Sans';
 }
 .widget{
- width: 15%;
+ width: 208px;
  top: 45%;
  left: 70%;
 }
@@ -505,8 +509,8 @@ footer {
   color: #fff;
 }
 .confidence{
-  left: 75%;
-  top: 85%;
+  left: 83%;
+  top: 100%;
   color: #fff;
   white-space: nowrap;
   height: 35px;
@@ -516,7 +520,7 @@ footer {
 .online-iliauni{
   color: #fff;
   left: 35px;
-  top: 85%;
+  top: 100%;
   height: 35px;
 }
 .widget_poster {
