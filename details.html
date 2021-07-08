@@ -171,7 +171,7 @@
         </div>
       </div>  
       <!-- carousel------ -->
-      <div class="slider-wrapper w-100">
+      <div class="slider-wrapper w-100">align-items-baseline
         <div class="slideshow-container">
         <!-- question-form  -->
         <div class="test-wrapper d-none">
@@ -179,11 +179,11 @@
             <!-- question  -->
             <p class="question mb-5"><span>1.</span> კითხვა, სამი პასუხიდან მხოლოდ ერთი არის სწორი და ან მოკლე კიტხვა არის ან გრძელი კითხვაა, სავარაუდოდ ამაზე გრძელი კიტხვა არ იქნება?</p>
             <!-- answers 1 -->
-            <label for="answer1" class="mb-4 d-flex"><input type="radio" id="answer1" class="me-3" name="answer" value="answer1">პირველი სავარაუდო პასუხი </label>
+            <label class="mb-4 d-flex"><input type="radio"  class="me-3" name="answer" value="answer1">პირველი სავარაუდო პასუხი </label>
             <!-- answer 2 -->
-            <label for="answer2" class="mb-4 d-flex"> <input type="radio" id="answer2" class="me-3" name="answer" value="answer2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
+            <label class="mb-4 d-flex"> <input type="radio" class="me-3" name="answer" value="answer2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
             <!-- answer 3 -->
-            <label for="answer3" class="d-flex"><input type="radio" id="answer3" class="me-3" name="answer" value="answer3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
+            <label  class="d-flex"><input type="radio" class="me-3" name="answer" value="answer3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
             <!-- result text  -->
             <div id="quizResult" class="m-4 mt-5"><p class="text-danger"></p><p></p></div>
             <!-- submit button  -->
@@ -200,6 +200,79 @@
         <div class="numbertext"><span id="slider-num">1</span> / <span id="courses-lenght"></span></div>
           <button type="button" id="minus" disabled><i class="fas fa-arrow-left prev text-muted"></i></button>
           <button type="button" id="plus" disabled><i class="fas fa-arrow-right next text-muted" ></i></button>
+        </div>
+      </div>
+      <!-- final quiz and certificate page  -->
+      <div class="final-quiz-container d-none flex-column">
+        <form id="final-quiz" class="mb-5">
+          <h4 id="quizResultTitle"></h4>
+          <p class="results">შედეგები</p>
+          <div id="questions-wrapper">
+            <!-- question  1-->
+            <div id="group1">
+              <!-- question  -->
+              <p class="question mb-5"><span>1.</span> კითხვა, სამი პასუხიდან მხოლოდ ერთი არის სწორი და ან მოკლე კიტხვა არის ან გრძელი კითხვაა, სავარაუდოდ ამაზე გრძელი კიტხვა არ იქნება?</p>
+              <!-- answers 1 -->
+              <label for="1" class="mb-4 d-flex align-items-baseline"><input type="radio" class="me-3" name="group1" value="1">პირველი სავარაუდო პასუხი </label>
+              <!-- answer 2 -->
+              <label for="2" class="mb-4 d-flex align-items-baseline"> <input type="radio"  class="me-3" name="group1" value="2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
+              <!-- answer 3 -->
+              <label for="3" class="d-flex align-items-baseline"><input type="radio"  class="me-3" name="group1" value="3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
+            </div>
+            <!-- question  2-->
+            <div id="group2">
+              <!-- question  -->
+              <p class="question mb-5"><span>2.</span> კითხვა, სამი პასუხიდან მხოლოდ ერთი არის სწორი და ან მოკლე კიტხვა არის ან გრძელი კითხვაა, სავარაუდოდ ამაზე გრძელი კიტხვა არ იქნება?</p>
+              <!-- answers 1 -->
+              <label for="1" class="mb-4 d-flex align-items-baseline"><input type="radio" class="me-3" name="group2" value="1">პირველი სავარაუდო პასუხი </label>
+              <!-- answer 2 -->
+              <label for="2" class="mb-4 d-flex align-items-baseline"> <input type="radio"  class="me-3" name="group2" value="2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
+              <!-- answer 3 -->
+              <label for="3" class="d-flex align-items-baseline"><input type="radio"  class="me-3" name="group2" value="3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
+            </div>
+            <!-- question  3-->
+            <div id="group3">
+              <!-- question  -->
+              <p class="question mb-5"><span>3.</span> კითხვა, სამი პასუხიდან მხოლოდ ერთი არის სწორი და ან მოკლე კიტხვა არის ან გრძელი კითხვაა, სავარაუდოდ ამაზე გრძელი კიტხვა არ იქნება?</p>
+              <!-- answers 1 -->
+              <label for="1" class="mb-4 d-flex align-items-baseline"><input type="radio" class="me-3" name="group3" value="1">პირველი სავარაუდო პასუხი </label>
+              <!-- answer 2 -->
+              <label for="2" class="mb-4 d-flex align-items-baseline"> <input type="radio"  class="me-3" name="group3" value="2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
+              <!-- answer 3 -->
+              <label for="3" class="d-flex align-items-baseline"><input type="radio"  class="me-3" name="group3" value="3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
+            </div>
+            <!-- question  4-->
+            <div id="group4">
+              <!-- question  -->
+              <p class="question mb-5"><span>4.</span> კითხვა, სამი პასუხიდან მხოლოდ ერთი არის სწორი და ან მოკლე კიტხვა არის ან გრძელი კითხვაა, სავარაუდოდ ამაზე გრძელი კიტხვა არ იქნება?</p>
+              <!-- answers 1 -->
+              <label for="1" class="mb-4 d-flex align-items-baseline"><input type="radio" class="me-3" name="group4" value="1">პირველი სავარაუდო პასუხი </label>
+              <!-- answer 2 -->
+              <label for="2" class="mb-4 d-flex align-items-baseline"> <input type="radio"  class="me-3" name="group4" value="2">მეორე სავარაუდო პასუხი, რომელიც შედარებიტ უფრო გრძელია</label>
+              <!-- answer 3 -->
+              <label for="3" class="d-flex align-items-baseline"><input type="radio"  class="me-3" name="group4" value="3">მესამე სავარაუდო პასუხი, რომელიც მაგალიტად ძალიან გრძელია, სავარაუდოდ ამაზე გრძელი პასუხი არ იქნება, დიდ ეკრანზე ასე ორ ხაზზე თუ გადავიდოდა</label>
+            </div>
+          </div>
+          <button type="button" id="finalQuizSubmit"  class="btn btn-light m-4  align-items-center">
+            <span>დადასტურება</span>
+            <i class='fas fa-arrow-right ms-2'></i>
+          </button>
+        </form>
+        <div id="certificate-div" class="my-2">
+          <div class="download-files d-flex justify-content-between">
+            <p>სერთიფიკატი:</p>
+            <div class="certificates d-flex">
+              <a href="./img/certificate1.svg" download class="mb-4 me-4 text-white">
+                  <img src="./img/certificate1.svg" alt="certificate">
+                  სერთიფიკატი
+              </a>
+              <a href="./img/certificate2.svg" download class="text-white">
+                  <img src="./img/certificate2.svg" alt="certificate">
+                  სერთიფიკატი
+              </a>
+            </div>
+          </div>
+          <img src="./img/certificate.png" class="w-100" alt="certificate">
         </div>
       </div>
     
@@ -524,6 +597,7 @@
 <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
 <script src="js/main.js"></script>
 <script src="js/details.js"></script>
+<script src="js/finalQuiz.js"></script>
 
 </body>
 
