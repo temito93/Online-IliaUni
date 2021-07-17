@@ -422,40 +422,47 @@ header {
 .pagination ul li:first-child {
   color: #e2e2f7;
 }
-
 /*here is footer css style*/
 footer {
   color: #fff;
 }
 
 .footer-logo{
+  width: 450px;
   left: 81px;
-  top: 129px;
+  top: 40%;
 }
 .footer-logo img{
-  width: 463px;
+  width: 67px;
+  height: 67px;
+}
+.footer-logo p{
+  font-size: 18px;
+  padding-left: 20px;
 }
 .z-index {
   z-index: 1;
 }
-.site-footer.style-3 {
+.site-footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #1e1e1d;
+  height: 343px;
+  width: 100%;
 }
-/*.row.position-absolute{
-  top: 126px;
-  height: 85px;
-}
-.row.position-absolute.information{
-  top: 300px;
-  height: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-}*/
 .widget a{
   font-size: 18px;
+}
+.social-icons{
+  left:85%; 
+  top: 161px;
+}
+.widget a{
+  font-size: 18px;
+}
+.container-footer{
+  height: 267px;
 }
 .col-xl-3 {
   display: flex;
@@ -465,23 +472,34 @@ footer {
 .social-icons{
   display: flex;
   justify-content: space-between;
-  left:85%; 
-  top: 161px;
+  left:87%; 
+  top: 45%;
   width: 100px;
 }
 .social-icons i{
   color: #fff;
+  width: 34px;
+  height: 35px;
 }
+.footer-logo-big{
+  left: 35%;
+  top: 15%;
 
+}
+.footer-logo-big img{
+  width:606px;
+  height: 300px;
+}
 .widget a {
   color: #fff;
   font-family: "DejaVu Sans";
   text-decoration: none;
   font-size: 18px;
+  font-family: 'DejaVu Sans';
 }
 .widget{
- width: 200px;
- top: 161px;
+ width: 208px;
+ top: 45%;
  left: 70%;
 }
 .bottom-content {
@@ -493,13 +511,19 @@ footer {
   color: #fff;
 }
 .confidence{
-  left: 80%;
+  left: 83%;
+  top: 100%;
   color: #fff;
   white-space: nowrap;
+  height: 35px;
+  font-size:16px;
+  font-family: 'Noto Sans Georgian';
 }
 .online-iliauni{
   color: #fff;
   left: 35px;
+  top: 100%;
+  height: 35px;
 }
 .widget_poster {
   margin-bottom: 0px;
@@ -1109,6 +1133,7 @@ footer {
 .privacy-p {
   margin-top: 30px;
 }
+
 
 /* media--------------- */
 @media (max-width: 1560px) {
