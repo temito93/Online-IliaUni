@@ -21,6 +21,7 @@
 
   <!--main css-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 
 </head>
@@ -68,9 +69,9 @@
             <div class="bg-light w-50"></div>
           </button>
           <div class="header-icons login">
-            <div class="logout">სისტემიდან გამოსვლა</div>
             <img src="img/icon-user.svg" alt="icon-user" >
           </div>
+          <div class="logout">სისტემიდან გამოსვლა</div>
         </div>
       </div>
     </div>
@@ -153,7 +154,7 @@
 
     <!-- Library content-->
     <div class="content-background position-absolute"> 
-      <form  action="/action_page.php" class="lib-content form  justify-content-around flex-column w-100 h-75">
+      <form  action="/action_page.php" class="lib-content form  justify-content-around flex-column w-100 ">
         <label for="checkbox-1" class="checkbox"> 
             <input type="checkbox" name="checkbox-1">
             <span class="checkbox-test"></span>მეცნიერება
@@ -218,7 +219,7 @@
           <input type="checkbox" name="checkbox-16">
           <span class="checkbox-test"></span>რელიგია
         </label>
-        <div class="buttons d-flex justify-content-between">
+        <div class="buttons d-flex flex-wrap  justify-content-between">
           <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
           <button type="button" class="library-check-button btn btn-outline-light clear-btn">გასუფთავება</button>
         </div>
@@ -244,7 +245,7 @@
                 <p>#არქეოლოგია,</p>
               </div>
             </div>
-        <div class="buttons d-flex justify-content-between">
+        <div class="buttons d-flex flex-wrap  justify-content-between">
           <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
           <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
         </div>
@@ -284,7 +285,7 @@
           <div>სახელი გვარი</div>
           <div>სახელი გვარი</div>
         </div>
-        <div class="buttons d-flex justify-content-between">
+        <div class="buttons d-flex flex-wrap  justify-content-between">
           <button type="button" class="btn btn-outline-light search-btn">ძიება</button>
           <button type="button" class="btn btn-outline-light clear-btn">გასუფთავება</button>
         </div>
@@ -775,25 +776,27 @@
     
   
 
+  
   <!-- Footer -->
-    <footer class="site-footer style-3" id="footer">
-        <div class="container-fluid position-relative">                
-          <div class="footer-logo position-absolute">
-            <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/>
+      <footer class="site-footer style-3" id="footer">
+        <div class="container-footer position-relative">                
+          <div class="footer-logo position-absolute d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="img/footer-logo.svg" alt=""/>
             </a>
+            <p class="logo-title text-uppercase">ილიას სახელმწიფო უნივერსიტეტი</p>
           </div>
 
           <div class="widget position-absolute d-flex z-index justify-content-between">
             <a href="projectAbout.html">შესახებ</a>
-            <a href="javascript:void(0);">კონტაქტი</a>
+            <a class="contact-wrap" href="javascript:void(0);">კონტაქტი</a>
           </div>
-
-          <div class="z-index social-icons position-absolute">
+          <div class="social-icons position-absolute">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
           </div>
-          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
-              <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+
+          <div class="footer-logo-big position-absolute d-flex align-items-center justify-content-center ">
+            <a href="index.html"><img src="img/footer-bg.svg" alt=""/></a> 
           </div>
           <div class="bottom-content">
             <div class="online-iliauni position-absolute">
@@ -804,9 +807,7 @@
             </div>
           </div>
         </div>
-    
     </footer>
-
 
 
 <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>

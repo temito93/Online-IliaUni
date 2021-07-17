@@ -172,7 +172,7 @@ header {
   height: 40px;
   background-color: #212529;
   position: absolute;
-  bottom: -44px;
+  top: 50px;
   right: 20px;
   text-align: center;
   padding: 7px;
@@ -199,7 +199,7 @@ header {
   padding: 15px 35px;
 }
 .filter-section {
-  height: 1568px;
+  height: 100%;
 }
 .bg-col {
   background-color: #1e1e1d;
@@ -303,6 +303,7 @@ header {
   display: flex;
   position: relative;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 .checkbox input {
   opacity: 0;
@@ -367,10 +368,14 @@ header {
 .lecturers::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.buttons button{
+  height: 40px;
+  margin-top: 20px;
+}
+
 /*tags*/
 .tag-items {
-  margin: 50px 0 40px 20px;
-  max-height: 770px;
+  margin: 30px 0 30px 0;
   color: #fff;
 }
 .tag-elements p {
@@ -381,9 +386,6 @@ header {
   line-height: 2;
   font-weight: lighter;
   text-decoration: none;
-}
-.tag-elements:last-child {
-  padding-bottom: 150px;
 }
 .b-left-none {
   border-left: none;
@@ -444,6 +446,7 @@ footer {
   z-index: 1;
 }
 .site-footer {
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -482,9 +485,9 @@ footer {
   height: 35px;
 }
 .footer-logo-big{
-  left: 35%;
-  top: 15%;
-
+  left: 50% !important;
+  top: 18%;
+  transform: translate(-50%, 2%);
 }
 .footer-logo-big img{
   width:606px;
@@ -511,7 +514,7 @@ footer {
   color: #fff;
 }
 .confidence{
-  left: 83%;
+  left: 75%;
   top: 100%;
   color: #fff;
   white-space: nowrap;
@@ -682,7 +685,7 @@ footer {
     background:#1E1E1D;
     font-size: 20px;
     color: white;
-    padding: 1% 18% 4% 18% !important;
+    padding: 1% 10% 4% 10% !important;
 }
 .video-info p {
   font-family: 'Noto Sans Georgian';
@@ -737,9 +740,6 @@ footer {
 #read-more{
   text-decoration: underline;
   border:none;
-}
-.video-courses-wr{
-    max-width: 1200px;
 }
 /* ----slideshow */
 .slideshow-container {
@@ -814,11 +814,14 @@ footer {
 .active-slider{
   background-color: #717171;
 }
+#slider{
+  height: 675px;
+}
 /* detail page list  */
 .lecture-num{
   font-size: 44px;
 }
-.align-items-flex-end{
+.category{
   align-items: flex-end;
 }
 .additional-info{
@@ -830,8 +833,6 @@ footer {
 }
 .video-lecture-num{
   font-size: 44px;
-  left: -40px;
-  top: -24px;
 }
 .additional-info p,.additional-info a {
   font-size: 16px;
@@ -1132,136 +1133,4 @@ footer {
 }
 .privacy-p {
   margin-top: 30px;
-}
-
-
-/* media--------------- */
-@media (max-width: 1560px) {
-  /* header  */
-  .nav-li {
-    padding: 15px 9px;
-  }
-}
-@media (max-width: 1366px) {
-  /* header  */
-  .nav-li {
-    padding: 7px 9px;
-  }
-  .navbar-side{
-    margin-left: 60px;
-    height: 60px;
-  }
-  .links {
-    font-size: 20px;
-  }
-  .logo {
-    padding: 10px !important;
-    width: 120px;
-    height: 120px;
-  }
-  .logo div{
-    height: 85%;
-    margin-top: 5px;
-  }
-  .space {
-    width: 60px;
-    height: 60px;
-  }
-
-  #library-left-elem{
-    padding-left: 60px;
-  }
-}
-@media (max-width: 1200px) {
-  /* header  */
-  .navbar-side{
-    justify-content: flex-end !important;
-  }
-  .burger{
-    display: flex;
-  }
-  .navbar{
-    position: fixed;
-    background: #212529eb;
-    width: 100%;
-    height: 0;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    transition: .2s;
-  }
-  .nav-li{
-    text-align: center;
-  }
-  .collapse img{
-    display: block;
-  }
-}
-@media (max-width: 992px) {
-  /* header  */
-  .navbar-side{
-    height: 50px;
-    margin-left: 50px;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-  .space {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* tabs  */
-  #library-left-elem{
-    padding-left: 50px;
-  }
-  .filter-items {
-    font-size: 18px;
-    padding: 11px 6px;
-    justify-content: space-around !important;
-  }
-}
-@media (max-width: 768px) {
-  #library-left-elem li span{
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-    /* header  */
-    .navbar-side{
-      margin-left: 0px;
-    }
-    .logo {
-      width: 90px;
-      height: 90px;
-    }
-    .space {
-      display: none;
-    }
-    .header-icons:nth-child(1){
-      display: none;
-    }
-
-    /* tabs  */
-    #library-left-elem{
-      padding-left: 0px;
-    }
-}
-@media (max-width: 320px) {
-  /* header  */
-  .logo{
-    width: 170px;
-    height: 50px;
-  }
-  .logo div{
-    margin-top: 0;
-    background: url(../img/responsiveLogo.svg) no-repeat center center / contain;
-    width: 100%;
-    height: 100%;
-  }
-  .header-icons{
-    padding: 0;
-    margin-right: 5px;
-  }
 }

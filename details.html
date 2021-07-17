@@ -21,6 +21,7 @@
 
   <!--main css-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 
 </head>
@@ -68,9 +69,9 @@
             <div class="bg-light w-50"></div>
           </button>
           <div class="header-icons login">
-            <div class="logout">სისტემიდან გამოსვლა</div>
             <img src="img/icon-user.svg" alt="icon-user" >
           </div>
+          <div class="logout">სისტემიდან გამოსვლა</div>
         </div>
       </div>
     </div>
@@ -145,8 +146,8 @@
   </section>
   <section class="container-fluid video-courses d-flex justify-content-center position-relative">
     <div class="video-courses-wr w-100 d-flex flex-column align-items-center ">
-      <div class="rating-wr w-100">
-        <div class="d-flex justify-content-between align-items-center w-50 py-5" >
+      <div class="container-fluid rating-wr">
+        <div class="rating-section d-flex justify-content-between align-items-center w-50 py-5" >
           <!-- star rating------- -->
           <div class="rating-wrapper d-flex align-items-center">
             <p class="text-white me-3 m-0">რეიტინგი: </p>
@@ -171,7 +172,7 @@
         </div>
       </div>  
       <!-- carousel------ -->
-      <div class="slider-wrapper w-100">align-items-baseline
+      <div class="slider-wrapper w-100">
         <div class="slideshow-container">
         <!-- question-form  -->
         <div class="test-wrapper d-none">
@@ -195,7 +196,7 @@
         </div>
         <!-- slider  -->
         <div id="slider">
-          <iframe id="existing-iframe-example" height="670px" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY?enablejsapi=1" frameborder="0"></iframe>      
+          <iframe id="existing-iframe-example" height="100%" width="100%" src="https://www.youtube.com/embed/HOBlvpAl7CY?enablejsapi=1" frameborder="0"></iframe>      
         </div>
         <div class="numbertext"><span id="slider-num">1</span> / <span id="courses-lenght"></span></div>
           <button type="button" id="minus" disabled><i class="fas fa-arrow-left prev text-muted"></i></button>
@@ -277,19 +278,19 @@
       </div>
     
       <div class="video-info d-flex w-100 justify-content-between flex-column py-3">
-        <div class="default-info d-flex w-100 justify-content-between">
-          <p>კურსის შესახებ: </br> <span id="course-lecturer"> გურამ ყიფიანი</span>, ძველი სამყაროს დიზაინი (შესავალი)</p>
+        <div class="default-info d-flex flex-wrap w-100 justify-content-between">
+          <p>კურსის შესახებ: <br> <span id="course-lecturer"> გურამ ყიფიანი</span>,<br> ძველი სამყაროს დიზაინი (შესავალი)</p>
           <p>7 ლექცია, ხანგძლივობა: 23 წთ.</p>
         </div>
         <div class="additional-info d-none w-100 justify-content-between mt-5">
-          <div class="w-50">
-            <h5 class="position-relative"><span class="position-absolute video-lecture-num me-2"></span><span id="lecture-title-num"></span> ლექციის სათაური</h5>
+          <div class="w-50 lectures-description">
+            <h5><span class="video-lecture-num me-2"></span><span id="lecture-title-num"></span> ლექციის სათაური</h5>
             <p>
               მეორე ლექციის მოკლე შინაარსი, რომელიც ამაზე მეტი წესით არ უნდა იყოს, ეს არის მაქსიმუმი რამდენიც შეიძლება ეწეროს მოკლე აღწერაში. პლუს მინუს რამდენიმე სიტყვა.</p>
           </div>
-          <div class="d-flex flex-column align-items-flex-end">
+          <div class="d-flex flex-column category">
             <small class="text-muted"> <img src="img/library.svg" alt="library-icon" class="me-1 mb-2"> ეკოლოგია</small>
-            <div class="d-flex mt-3">
+            <div class="d-flex flex-wrap justify-content-end mt-3 category-list">
               <img src="img/tags.svg" alt="tag">
               <a href="#" class="text-muted ms-3">#ეკოლოგია,</a>
               <a href="#" class="text-muted ms-3">#მეცნიერება,</a>
@@ -318,7 +319,7 @@
         </p>
         <div class="position-relative">
           <button id="read-more" class="bg-white position-absolute end-0"> <span id="btn-text">სრულიად</span> <i class="fas fa-angle-down"></i></button>
-          <div class="tags d-flex pt-5">
+          <div class="tags d-flex flex-wrap pt-5">
             <img src="img/tags.svg" alt="tag">
             <a href="#" class="text-dark ms-3">#ეკოლოგია,</a>
             <a href="#" class="text-dark ms-3">#მეცნიერება,</a>
@@ -341,7 +342,7 @@
             </div>
           </div>
           <div class="controls d-flex align-items-center justify-content-between">
-            <div class="pe-4">
+            <div class="pe-4 playBtn">
               <img src="img/play.svg" alt="play-button" id="playBtn">
               <span id="lecture-duration" class="ms-2">5:30</span>
             </div>
@@ -359,7 +360,7 @@
           </div>
         </div>
         <div class="controls d-flex align-items-center justify-content-between">
-          <div class="pe-4">
+          <div class="pe-4 playBtn">
             <img src="img/play.svg" alt="play-button" id="playBtn">
             <span id="lecture-duration" class="ms-2">5:30</span>
           </div>
@@ -377,7 +378,7 @@
           </div>
         </div>
         <div class="controls d-flex align-items-center justify-content-between">
-          <div class="pe-4">
+          <div class="pe-4 playBtn">
             <img src="img/play.svg" alt="play-button" id="playBtn">
             <span id="lecture-duration" class="ms-2">5:30</span>
           </div>
@@ -395,7 +396,7 @@
           </div>
         </div>
         <div class="controls d-flex align-items-center justify-content-between">
-          <div class="pe-4">
+          <div class="pe-4 playBtn">
             <img src="img/play.svg" alt="play-button" id="playBtn">
             <span id="lecture-duration" class="ms-2">5:30</span>
           </div>
@@ -562,25 +563,27 @@
 
   
 
+  
   <!-- Footer -->
-    <footer class="site-footer style-3" id="footer">
-        <div class="container-fluid position-relative">                
-          <div class="footer-logo position-absolute">
-            <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/>
+      <footer class="site-footer style-3" id="footer">
+        <div class="container-footer position-relative">                
+          <div class="footer-logo position-absolute d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="img/footer-logo.svg" alt=""/>
             </a>
+            <p class="logo-title text-uppercase">ილიას სახელმწიფო უნივერსიტეტი</p>
           </div>
 
           <div class="widget position-absolute d-flex z-index justify-content-between">
             <a href="projectAbout.html">შესახებ</a>
-            <a href="javascript:void(0);">კონტაქტი</a>
+            <a class="contact-wrap" href="javascript:void(0);">კონტაქტი</a>
           </div>
-
-          <div class="z-index social-icons position-absolute">
+          <div class="social-icons position-absolute">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
           </div>
-          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
-              <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+
+          <div class="footer-logo-big position-absolute d-flex align-items-center justify-content-center ">
+            <a href="index.html"><img src="img/footer-bg.svg" alt=""/></a> 
           </div>
           <div class="bottom-content">
             <div class="online-iliauni position-absolute">
@@ -591,9 +594,7 @@
             </div>
           </div>
         </div>
-    
     </footer>
-
 <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
 <script src="js/main.js"></script>
 <script src="js/details.js"></script>

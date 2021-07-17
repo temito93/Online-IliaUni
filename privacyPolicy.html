@@ -21,6 +21,7 @@
 
   <!--main css-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 
 </head>
@@ -224,25 +225,27 @@
         
   </section>
 
-    <!-- Footer -->
-    <footer class="site-footer style-3" id="footer">
-        <div class="container-fluid position-relative">                
-          <div class="footer-logo position-absolute">
-            <a href="index.html"><img src="img/logo-ilia-state-university.svg" alt=""/>
+    
+  <!-- Footer -->
+      <footer class="site-footer style-3" id="footer">
+        <div class="container-footer position-relative">                
+          <div class="footer-logo position-absolute d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="img/footer-logo.svg" alt=""/>
             </a>
+            <p class="logo-title text-uppercase">ილიას სახელმწიფო უნივერსიტეტი</p>
           </div>
 
           <div class="widget position-absolute d-flex z-index justify-content-between">
             <a href="projectAbout.html">შესახებ</a>
-            <a href="javascript:void(0);">კონტაქტი</a>
+            <a class="contact-wrap" href="javascript:void(0);">კონტაქტი</a>
           </div>
-
-          <div class="z-index social-icons position-absolute">
+          <div class="social-icons position-absolute">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
           </div>
-          <div class="footer-logo-big position-relative d-flex align-items-center justify-content-center pt-5">
-              <a href="index.html"><img src="img/img-footer-brain.svg" alt=""/></a> 
+
+          <div class="footer-logo-big position-absolute d-flex align-items-center justify-content-center ">
+            <a href="index.html"><img src="img/footer-bg.svg" alt=""/></a> 
           </div>
           <div class="bottom-content">
             <div class="online-iliauni position-absolute">
@@ -253,9 +256,7 @@
             </div>
           </div>
         </div>
-    
     </footer>
-
 
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
   <script src="js/library-click.js"></script>

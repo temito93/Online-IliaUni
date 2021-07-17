@@ -134,7 +134,7 @@ function changeContent(){
     addlInfo();
     lowerBtn.removeEventListener("click",loginCourse);
 }
-
+sessionStorage.loggedIn === "true" ? changeContent():null
 //after login enable slider button
 function changeSliderBtn(){
     // enable button 
@@ -242,4 +242,3 @@ function clearQuizResults(){
     submitAnswer.removeEventListener("click",inCorrect);
     submitAnswer.addEventListener("click",checkAnswer);
 }
-
