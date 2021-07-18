@@ -73,27 +73,39 @@ const authenticationForm = function(event) {
    authentication.classList.remove('d-none');
 }
 
+function loggOutButton(){
+   loggOutBtn.style.display = "block"; 
+}
 // demo loggOut function 
 const loggOut = () => {
    console.log("user logged out");
-   setTimeout(() => location.reload(),1000)
+   loginBtn.removeEventListener('mouseover',loggOutButton);
+   loginBtn.removeEventListener('click',loggOutButton);
+   sessionStorage.loggedIn = false;
+   location.reload();
 }
 //login user
 const loggin = (event) => {
    event.preventDefault();
    if(authEmail.value !== "" && authPassword.value !== "" ){
-      //  show personal.html page on login button click 
-       loginBtn.removeEventListener('click', popupShow);
-       loginBtn.addEventListener('click',() => location.replace("personal.html"));
-      //  show loggout button under the loginBtn ,add events
-       loginBtn.addEventListener('mouseover',() =>  loggOutBtn.style.display = "block");
-       loggOutBtn.addEventListener('mouseout',() =>  loggOutBtn.style.display = "none");
-       loggOutBtn.addEventListener('click',loggOut);
-      // in details_main.js
-      location.href === "http://127.0.0.1:5500/details.html" ? changeContent():null
       // changeContent()
+      sessionStorage.loggedIn = true;
+      location.reload()
    }
 }
+if(sessionStorage.loggedIn === "true"){
+   //  show personal.html page on login button click 
+   loginBtn.removeEventListener('click', popupShow);
+   loginBtn.addEventListener('click',() => location.replace("personal.html"));
+   //  show loggout button under the loginBtn ,add events
+   loginBtn.addEventListener('mouseover',loggOutButton);
+   loginBtn.addEventListener('click',loggOutButton);
+   loggOutBtn.addEventListener('mouseout',() =>  loggOutBtn.style.display = "none");
+   loggOutBtn.addEventListener('click',loggOut);
+   console.log("yes");
+}
+
+
 
 //Registration form
 const registrationForm = function(event) {
