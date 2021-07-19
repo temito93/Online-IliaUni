@@ -546,14 +546,14 @@ footer {
   transform: rotate(-90deg);
 }
 .relative-box img {
-  max-width: 400px;
-  max-height: 390px;
+  max-width: 508px;
+  max-height: 495px;
   object-fit: cover;
 }
 
 .relative-box {
-  max-width: 400px;
-  max-height: 390px;
+  max-width: 508px;
+  max-height: 495px;
 }
 .relative-second-box {
   min-height: 538px;
