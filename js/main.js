@@ -90,6 +90,7 @@ const loggin = (event) => {
    if(authEmail.value !== "" && authPassword.value !== "" ){
       // changeContent()
       sessionStorage.loggedIn = true;
+      localStorage.num = 0
       location.reload()
    }
 }
