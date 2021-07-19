@@ -590,12 +590,21 @@
   .relative-second-box{
     margin-top: 30px;
   }
+
   
 }
 @media(max-width: 480px){
- /* .first-container{
-    margin-bottom: 35%;
-  }*/
+  .course-space{
+    margin-bottom: 35px;
+  }
+  .box-visibility{
+    padding-top: 40px;
+  }
+}
+@media(max-width: 375px){
+  .course-space{
+    margin-bottom: 50px;
+  }
 }
 @media(max-width: 320px){
   .first-container{
@@ -607,3 +616,4 @@
     margin-bottom: 60%;
   }
 }
+
