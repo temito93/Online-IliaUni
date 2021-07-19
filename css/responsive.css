@@ -44,16 +44,19 @@
     font-size: 16px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1201px) {
   /* header  */
   .navbar-side{
     justify-content: flex-end !important;
+  }
+  .navbar-expand-xl .navbar-nav {
+    flex-direction: column;
   }
   .burger{
     display: flex;
   }
   .navbar{
-    position: absolute;
+    position: fixed;
     background: #212529eb;
     width: 100%;
     height: 0;
@@ -61,6 +64,7 @@
     top: 0;
     overflow: hidden;
     transition: .2s;
+    z-index: 10;
   }
   .nav-li{
     text-align: center;
@@ -72,6 +76,10 @@
   .rating-section{
     width: 100% !important;
   }
+  .course-info-row{
+    width: 100% !important;
+  }
+
 }
 @media(max-width: 1125px){
   .widget{
@@ -96,6 +104,15 @@
   .footer-logo-big{
     left: 30%;
     top: 50%;
+  }
+  .course-links {
+    left: 5%;
+  }
+  .transcriptSection p{
+    max-width: 70%;
+  }
+  .course-info {
+    max-width: 70%;
   }
 }
 @media(max-width: 1065px){
@@ -203,6 +220,9 @@
   .course-links{
     display: none !important;
   }
+  .transcriptSection p{
+    max-width: none;
+  }
 }
 @media(max-width: 980px){
   .site-footer{
@@ -282,7 +302,25 @@
     left: 33%;
   }
 }
-@media(max-width: 600px){
+@media(max-width: 600px) ,(max-height:750px){
+  /* //header */
+  .menu-brain{
+    width: 196px;
+    bottom: -97px;
+  }
+  .menu-brain:nth-child(1){
+    top: -97px;
+  }
+  .nav-li {
+    padding: 0;
+  }
+  .popup{
+    width: 100% !important;
+  }
+  .hidePopup {
+    right: -100%;
+  }
+
   /* details  */
   .rating-section{
     flex-wrap: wrap;
@@ -327,32 +365,153 @@
   .playBtn{
     display: none;
   }
+  .listDescription{
+    display: none;
+  }
+  .padlocks{
+    width: 80px;
+    height: 70px;
+  }
 
   /* footer  */
   .footer-logo-big{
     left: 15%;
   }
-}
+} 
 @media (max-width: 576px) {
-    /* header  */
-    .navbar-side{
-      margin-left: 0px;
-    }
-    .logo {
-      width: 90px;
-      height: 90px;
-    }
-    .space {
-      display: none;
-    }
-    .header-icons:nth-child(1){
-      display: none;
-    }
+  /* header  */
+  .navbar-side{
+    margin-left: 0px;
+  }
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+  .space {
+    display: none;
+  }
+  .header-icons:nth-child(1){
+    display: none;
+  }
+
+
+    /* footer  */
+  .site-footer{
+    height: 479px;
+  }
+   .footer-logo-big img{
+    width: 300px;
+    height: 147px;
+  }
+  .footer-logo-big{
+    top: 124%;
+  }
+  .online-iliauni{
+    top: 296px;
+  }
+  .confidence{
+    top: 255px;
+  }
+  .widget{
+    top: 206px;
+  }
+  .social-icons{
+    top: 142px;
+  }
 
     /* tabs  */
     #library-left-elem{
       padding-left: 0px;
     }
+}
+
+@media(max-width: 540px){
+  .footer-logo-big{
+    left: 23%;
+  }
+  .online-iliauni{
+    left: 35%;
+  }
+  .confidence{
+    left: 30%;
+  }
+  .widget{
+    left: 43%;
+  }
+  .social-icons{
+    left: 43%;
+  }
+  .footer-logo{
+    left: 30%;
+  }
+}
+@media(max-width: 525px){
+  .footer-logo p{
+    display: none;
+  }
+  .footer-logo{
+    left: 47%;
+  }
+}
+@media(max-width: 450px){
+  /* header  */
+  .menu-brain{
+    display: none !important ;
+  }
+  /* footer  */
+  .footer-logo-big{
+    top: 124%;
+    left: 15%;
+  }
+  .online-iliauni{
+    left: 34%;
+  }
+  .confidence{
+    left: 25%;
+  }
+  .widget{
+    left: 45%;
+  } 
+  .social-icons{
+    left: 45%;
+  }
+  .footer-logo{
+    left: 42%;
+  }
+}
+@media (max-height : 440px){
+  .popup-wrapper{
+    height: 287px !important;
+    overflow-y: scroll;
+    padding: 40px 0 !important;
+  }
+}
+@media (max-height : 300px){
+  .popup-wrapper{
+    height: 280px !important;
+    overflow-y: scroll;
+    padding: 140px 0 !important;
+  }
+}
+@media(max-width: 375px){
+  .footer-logo-big{
+    left: 10%;
+  }
+  .widget{
+    left: 42%
+  }
+  .social-icons{
+    left: 42%;
+  }
+  .online-iliauni{
+    left: 30%;
+  }
+  .footer-logo{
+    left: 40%;
+  }
+  .confidence{
+    left: 20%;
+  }
 }
 @media (max-width: 320px) {
   /* header  */
@@ -396,106 +555,6 @@
     top: 215px;
   }
 }
-
-
-
-
-
-@media(max-width: 576px){
-  .site-footer{
-    height: 479px;
-  }
-   .footer-logo-big img{
-    width: 300px;
-    height: 147px;
-  }
-  .footer-logo-big{
-    top: 124%;
-  }
-  .online-iliauni{
-    top: 296px;
-  }
-  .confidence{
-    top: 255px;
-  }
-  .widget{
-    top: 206px;
-  }
-  .social-icons{
-    top: 142px;
-  }
-}
-@media(max-width: 540px){
-  .footer-logo-big{
-    left: 23%;
-  }
-  .online-iliauni{
-    left: 35%;
-  }
-  .confidence{
-    left: 30%;
-  }
-  .widget{
-    left: 43%;
-  }
-  .social-icons{
-    left: 43%;
-  }
-  .footer-logo{
-    left: 30%;
-  }
-}
-@media(max-width: 525px){
-  .footer-logo p{
-    display: none;
-  }
-  .footer-logo{
-    left: 47%;
-  }
-}
-@media(max-width: 430px){
-  .footer-logo-big{
-    top: 124%;
-    left: 15%;
-  }
-  .online-iliauni{
-    left: 34%;
-  }
-  .confidence{
-    left: 25%;
-  }
-  .widget{
-    left: 45%;
-  } 
-  .social-icons{
-    left: 45%;
-  }
-  .footer-logo{
-    left: 42%;
-  }
-}
-@media(max-width: 375px){
-  .footer-logo-big{
-    left: 10%;
-  }
-  .widget{
-    left: 42%
-  }
-  .social-icons{
-    left: 42%;
-  }
-  .online-iliauni{
-    left: 30%;
-  }
-  .footer-logo{
-    left: 40%;
-  }
-  .confidence{
-    left: 20%;
-  }
-}
-
-/*footer responsive finished here*/
 
 
 /*main page responsive*/
