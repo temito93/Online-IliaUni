@@ -21,6 +21,7 @@
 
   <!--main css-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 
 </head>
@@ -65,7 +66,7 @@
             <div class="header-icons">
                 <img src="img/icon-search.png" alt="search" >
             </div>
-            <div class="header-icons login position-relative">
+            <div class="header-icons login position-fixed">
               <div class="logout">სისტემიდან გამოსვლა</div>
               <img src="img/icon-user.png" alt="icon-user" >
             </div>
@@ -92,7 +93,7 @@
             <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
           </div>
         </div>
-        <form id="authentication-form">
+        <form id='authentication-form'>
           <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
           <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
           <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
@@ -105,7 +106,7 @@
       </div>
       <!-- --registration-- -->
       <div class="container-fluid registration-popup flex-column  p-0 d-none">
-        <form id="registration-form" class="d-flex flex-column">
+        <form class="registration-form d-flex flex-column">
           <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
             ყველა ველის შევსება</p>
           <input type="text" name="name"  class="name"  placeholder="სახელი">
@@ -123,7 +124,7 @@
       </div>
       <!-- ---recovery-- -->
       <div class="password-recovery d-none container-fluid flex-column  p-0">
-        <form id="password-form" class="d-flex flex-column">
+        <form class="password-form d-flex flex-column">
           <p class="text-dark w-100">
             პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
           </p>
@@ -221,9 +222,46 @@
             </p>
         </div>
         
+        
   </section>
+
+    
+  <!-- Footer -->
+      <footer class="site-footer style-3" id="footer">
+        <div class="container-footer position-relative">                
+          <div class="footer-logo position-absolute d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="img/footer-logo.svg" alt=""/>
+            </a>
+            <p class="logo-title text-uppercase">ილიას სახელმწიფო უნივერსიტეტი</p>
+          </div>
+
+          <div class="widget position-absolute d-flex z-index justify-content-between">
+            <a href="projectAbout.html">შესახებ</a>
+            <a class="contact-wrap" href="javascript:void(0);">კონტაქტი</a>
+          </div>
+          <div class="social-icons position-absolute">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+
+          <div class="footer-logo-big position-absolute d-flex align-items-center justify-content-center ">
+            <a href="index.html"><img src="img/footer-bg.svg" alt=""/></a> 
+          </div>
+          <div class="bottom-content">
+            <div class="online-iliauni position-absolute">
+              <p class="online-iliauni">© 2021 online iliauni</p>
+            </div>
+            <div class="confidence position-absolute justify-content-end">
+              <a href="privacyPolicy.html" class="confidence">კონფიდენციალობის პოლიტიკა</a>
+            </div>
+          </div>
+        </div>
+    </footer>
+
   <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
   <script src="js/library-click.js"></script>
   <script src="js/pagination.js"></script>
   <script src="js/forms.js"></script>
 </body>
+
+</html>

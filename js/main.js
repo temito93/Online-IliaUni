@@ -6,8 +6,6 @@ const loginBtn = document.querySelector('.login');
 const closeBtn = document.querySelector('.close');
 //Authentication form button
 const authenticationBtn = document.querySelector('.authentication-btn');
-//Authentication form-submit 
-const authenticationSubmit = document.querySelector('#authentication-form');
 const authEmail = document.querySelector('.authentication-email');
 const authPassword = document.querySelector('.authentication-password');
 //Registration form button
@@ -28,6 +26,16 @@ let topTitle = document.querySelector('.top-title');
 // logout user 
 const loggOutBtn = document.querySelector(".logout") ;
 
+
+//Authentication form
+const getAuthForm = document.querySelector('#authentication-form');
+
+//Registration form
+const getRegForm = document.querySelector('.registration-form');
+
+//Password recovery form
+const getRecoveryForm = document.querySelector('.password-form');
+
 // mobile nav-bar menu 
 const openMenu = () => {
    //change content
@@ -39,12 +47,22 @@ const openMenu = () => {
 const popupShow = function(){
    popUp.classList.remove('hidePopup');
    popUp.classList.add('showPopup');
+   if(popUp.classList.contains('showPopup')) {
+      getAuthForm.setAttribute('id', 'authentication-form');
+      getRegForm.setAttribute('id', 'registration-form');
+      getRecoveryForm.setAttribute('id', 'password-form');
+   } 
 }
 //Popup close
 const popupHide = function(event) {
    event.preventDefault();
    popUp.classList.remove('showPopup');
    popUp.classList.add('hidePopup');
+   if(popUp.classList.contains('hidePopup')) {
+      getAuthForm.removeAttribute('id', 'authentication-form');
+      getRegForm.removeAttribute('id', 'registration-form');
+      getRecoveryForm.removeAttribute('id', 'password-form');
+   }
 }
 
 //Authentication form
@@ -55,26 +73,38 @@ const authenticationForm = function(event) {
    authentication.classList.remove('d-none');
 }
 
+function loggOutButton(){
+   loggOutBtn.style.display = "block"; 
+}
 // demo loggOut function 
 const loggOut = () => {
    console.log("user logged out");
-   setTimeout(() => location.reload(),1000)
+   loginBtn.removeEventListener('mouseover',loggOutButton);
+   loginBtn.removeEventListener('click',loggOutButton);
+   sessionStorage.loggedIn = false;
+   location.reload();
 }
 //login user
 const loggin = (event) => {
    event.preventDefault();
    if(authEmail.value !== "" && authPassword.value !== "" ){
-      //  show personal.html page on login button click 
-       loginBtn.removeEventListener('click', popupShow);
-       loginBtn.addEventListener('click',() => location.replace("personal.html"));
-      //  show loggout button under the loginBtn ,add events
-       loginBtn.addEventListener('mouseover',() =>  loggOutBtn.style.display = "block");
-       loggOutBtn.addEventListener('mouseout',() =>  loggOutBtn.style.display = "none");
-       loggOutBtn.addEventListener('click',loggOut);
-      // in details_main.js
-      changeContent()
+      // changeContent()
+      sessionStorage.loggedIn = true;
+      location.reload()
    }
 }
+if(sessionStorage.loggedIn === "true"){
+   //  show personal.html page on login button click 
+   loginBtn.removeEventListener('click', popupShow);
+   loginBtn.addEventListener('click',() => location.replace("personal.html"));
+   //  show loggout button under the loginBtn ,add events
+   loginBtn.addEventListener('mouseover',loggOutButton);
+   loginBtn.addEventListener('click',loggOutButton);
+   loggOutBtn.addEventListener('mouseout',() =>  loggOutBtn.style.display = "none");
+   loggOutBtn.addEventListener('click',loggOut);
+   console.log("yes");
+}
+
 
 
 //Registration form
@@ -99,6 +129,6 @@ loginBtn.addEventListener('click', popupShow);
 closeBtn.addEventListener('click', popupHide);
 registrationBtn.addEventListener('click', registrationForm);
 authenticationBtn.addEventListener('click', authenticationForm);
-authenticationSubmit.addEventListener('submit', loggin);
+getAuthForm.addEventListener('submit', loggin);
 passwordRecoveryFormBtn.addEventListener('click', passwordRecovery);
 passwordRecoveryFormBtn2.addEventListener('click', passwordRecovery);
