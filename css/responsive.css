@@ -498,3 +498,31 @@
 /*footer responsive finished here*/
 
 
+/*main page responsive*/
+@media(max-width: 1200px){
+  .last-content{
+    display: none;
+  }
+  .col-3{
+    width: 30%;
+  }
+}
+@media(max-width: 992px){
+  .third-content{
+    display: none;
+  }
+  .col-3{
+    width: 50%;
+  }
+}
+@media(max-width: 576px){
+  .second-content{
+    display: none;
+  }
+  .col-3{
+    width: 100%;
+  }
+  .first-container{
+    margin-bottom: 35%;
+  }
+}
