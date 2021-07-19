@@ -46,7 +46,7 @@
 
  
   .box-visibility {
-    max-width: 400px;
+    max-width: 508px;
     width: 100%;
   }
 
@@ -100,6 +100,12 @@
   }
   .course-info-row{
     width: 100% !important;
+  }
+
+  
+  .box-visibility {
+    max-width: 462px;
+    width: 100%;
   }
 
 }
@@ -244,6 +250,10 @@
   }
   .transcriptSection p{
     max-width: none;
+  }
+
+  .box-visibility:nth-child(3) {
+    display: none;
   }
 }
 @media(max-width: 980px){
