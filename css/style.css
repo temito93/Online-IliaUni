@@ -415,7 +415,7 @@ header {
 .pagination ul li {
   list-style: none;
   line-height: 45px;
-  font-size: 46px;
+  font-size: 36px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -545,7 +545,7 @@ footer {
   transform: rotate(-90deg);
 }
 .relative-box img {
-  max-width: 400px;
+/*  max-width: 400px;*/
   max-height: 390px;
   object-fit: cover;
 }
