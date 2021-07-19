@@ -538,8 +538,7 @@ footer {
 
 /*grid-systems styles*/
 .grid-system {
-  min-height: 300px;
-  margin-bottom: 73px;
+  min-height: 1000px;
 }
 
 .rotate-title {
@@ -638,7 +637,7 @@ footer {
  padding-bottom: 200px;
 }
 .index-p-margin {
-  margin-top: 100px;
+  margin: 50px 0;
 }
 
 .courses-p-margin {
@@ -647,12 +646,6 @@ footer {
 
 .lectures-p-margin {
   margin-top: 290px;
-}
-
-.courses-filter-section,
-.lectures-filter-section,
-.tutorials-filter-section {
-  height: 3560px;
 }
 
 .m-top {
