@@ -523,6 +523,22 @@
     width: 100%;
   }
   .first-container{
+    margin-bottom: 20%;
+  }
+  
+}
+@media(max-width: 480px){
+  .first-container{
     margin-bottom: 35%;
+  }
+}
+@media(max-width: 320px){
+  .first-container{
+    margin-bottom: 50%;
+  }
+}
+@media(max-width: 280px){
+  .first-container{
+    margin-bottom: 60%;
   }
 }
