@@ -43,6 +43,28 @@
   .footer-logo p{
     font-size: 16px;
   }
+
+ 
+  .box-visibility {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .video-section {
+    margin-top: 130px;
+  }
+  
+  
+  .confidence,
+  .widget-about,
+  .box-visibility:nth-child(4),
+  .social-icons {
+    display: none !important;
+  }
+
+  .footer-logo-big {
+    left: 70% !important;
+  }
 }
 @media (max-width: 1201px) {
   /* header  */
