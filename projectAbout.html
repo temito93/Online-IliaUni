@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online IliaUni</title>
+
+  <!-- icons -->
+   <link rel="stylesheet" href="css/libraries/fontawsome/all.min.css">
+ 
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap-utilities.css">
+  <link rel="stylesheet" href="css/libraries/bootstrap/bootstrap.css">
+
+  <!--fonts-->
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!--main css-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+</head>
+
+<body>
+  <header class="header position-absolute top-0 w-100">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-start p-0 m-0">
+        <div class="space bg-dark"></div>
+          <a class="navbar-brand bg-dark  me-0 p-3 pt-4 logo" href="index.html">
+            <div></div>
+          </a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center bg-dark navbar-side">
+        <nav class="navbar navbar-expand-xl navbar-light py-0">
+          <div class="collapse justify-content-between">
+            <img src="./img/menu-logo.svg" alt="brain" class="position-absolute menu-brain">
+              <ul class="navbar-nav m-0">
+                <li class="nav-item nav-li position-relative">
+                  <a class="nav-link active text-white links" aria-current="page" href="courses.html">კურსები</a>
+                </li>
+                <li class="nav-item nav-li position-relative">
+                  <a class="nav-link  text-white links" aria-current="page" href="lectures.html">ლექციები</a>
+                </li>
+                <li class="nav-item nav-li position-relative">
+                  <a class="nav-link  text-white links" aria-current="page" href="tutorials.html">თუთორიალები</a>
+                </li>
+                <li class="nav-item nav-li position-relative">
+                  <a class="nav-link  text-white links" aria-current="page" href="interview.html">ინტერვიუები</a>
+                </li>
+                <li class="nav-item nav-li position-relative">
+                  <a class="nav-link  text-white links" aria-current="page" href="films.html">ფილმები</a>
+                </li>
+              </ul>
+            <img src="./img/menu-logo.svg" alt="brain" class="position-absolute menu-brain">
+          <div>
+        </nav>
+        <div class="icons position-relative d-flex align-items-center">
+          <div class="header-icons position-relative">
+            <img src="img/icon-search.svg" alt="search">
+          </div>
+          <button class="navbar-toggler ms-auto position-relative flex-column justify-content-between burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="bg-light"></div>
+            <div class="bg-light"></div>
+            <div class="bg-light w-50"></div>
+          </button>
+          <div class="header-icons login">
+            <img src="img/icon-user.svg" alt="icon-user" >
+          </div>
+          <div class="logout">სისტემიდან გამოსვლა</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="popup hidePopup top-0 position-fixed vh-100 ">
+    <img src="img/close.png" alt="close" class="close position-absolute close">
+    <h5 class="text-white top-title">ავტორიზაცია</h5>
+    <!-- --authentication-- -->
+    <div class="popup-wrapper align-items-center vh-100 d-flex" >
+      <div class="container-fluid authentication flex-column d-flex p-0">
+        <div class="result-text position-absolute">
+          <div class="courses-authentication d-none">
+            <small>კურსის გასასვლელად:</small>
+            <h4>(კურსი)</h4>
+          </div>
+          <div class="success-registration d-none">
+            <img src="img/done.svg" class="pb-3" alt="done">
+            <p class="popup-title m-0 ps-3">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
+          </div>
+        </div>
+        <form id='authentication-form'>
+          <p class="mb-3">გთხოვთ გაიაროთ ავტორიზაცია</p>
+          <input type="email" name="email"  class="authentication-email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="authentication-password"  placeholder="პაროლი">
+          <div class="input-links mb-5">
+            <button class="auth-rg-btn text-dark me-3">რეგისტრაცია</button>
+            <button class="auth-password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark ps-2">ავტორიზაცია</button>
+        </form>
+      </div>
+      <!-- --registration-- -->
+      <div class="container-fluid registration-popup flex-column  p-0 d-none">
+        <form class="registration-form d-flex flex-column">
+          <p class="text-dark w-100">რეგისტრაციისთვის აუცილებელია 
+            ყველა ველის შევსება</p>
+          <input type="text" name="name"  class="name"  placeholder="სახელი">
+          <input type="text" name="surname" class="surname"  placeholder="გვარი">
+          <input type="email" name="email"  class="email" placeholder="ელ.ფოსტა">
+          <input type="password" name="password" class="password"  placeholder="პაროლი">
+          <input type="password" name="password"  class="confirmPassword" placeholder="გაიმეორეთ პაროლი" class="mb-0">
+          <div class="errors py-2 text-danger"></div>
+          <div class="input-links mb-5">
+            <button class="authentication-btn text-dark me-3">ავტორიზაცია</button>
+            <button class="password-btn text-dark">პაროლის აღდგენა</button>
+          </div>
+          <button type="submit" class="btn btn-dark rg-btn ps-2">რეგისტრაცია</button>
+        </form>
+      </div>
+      <!-- ---recovery-- -->
+      <div class="password-recovery d-none container-fluid flex-column  p-0">
+        <form class="password-form d-flex flex-column">
+          <p class="text-dark w-100">
+            პაროლის აღსადგენათ, გამოიყენეთ რეგისტრაციის დროს მითითებული ელ. ფოსტა
+          </p>
+          <input type="email" name="email"  class="email-recovery" placeholder="ელ.ფოსტა" required>
+          <button type="submit" class="recover btn btn-dark ps-2">პაროლის აღდგენა</button>
+        </form>
+        <div class="recovery-done d-none">
+          <img src="img/done.svg" class="pb-3" alt="done">
+          <p class="m-0 ps-3">ელ. ფოსტაზე გამოგეგზავნთ პაროლის აღსადგენი ბმული</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Background -->
+  <section class="project-background container-fluid p-0">
+    <div class="project-wrapper position-relative">
+        <div class="project-img position-absolute">
+            <img src="img/projectBrain.png" alt="img">
+        </div>
+        <div class="project-title position-absolute">
+            <img src="img/projectTitle.png" alt="img">
+            <h5> პროექტის შესახებ</h5>
+        </div>
+        
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <section class="container p-0 project-content">
+        <div class="project-content-container d-flex">
+            <div class="project-icons">
+                <div class="project-fb project-icon-parameter d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <img src="img/facebook.svg" alt="icon">
+                    </a>
+                </div>
+                <div class="project-twitter project-icon-parameter d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <img src="img/twitter.svg" alt="icon">
+                    </a>
+                </div>
+
+                <div class="project-link project-icon-parameter d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <img src="img/project-link.png" alt="icon">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="project-content-text">
+                <p class="line-p">ვებგვერდი წარმოადგენს ილიას უნივერსიტეტის ელექტრონულ სასწავლო პორტალს.</p>
+                <p class="line-p">საგანმანათლებლო რესურსები რამდენიმე სექციაში გადანაწილდება:</p>
+                <p class="line-p">
+                    კურსები - სექციაში განთავსდება სხვადასხვა მიმართულების სრული კურსები, რომლებშიც ინტეგრირებული იქნება ტესტები. 
+                    შესაბამისად, მომხმარებელს საშუალება ექნება, კურსის გავლის განმავლობაში შეაფასოს საკუთარი ცოდნა. 
+                    ვიდეოვერსიის პარალელურად, შესაძლებელი იქნება კურსში შემავალი ლექციების ბეჭდური სახით ნახვაც. 
+                    მსურველებს საშუალება ექნებათ, ლექტორს დაუსვან შეკითხვები.
+                    ლექციები - სექციაში განთავსება ცალკეული (მაგალითად, ილიაუნიში მოწვეული ლექტორების მიერ წაკითხული) 
+                    ლექციები ან სასწავლო პროცესის განმავლობაში მიმდინარე კურსებიდან ლექციების ვიდეოჩანაწერები.
+                    ტუტორიალები - სექციაში განთავსდება სასწავლო ტუტორიალები, რომლებიც კონკრეტული პრაქტიკული 
+                    ცოდნის მიღებაზე იქნება ორიენტირებული. მაგალითად, როგორ ავკინძოთ წიგნი, დავამუშაოთ ხმა 
+                    კომპიუტერულად ან გავსხლათ ხე და ა. შ.
+                    ონლაინ ტელევიზია - სექციაში განთავსდება სატელევიზიო ფორმატის მოკლემეტრაჟიანი ფილმები, 
+                    რომლებშიც ქართველი მეცნიერები თავიანთი პროფესიული არჩევანის შესახებ ისაუბრებენ.
+                </p>
+                <p class="line-p">
+                    ონლაინ მოსამზადებელი კურსები - სექციაში განთავსდება სასწავლო მასალები მოსამზადებელ ეტაპზე მყოფი 
+                    მსურველებისთვის, მაგალითად - ონლაინ ტესტები უნარებში. 
+                </p>
+
+                <div class="project-content-addr">
+                    <div class="project-address">
+                        <p class="c-17px m-0 fw-bold">ქაქუცა ჩოლოყაშვილის გამზირი 3/5</p>
+                        <p class="fw-bold">თბილისი 0162, საქართველო</p>
+                    </div>
+                </div>
+
+                <div class="project-content-num">
+                    <div class="project-num">
+                        <p class="c-17px m-0 fw-bold">(+995 32) 222 00 09</p>
+                        <p class="c-17px fw-bold">(+995 32) 223 10 26</p>
+                    </div>
+                </div>
+
+                <div class="project-content-mail">
+                    <p class="c-17px fw-bold">info@iliauni.edu.ge</p>
+                </div>
+
+                <div class="project-content-icons d-flex">
+                    <div class="fb-icon-container">
+                        <a href="#">
+                            <img src="img/icon-fb.svg" alt="icon" class="fb-icon">
+                        </a>
+                        
+                    </div>
+                    <div class="youtube-icon-container">
+                        <a href="#">
+                            <img src="img/icon-youtube.svg" alt="icon" class="youtube-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </section>
+
+    
+  <!-- Footer -->
+      <footer class="site-footer style-3" id="footer">
+        <div class="container-footer position-relative">                
+          <div class="footer-logo position-absolute d-flex align-items-center justify-content-between">
+            <a href="index.html"><img src="img/footer-logo.svg" alt=""/>
+            </a>
+            <p class="logo-title text-uppercase">ილიას სახელმწიფო უნივერსიტეტი</p>
+          </div>
+
+          <div class="widget position-absolute d-flex z-index justify-content-between">
+            <a href="projectAbout.html">შესახებ</a>
+            <a class="contact-wrap" href="javascript:void(0);">კონტაქტი</a>
+          </div>
+          <div class="social-icons position-absolute">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+
+          <div class="footer-logo-big position-absolute d-flex align-items-center justify-content-center ">
+            <a href="index.html"><img src="img/footer-bg.svg" alt=""/></a> 
+          </div>
+          <div class="bottom-content">
+            <div class="online-iliauni position-absolute">
+              <p class="online-iliauni">© 2021 online iliauni</p>
+            </div>
+            <div class="confidence position-absolute justify-content-end">
+              <a href="privacyPolicy.html" class="confidence">კონფიდენციალობის პოლიტიკა</a>
+            </div>
+          </div>
+        </div>
+    </footer>
+  <script src="js/libraries/bootstrap/bootstrap.bundle.js"></script>
+  <script src="js/library-click.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
